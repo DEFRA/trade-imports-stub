@@ -1,0 +1,302 @@
+[
+  {
+    "code": "AT",
+    "name": "Austria",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "BE",
+    "name": "Belgium",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "BG",
+    "name": "Bulgaria",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "HR",
+    "name": "Croatia",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "CY",
+    "name": "Cyprus",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "CZ",
+    "name": "Czechia",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "DK",
+    "name": "Denmark",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "EE",
+    "name": "Estonia",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "FI",
+    "name": "Finland",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "GR",
+    "name": "Greece",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "HU",
+    "name": "Hungary",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "IS",
+    "name": "Iceland",
+    "classifiers": [
+      "EFTA",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "IE",
+    "name": "Ireland",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "LV",
+    "name": "Latvia",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "LI",
+    "name": "Liechtenstein",
+    "classifiers": [
+      "EFTA",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "LT",
+    "name": "Lithuania",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "LU",
+    "name": "Luxembourg",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "MT",
+    "name": "Malta",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands (the)",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "NO",
+    "name": "Norway",
+    "classifiers": [
+      "EFTA",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "PL",
+    "name": "Poland",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "PT",
+    "name": "Portugal",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "RO",
+    "name": "Romania",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "SK",
+    "name": "Slovakia",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "SI",
+    "name": "Slovenia",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  },
+  {
+    "code": "SE",
+    "name": "Sweden",
+    "classifiers": [
+      "EU",
+      "EEA",
+      "CTC"
+    ],
+    "internalClassifiers": []
+  }
+]
