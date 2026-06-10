@@ -538,5 +538,23 @@
     "blocks": [
       { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
     ]
+  },
+  {
+    "name": "Switzerland",
+    "longName": "the Swiss Confederation",
+    "effectiveAlpha2": "CH",
+    "effectiveAlpha3": "CHE",
+    "effectiveAlias": "Switzerland",
+    "effectiveLongName": "the Swiss Confederation",
+    "independent": false,
+    "statusName": "officially-assigned",
+    "system": "iso",
+    "systemAlias": null,
+    "systemAlpha2": null,
+    "systemAlpha3": null,
+    "systemLongName": null,
+    "blocks": [
+      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
+    ]
   }
 ]
