@@ -22,7 +22,7 @@ public class CountriesController {
   ResponseEntity<List<MdmCountry>> getCountries(
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
       @RequestParam(value = "system", required = false) String system,
-      @RequestParam(value = "classifier", required = false) String classifier){
+      @RequestParam(value = "blocks", required = false) String blocks){
 
     List<MdmCountry> countries = fileUtils.getObjectFromFile(
         "responses/countriesResponse.json"
