@@ -32,8 +32,8 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.client.RestClient;
-import org.testcontainers.containers.MockServerContainer;
-import org.testcontainers.containers.MongoDBContainer;
+import org.testcontainers.mockserver.MockServerContainer;
+import org.testcontainers.mongodb.MongoDBContainer;
 import org.testcontainers.lifecycle.Startables;
 import org.testcontainers.utility.DockerImageName;
 
@@ -57,7 +57,7 @@ abstract class IntegrationBase {
             "mockserver-" + MockServerClient.class.getPackage().getImplementationVersion()));
 
     static MongoDBContainer MONGO_CONTAINER = new MongoDBContainer(
-        DockerImageName.parse("mongo:7.0")).withExposedPorts(27017);
+        DockerImageName.parse("mongo:7.0")).withReplicaSet().withExposedPorts(27017);
 
     static {
         Startables.deepStart(
