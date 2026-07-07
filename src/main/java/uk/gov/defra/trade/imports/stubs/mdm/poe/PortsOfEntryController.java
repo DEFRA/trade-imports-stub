@@ -1,6 +1,5 @@
 package uk.gov.defra.trade.imports.stubs.mdm.poe;
 
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +19,7 @@ public class PortsOfEntryController {
   private FileUtils fileUtils;
 
   @GetMapping(value = "/mdm/trade/bcp/poes")
-  ResponseEntity<List<MdmPortOfEntry>> getPortsOfEntry(
+  ResponseEntity<MdmPortsResponse> getPortsOfEntry(
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
       @RequestParam(value = "system", required = false) String system) {
 
@@ -28,6 +27,6 @@ public class PortsOfEntryController {
 
     return ResponseEntity.ok()
         .header("x-ms-middleware-request-id", "stub-trace-id")
-        .body(response.getResult());
+        .body(response);
   }
 }
