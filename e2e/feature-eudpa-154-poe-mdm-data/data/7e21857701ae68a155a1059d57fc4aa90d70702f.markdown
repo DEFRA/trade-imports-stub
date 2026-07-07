@@ -1,0 +1,144 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/pages/addresses.spec.ts >> Addresses landing page >> continues to port of entry page after saving addresses
+- Location: tests/e2e/pages/addresses.spec.ts:56:3
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('heading', { name: 'Entry point and arrival at destination', level: 1 })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for getByRole('heading', { name: 'Entry point and arrival at destination', level: 1 })
+
+```
+
+```yaml
+- link "Skip to main content":
+  - /url: "#main-content"
+- banner:
+  - link "GOV.UK":
+    - /url: https://www.gov.uk/
+    - img "GOV.UK"
+  - region "Service information":
+    - link "Animals":
+      - /url: /
+    - navigation "Menu":
+      - list:
+        - listitem:
+          - link "Home":
+            - /url: /
+        - listitem:
+          - link "About":
+            - /url: /about
+- text: test.user11@defra.gov.uk
+- link "Sign out":
+  - /url: /signout
+- main:
+  - heading "500" [level=1]
+  - paragraph: Something went wrong
+- contentinfo:
+  - heading "Support links" [level=2]
+  - list:
+    - listitem:
+      - link "Privacy":
+        - /url: https://www.gov.uk/help/privacy-notice
+    - listitem:
+      - link "Cookies":
+        - /url: https://www.gov.uk/help/cookies
+    - listitem:
+      - link "Accessibility statement":
+        - /url: https://www.gov.uk/help/accessibility-statement
+  - text: All content is available under the
+  - link "Open Government Licence v3.0":
+    - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+  - text: ", except where otherwise stated"
+  - link "© Crown copyright":
+    - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@fixtures';
+  2  | 
+  3  | test.describe('Addresses landing page', () => {
+  4  |   test.beforeEach(async ({ journeys }) => {
+  5  |     await journeys.toAddresses();
+  6  |   });
+  7  | 
+  8  |   test('shows system-generated notification id (draft)', async ({ journeyContext, pages }) => {
+  9  |     const notificationId = await pages.addresses.notificationId.textContent();
+  10 |     expect(notificationId).toMatch(/^GBN-AG-\d{2}-[0-9A-Z]{6}$/);
+  11 |     expect(journeyContext.notificationId).toBe(notificationId);
+  12 |   });
+  13 | 
+  14 |   test('can navigate back to accompanying documents', async ({ pages }) => {
+  15 |     await pages.addresses.linkBack.click();
+  16 |     await expect(pages.page).toHaveURL(pages.accompanyingDocuments.expectedUrl);
+  17 |     await expect(pages.accompanyingDocuments.heading).toBeVisible();
+  18 |   });
+  19 | 
+  20 |   test('can navigate to place of origin selection', async ({ pages }) => {
+  21 |     await pages.addresses.linkAddPlaceOfOrigin.click();
+  22 |     await expect(pages.page).toHaveURL(pages.placeOfOriginSelection.expectedUrl);
+  23 |     await expect(pages.placeOfOriginSelection.heading).toBeVisible();
+  24 |   });
+  25 | 
+  26 |   test('can navigate to consignor or exporter selection', async ({ pages }) => {
+  27 |     await pages.addresses.linkAddConsignorOrExporter.click();
+  28 |     await expect(pages.page).toHaveURL(pages.consignorSelection.expectedUrl);
+  29 |     await expect(pages.consignorSelection.heading).toBeVisible();
+  30 |   });
+  31 | 
+  32 |   test('can navigate to consignee selection', async ({ pages }) => {
+  33 |     await pages.addresses.linkAddConsignee.click();
+  34 |     await expect(pages.page).toHaveURL(pages.consigneeSelection.expectedUrl);
+  35 |     await expect(pages.consigneeSelection.heading).toBeVisible();
+  36 |   });
+  37 | 
+  38 |   test('can navigate to importer selection', async ({ pages }) => {
+  39 |     await pages.addresses.linkAddImporter.click();
+  40 |     await expect(pages.page).toHaveURL(pages.importerSelection.expectedUrl);
+  41 |     await expect(pages.importerSelection.heading).toBeVisible();
+  42 |   });
+  43 | 
+  44 |   test('can navigate to place of destination selection', async ({ pages }) => {
+  45 |     await pages.addresses.linkAddPlaceOfDestination.click();
+  46 |     await expect(pages.page).toHaveURL(pages.destinationSelection.expectedUrl);
+  47 |     await expect(pages.destinationSelection.heading).toBeVisible();
+  48 |   });
+  49 | 
+  50 |   test('continues to port of entry page after saving with no addresses selected', async ({ pages }) => {
+  51 |     await pages.addresses.btnSaveAndContinue.click();
+  52 |     await expect(pages.page).toHaveURL(pages.entryPoint.expectedUrl);
+  53 |     await expect(pages.entryPoint.heading).toBeVisible();
+  54 |   });
+  55 | 
+  56 |   test('continues to port of entry page after saving addresses', async ({ pages }) => {
+  57 |     await pages.addresses.linkAddConsignorOrExporter.click();
+  58 |     await pages.consignorSelection.radioConsignorOrExporter('Astra Rosales').click();
+  59 |     await pages.consignorSelection.btnSaveAndContinue.click();
+  60 |     await pages.addresses.linkAddPlaceOfDestination.click();
+  61 |     await pages.destinationSelection.radioPlaceOfDestination('Tech Imports Ltd').click();
+  62 |     await pages.destinationSelection.btnSaveAndContinue.click();
+  63 |     await pages.addresses.btnSaveAndContinue.click();
+  64 |     await expect(pages.page).toHaveURL(pages.entryPoint.expectedUrl);
+> 65 |     await expect(pages.entryPoint.heading).toBeVisible();
+     |                                            ^ Error: expect(locator).toBeVisible() failed
+  66 |   });
+  67 | });
+  68 | 
+```

@@ -1,0 +1,141 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/features/notification-delete.spec.ts >> Notification delete >> delete button and dialog >> closes the dialog without deleting when cancel is clicked
+- Location: tests/e2e/features/notification-delete.spec.ts:33:5
+
+# Error details
+
+```
+"beforeAll" hook timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "Animals" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - main [ref=e43]:
+      - generic [ref=e45]:
+        - heading "500" [level=1] [ref=e47]
+        - paragraph [ref=e48]: Something went wrong
+  - contentinfo [ref=e49]:
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - heading "Support links" [level=2] [ref=e64]
+        - list [ref=e65]:
+          - listitem [ref=e66]:
+            - link "Privacy" [ref=e67] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e68]:
+            - link "Cookies" [ref=e69] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e70]:
+            - link "Accessibility statement" [ref=e71] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e72]
+        - generic [ref=e74]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e75] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e77] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@fixtures';
+  2  | import { createPageObjects } from '@page-objects';
+  3  | import { Journeys, type JourneyContext } from '@flows/journeys';
+  4  | 
+  5  | test.describe('Notification delete', () => {
+  6  |   test.describe('delete button and dialog', () => {
+  7  |     let referenceNumber: string;
+  8  | 
+> 9  |     test.beforeAll(async ({ browser }) => {
+     |          ^ "beforeAll" hook timeout of 30000ms exceeded.
+  10 |       const context = await browser.newContext();
+  11 |       const page = await context.newPage();
+  12 |       const pages = createPageObjects(page);
+  13 |       const journeyContext: JourneyContext = {};
+  14 |       const journeys = new Journeys(pages, journeyContext);
+  15 |       await journeys.submitNotification();
+  16 |       referenceNumber = journeyContext.notificationId;
+  17 |       await context.close();
+  18 |     });
+  19 | 
+  20 |     test.beforeEach(async ({ journeys }) => {
+  21 |       await journeys.toNotificationView(referenceNumber);
+  22 |     });
+  23 | 
+  24 |     test('shows the delete button for a submitted notification', async ({ pages }) => {
+  25 |       await expect(pages.notificationView.btnDelete).toBeVisible();
+  26 |     });
+  27 | 
+  28 |     test('opens the confirmation dialog when delete is clicked', async ({ pages }) => {
+  29 |       await pages.notificationView.btnDelete.click();
+  30 |       await expect(pages.notificationView.deleteDialog).toBeVisible();
+  31 |     });
+  32 | 
+  33 |     test('closes the dialog without deleting when cancel is clicked', async ({ pages }) => {
+  34 |       await pages.notificationView.btnDelete.click();
+  35 |       await pages.notificationView.btnCancelDelete.click();
+  36 |       await expect(pages.notificationView.deleteDialog).not.toBeVisible();
+  37 |       await expect(pages.notificationView.heading).toBeVisible();
+  38 |     });
+  39 |   });
+  40 | 
+  41 |   test(
+  42 |     'deletes the notification and removes it from the dashboard',
+  43 |     { tag: ['@integration'] },
+  44 |     async ({ pages, journeys, journeyContext }) => {
+  45 |       await journeys.submitNotification();
+  46 |       const referenceNumber = journeyContext.notificationId;
+  47 | 
+  48 |       await journeys.toNotificationView(referenceNumber);
+  49 | 
+  50 |       await pages.notificationView.btnDelete.click();
+  51 |       await pages.notificationView.btnConfirmDelete.click();
+  52 | 
+  53 |       await expect(pages.notificationView.successBanner).toBeVisible();
+  54 | 
+  55 |       // The JS redirects to / after 3 seconds
+  56 |       await pages.notificationDashboard.heading.waitFor({ timeout: 10000 });
+  57 |       await expect(pages.notificationDashboard.viewLink(referenceNumber)).not.toBeVisible();
+  58 |     },
+  59 |   );
+  60 | });
+  61 | 
+```

@@ -1,0 +1,143 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/features/all-operators.spec.ts >> All operator addresses >> all six operators appear in the addresses section of the notification view
+- Location: tests/e2e/features/all-operators.spec.ts:24:3
+
+# Error details
+
+```
+"beforeAll" hook timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "Animals" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - main [ref=e43]:
+      - generic [ref=e45]:
+        - heading "500" [level=1] [ref=e47]
+        - paragraph [ref=e48]: Something went wrong
+  - contentinfo [ref=e49]:
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - heading "Support links" [level=2] [ref=e64]
+        - list [ref=e65]:
+          - listitem [ref=e66]:
+            - link "Privacy" [ref=e67] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e68]:
+            - link "Cookies" [ref=e69] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e70]:
+            - link "Accessibility statement" [ref=e71] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e72]
+        - generic [ref=e74]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e75] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e77] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@fixtures';
+  2  | import { createPageObjects } from '@page-objects';
+  3  | import { Journeys, JourneyContext } from '@flows/journeys';
+  4  | import { PLACE_OF_ORIGIN_NAME, CONSIGNOR_NAME, CONSIGNEE_NAME, IMPORTER_NAME, DESTINATION_NAME, CPH_NUMBER } from '@flows/journeys';
+  5  | 
+  6  | test.describe('All operator addresses', () => {
+  7  |   let referenceNumber: string;
+  8  | 
+> 9  |   test.beforeAll(async ({ browser }) => {
+     |        ^ "beforeAll" hook timeout of 30000ms exceeded.
+  10 |     const context = await browser.newContext();
+  11 |     const page = await context.newPage();
+  12 |     const pages = createPageObjects(page);
+  13 |     const journeyContext: JourneyContext = {};
+  14 |     const journeys = new Journeys(pages, journeyContext);
+  15 |     await journeys.toReview();
+  16 |     referenceNumber = journeyContext.notificationId;
+  17 |     await context.close();
+  18 |   });
+  19 | 
+  20 |   test.beforeEach(async ({ journeys }) => {
+  21 |     await journeys.toNotificationView(referenceNumber);
+  22 |   });
+  23 | 
+  24 |   test('all six operators appear in the addresses section of the notification view', async ({ pages }) => {
+  25 |     await expect(pages.notificationView.summaryValue('Place of origin')).toContainText(PLACE_OF_ORIGIN_NAME);
+  26 |     await expect(pages.notificationView.summaryValue('Consignor')).toContainText(CONSIGNOR_NAME);
+  27 |     await expect(pages.notificationView.summaryValue('Consignee')).toContainText(CONSIGNEE_NAME);
+  28 |     await expect(pages.notificationView.summaryValue('Importer')).toContainText(IMPORTER_NAME);
+  29 |     await expect(pages.notificationView.summaryValue('Place of destination')).toContainText(DESTINATION_NAME);
+  30 |     await expect(pages.notificationView.summaryValue('County Parish Holding number (CPH)')).toContainText(CPH_NUMBER);
+  31 |   });
+  32 | 
+  33 |   test('place of origin shows name and country', async ({ pages }) => {
+  34 |     const value = pages.notificationView.summaryValue('Place of origin');
+  35 |     await expect(value).toContainText(PLACE_OF_ORIGIN_NAME);
+  36 |     await expect(value).toContainText('Ireland');
+  37 |   });
+  38 | 
+  39 |   test('consignor shows name and country', async ({ pages }) => {
+  40 |     const value = pages.notificationView.summaryValue('Consignor');
+  41 |     await expect(value).toContainText(CONSIGNOR_NAME);
+  42 |     await expect(value).toContainText('Switzerland');
+  43 |   });
+  44 | 
+  45 |   test('consignee shows name and country', async ({ pages }) => {
+  46 |     const value = pages.notificationView.summaryValue('Consignee');
+  47 |     await expect(value).toContainText(CONSIGNEE_NAME);
+  48 |     await expect(value).toContainText('United Kingdom');
+  49 |   });
+  50 | 
+  51 |   test('importer shows name and country', async ({ pages }) => {
+  52 |     const value = pages.notificationView.summaryValue('Importer');
+  53 |     await expect(value).toContainText(IMPORTER_NAME);
+  54 |     await expect(value).toContainText('United Kingdom');
+  55 |   });
+  56 | 
+  57 |   test('place of destination shows name and country', async ({ pages }) => {
+  58 |     const value = pages.notificationView.summaryValue('Place of destination');
+  59 |     await expect(value).toContainText(DESTINATION_NAME);
+  60 |     await expect(value).toContainText('United Kingdom');
+  61 |   });
+  62 | });
+  63 | 
+```

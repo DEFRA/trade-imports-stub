@@ -1,0 +1,199 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/pages/notification-view-submitted.spec.ts >> Notification view (SUBMITTED) >> shows species rows with ear tag
+- Location: tests/e2e/pages/notification-view-submitted.spec.ts:81:3
+
+# Error details
+
+```
+"beforeAll" hook timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "Animals" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - main [ref=e43]:
+      - generic [ref=e45]:
+        - heading "500" [level=1] [ref=e47]
+        - paragraph [ref=e48]: Something went wrong
+  - contentinfo [ref=e49]:
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - heading "Support links" [level=2] [ref=e64]
+        - list [ref=e65]:
+          - listitem [ref=e66]:
+            - link "Privacy" [ref=e67] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e68]:
+            - link "Cookies" [ref=e69] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e70]:
+            - link "Accessibility statement" [ref=e71] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e72]
+        - generic [ref=e74]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e75] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e77] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  1   | import { test, expect } from '@fixtures';
+  2   | import { createPageObjects } from '@page-objects';
+  3   | import {
+  4   |   Journeys,
+  5   |   JourneyContext,
+  6   |   defaultJourneyOptions,
+  7   |   EAR_TAG_PREFIX,
+  8   |   CONSIGNOR_NAME,
+  9   |   DESTINATION_NAME,
+  10  |   CPH_NUMBER,
+  11  |   TRANSPORTER_NAME,
+  12  | } from '@flows/journeys';
+  13  | import { getRelativeDate, toDisplayDate } from '@utils/date-utils';
+  14  | import { camelCaseToSentenceCase, camelCaseToTitleCase } from '@utils/string-utils';
+  15  | import { countryCodes } from '@domain/constants/country-codes';
+  16  | 
+  17  | test.describe('Notification view (SUBMITTED)', () => {
+  18  |   const defaults = defaultJourneyOptions;
+  19  |   let referenceNumber: string;
+  20  | 
+> 21  |   test.beforeAll(async ({ browser }) => {
+      |        ^ "beforeAll" hook timeout of 30000ms exceeded.
+  22  |     const context = await browser.newContext();
+  23  |     const page = await context.newPage();
+  24  |     const pages = createPageObjects(page);
+  25  |     const journeyContext: JourneyContext = {};
+  26  |     const journeys = new Journeys(pages, journeyContext);
+  27  |     await journeys.submitNotification();
+  28  |     referenceNumber = journeyContext.notificationId;
+  29  |     await context.close();
+  30  |   });
+  31  | 
+  32  |   test.beforeEach(async ({ journeys }) => {
+  33  |     await journeys.toNotificationView(referenceNumber);
+  34  |   });
+  35  | 
+  36  |   test('lands on the notification view page', async ({ pages }) => {
+  37  |     await expect(pages.page).toHaveURL(new RegExp(pages.notificationView.expectedUrl(referenceNumber)));
+  38  |     await expect(pages.notificationView.heading).toBeVisible();
+  39  |     await expect(pages.notificationView.referenceNumberCaption).toContainText(referenceNumber);
+  40  |   });
+  41  | 
+  42  |   test('displays date created', async ({ pages }) => {
+  43  |     const expectedDateCreated = toDisplayDate(getRelativeDate());
+  44  |     await expect(pages.notificationView.dateCreated).toHaveText(`Date created: ${expectedDateCreated}`);
+  45  |   });
+  46  | 
+  47  |   test('does not show Change links for a SUBMITTED notification', async ({ pages }) => {
+  48  |     await expect(pages.notificationView.changeLink('Where is this consignment coming from?')).not.toBeVisible();
+  49  |     await expect(pages.notificationView.changeLink('Your commodities')).not.toBeVisible();
+  50  |     await expect(pages.notificationView.changeLink('Addresses')).not.toBeVisible();
+  51  |   });
+  52  | 
+  53  |   test('shows Copy as new button', async ({ pages }) => {
+  54  |     await expect(pages.notificationView.btnCopyAsNew).toBeVisible();
+  55  |   });
+  56  | 
+  57  |   test('does not show Confirm and submit button for a SUBMITTED notification', async ({ pages }) => {
+  58  |     await expect(pages.notificationView.btnConfirmAndSubmit).not.toBeVisible();
+  59  |   });
+  60  | 
+  61  |   test('displays all section headings', async ({ pages }) => {
+  62  |     await expect(pages.notificationView.sectionHeading('Where is this consignment coming from?')).toBeVisible();
+  63  |     await expect(pages.notificationView.sectionHeading('Your commodities')).toBeVisible();
+  64  |     await expect(pages.notificationView.sectionHeading('Additional information details')).toBeVisible();
+  65  |     await expect(pages.notificationView.sectionHeading('Reason for importing the animals')).toBeVisible();
+  66  |     await expect(pages.notificationView.sectionHeading('Addresses')).toBeVisible();
+  67  |     await expect(pages.notificationView.sectionHeading('County Parish Holding number (CPH)')).toBeVisible();
+  68  |     await expect(pages.notificationView.sectionHeading('Transport details')).toBeVisible();
+  69  |     await expect(pages.notificationView.sectionHeading('Accompanying documents')).toBeVisible();
+  70  |   });
+  71  | 
+  72  |   test('shows origin details', async ({ pages }) => {
+  73  |     const country = Object.entries(countryCodes.eu).find(([, code]) => code === defaults.countryCode)[0];
+  74  |     await expect(pages.notificationView.summaryValue('Country of origin')).toHaveText(camelCaseToTitleCase(country));
+  75  |   });
+  76  | 
+  77  |   test('shows commodity name', async ({ pages }) => {
+  78  |     await expect(pages.notificationView.commodityName).toContainText(defaults.commodityCode);
+  79  |   });
+  80  | 
+  81  |   test('shows species rows with ear tag', async ({ pages }) => {
+  82  |     await expect(pages.notificationView.speciesRows).toHaveCount(defaults.species.length);
+  83  |     await expect(pages.notificationView.speciesCell(0, 0)).toContainText(defaults.species[0]);
+  84  |     await expect(pages.notificationView.speciesCell(0, 1)).toContainText(EAR_TAG_PREFIX);
+  85  |     await expect(pages.notificationView.speciesCell(1, 0)).toContainText(defaults.species[1]);
+  86  |     await expect(pages.notificationView.speciesCell(1, 1)).toContainText(EAR_TAG_PREFIX);
+  87  |   });
+  88  | 
+  89  |   test('shows reason for import', async ({ pages }) => {
+  90  |     const expectedImportReason = camelCaseToSentenceCase(defaults.importReason);
+  91  |     await expect(pages.notificationView.summaryValue('Main reason for importing the animals')).toHaveText(expectedImportReason);
+  92  |   });
+  93  | 
+  94  |   test('shows consignor in addresses section', async ({ pages }) => {
+  95  |     await expect(pages.notificationView.summaryValue('Consignor')).toContainText(CONSIGNOR_NAME);
+  96  |   });
+  97  | 
+  98  |   test('shows place of destination in addresses section', async ({ pages }) => {
+  99  |     await expect(pages.notificationView.summaryValue('Place of destination')).toContainText(DESTINATION_NAME);
+  100 |   });
+  101 | 
+  102 |   test('shows CPH number', async ({ pages }) => {
+  103 |     await expect(pages.notificationView.summaryValue('County Parish Holding number (CPH)')).toHaveText(CPH_NUMBER);
+  104 |   });
+  105 | 
+  106 |   test('shows transporter name', async ({ pages }) => {
+  107 |     await expect(pages.notificationView.summaryValue('Transporter name')).toContainText(TRANSPORTER_NAME);
+  108 |   });
+  109 | 
+  110 |   test('shows port of entry', async ({ pages }) => {
+  111 |     await expect(pages.notificationView.summaryValue('Port of entry')).toContainText(defaults.pointOfEntry);
+  112 |   });
+  113 | 
+  114 |   test('shows no accompanying documents', async ({ pages }) => {
+  115 |     // TODO: Pending automation of accompanying documents page (upload doc).
+  116 |     await expect(pages.notificationView.noDocumentsText).toBeVisible();
+  117 |   });
+  118 | });
+  119 | 
+```

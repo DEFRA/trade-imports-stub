@@ -1,0 +1,204 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/features/notification-amend.spec.ts >> Notification amend >> amends from the dashboard and lands on the view page in AMEND state
+- Location: tests/e2e/features/notification-amend.spec.ts:74:3
+
+# Error details
+
+```
+"beforeAll" hook timeout of 30000ms exceeded.
+```
+
+```
+"afterAll" hook timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "Animals" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - main [ref=e43]:
+      - generic [ref=e45]:
+        - heading "500" [level=1] [ref=e47]
+        - paragraph [ref=e48]: Something went wrong
+  - contentinfo [ref=e49]:
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - heading "Support links" [level=2] [ref=e64]
+        - list [ref=e65]:
+          - listitem [ref=e66]:
+            - link "Privacy" [ref=e67] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e68]:
+            - link "Cookies" [ref=e69] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e70]:
+            - link "Accessibility statement" [ref=e71] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e72]
+        - generic [ref=e74]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e75] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e77] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  1   | import { expect, test } from '@fixtures';
+  2   | import { createPageObjects } from '@page-objects';
+  3   | import { type JourneyContext, Journeys } from '@flows/journeys';
+  4   | import { sortByValues } from '@domain/constants/sort-by-values';
+  5   | 
+  6   | test.describe('Notification amend', () => {
+  7   |   let referenceNumber: string;
+  8   | 
+  9   |   test.beforeAll(async ({ browser }) => {
+  10  |     const context = await browser.newContext();
+  11  |     const page = await context.newPage();
+  12  |     const pages = createPageObjects(page);
+  13  |     const journeyContext: JourneyContext = {};
+  14  |     const journeys = new Journeys(pages, journeyContext);
+  15  |     await journeys.submitNotification();
+  16  |     referenceNumber = journeyContext.notificationId;
+  17  |     await context.close();
+  18  |   });
+  19  | 
+> 20  |   test.afterAll(async ({ browser }) => {
+      |        ^ "afterAll" hook timeout of 30000ms exceeded.
+  21  |     const context = await browser.newContext();
+  22  |     const page = await context.newPage();
+  23  |     const pages = createPageObjects(page);
+  24  |     const journeys = new Journeys(pages);
+  25  |     await journeys.deleteNotification(referenceNumber);
+  26  |     await context.close();
+  27  |   });
+  28  | 
+  29  |   test.afterEach(async ({ journeys, journeyContext }) => {
+  30  |     if (journeyContext.notificationId) {
+  31  |       await journeys.deleteNotification(journeyContext.notificationId);
+  32  |     }
+  33  |   });
+  34  | 
+  35  |   test.describe('amend entry points', () => {
+  36  |     test.beforeEach(async ({ journeys }) => {
+  37  |       await journeys.toNotificationView(referenceNumber);
+  38  |     });
+  39  | 
+  40  |     test('shows the Amend button on the notification view page when SUBMITTED', async ({ pages }) => {
+  41  |       await expect(pages.notificationView.btnAmend).toBeVisible();
+  42  |     });
+  43  | 
+  44  |     test('shows the Amend action on the dashboard for the SUBMITTED notification', async ({ pages }) => {
+  45  |       await pages.notificationDashboard.open();
+  46  |       await pages.notificationDashboard.sortBy(sortByValues.dateCreatedNewestToOldest);
+  47  |       await expect(pages.notificationDashboard.btnAmend(referenceNumber)).toBeVisible();
+  48  |     });
+  49  |   });
+  50  | 
+  51  |   test(
+  52  |     'amends from the view page and shows Change links + CTAs',
+  53  |     { tag: ['@integration'] },
+  54  |     async ({ pages, journeys, journeyContext }) => {
+  55  |       await journeys.submitNotification();
+  56  |       const ref = journeyContext.notificationId;
+  57  | 
+  58  |       await journeys.toNotificationView(ref);
+  59  |       await pages.notificationView.btnAmend.click();
+  60  | 
+  61  |       // status pill is "Amend" and a Change link is shown per section
+  62  |       await expect(pages.notificationView.amendStatusTag).toBeVisible();
+  63  |       await expect(pages.notificationView.changeLink('Where is this consignment coming from?')).toBeVisible();
+  64  |       await expect(pages.notificationView.changeLink('Your commodities')).toBeVisible();
+  65  |       await expect(pages.notificationView.changeLink('Addresses')).toBeVisible();
+  66  |       await expect(pages.notificationView.changeLink('Transport details')).toBeVisible();
+  67  | 
+  68  |       // AC4: Copy as new + Delete CTAs are visible on the AMEND view
+  69  |       await expect(pages.notificationView.btnCopyAsNew).toBeVisible();
+  70  |       await expect(pages.notificationView.btnDelete).toBeVisible();
+  71  |     },
+  72  |   );
+  73  | 
+  74  |   test(
+  75  |     'amends from the dashboard and lands on the view page in AMEND state',
+  76  |     { tag: ['@integration'] },
+  77  |     async ({ pages, journeys, journeyContext }) => {
+  78  |       await journeys.submitNotification();
+  79  |       const ref = journeyContext.notificationId;
+  80  | 
+  81  |       await pages.notificationDashboard.open();
+  82  |       await pages.notificationDashboard.sortBy(sortByValues.dateCreatedNewestToOldest);
+  83  |       await pages.notificationDashboard.btnAmend(ref).click();
+  84  | 
+  85  |       // Lands on /notification-view/{ref} with AMEND state
+  86  |       await expect(pages.notificationView.heading).toBeVisible();
+  87  |       await expect(pages.notificationView.amendStatusTag).toBeVisible();
+  88  |     },
+  89  |   );
+  90  | 
+  91  |   test(
+  92  |     'walks the full amend lifecycle: SUBMITTED → AMEND → SUBMITTED',
+  93  |     { tag: ['@integration'] },
+  94  |     async ({ pages, journeys, journeyContext }) => {
+  95  |       // 1. Start from a freshly submitted notification.
+  96  |       await journeys.submitNotification();
+  97  |       const ref = journeyContext.notificationId;
+  98  | 
+  99  |       await journeys.toNotificationView(ref);
+  100 |       await expect(pages.notificationView.btnAmend).toBeVisible();
+  101 |       await expect(pages.notificationView.amendStatusTag).not.toBeVisible();
+  102 | 
+  103 |       // 2. Enter amend mode (SUBMITTED → AMEND).
+  104 |       await pages.notificationView.btnAmend.click();
+  105 |       await expect(pages.notificationView.amendStatusTag).toBeVisible();
+  106 |       await expect(pages.notificationView.btnAmend).not.toBeVisible();
+  107 | 
+  108 |       // 3. Save the amendments — view-page CTA navigates to /declaration.
+  109 |       await pages.notificationView.btnConfirmAndSubmit.click();
+  110 |       await expect(pages.declaration.heading).toBeVisible();
+  111 | 
+  112 |       // 4. Confirm the declaration and submit (AMEND → SUBMITTED via the
+  113 |       //    extended backend submitNotification that now accepts AMEND).
+  114 |       await pages.declaration.checkboxDeclaration.click();
+  115 |       await pages.declaration.btnSubmitNotification.click();
+  116 | 
+  117 |       // 5. Re-open the view page and assert we're back in SUBMITTED:
+  118 |       //    the AMEND status pill is gone and the Amend CTA is offered again.
+  119 |       await journeys.toNotificationView(ref);
+  120 |       await expect(pages.notificationView.amendStatusTag).not.toBeVisible();
+```
