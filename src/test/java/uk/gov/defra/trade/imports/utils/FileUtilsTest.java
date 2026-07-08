@@ -45,11 +45,11 @@ class FileUtilsTest {
         "responses/portsOfEntryResponse.json", MdmPortsResponse.class);
 
     List<MdmPortOfEntry> ports = response.getResult();
-    assertThat(ports).hasSize(3);
+    assertThat(ports).hasSize(78);
+    assertThat(ports.get(0).getCode()).isEqualTo("GB DYC");
+    assertThat(ports.get(0).getName()).isEqualTo("Aberdeen Airport");
     assertThat(ports).extracting(MdmPortOfEntry::getCode)
-        .containsExactly("GBABE", "GBEMA", "GBEDI");
-    assertThat(ports).extracting(MdmPortOfEntry::getName)
-        .containsExactly("Aberdeen", "East Midlands Airport", "Edinburgh");
+        .contains("GB EMA", "GB EDI", "GB DVR");
   }
 
   @Test
