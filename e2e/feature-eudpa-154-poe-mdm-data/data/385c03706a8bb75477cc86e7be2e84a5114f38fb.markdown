@@ -1,0 +1,311 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/pages/admin/admin-outbox-events.spec.ts >> Outbox events (admin) >> shows outbox event for a submitted notification
+- Location: tests/e2e/pages/admin/admin-outbox-events.spec.ts:8:3
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.waitFor: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('heading', { name: 'Commodity', level: 1 }) to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "Animals" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - main [ref=e43]:
+      - generic [ref=e45]:
+        - link "Back" [ref=e46] [cursor=pointer]:
+          - /url: /commodities/select
+        - paragraph [ref=e47]:
+          - generic [ref=e48]: GBN-AG-26-NSWR65
+        - heading "About the consignment What is the main reason for importing the animals?" [level=1] [ref=e50]:
+          - generic [ref=e51]: About the consignment
+          - text: What is the main reason for importing the animals?
+        - generic [ref=e52]:
+          - alert [ref=e54]:
+            - heading "There is a problem" [level=2] [ref=e55]
+            - list [ref=e57]:
+              - listitem [ref=e58]: Something went wrong, please contact the EUDP team
+          - generic [ref=e59]:
+            - group "Choose the reason that applies to this consignment" [ref=e61]:
+              - generic [ref=e62]: Choose the reason that applies to this consignment
+              - generic [ref=e63]:
+                - generic [ref=e64]:
+                  - radio "Internal market" [checked] [ref=e65] [cursor=pointer]
+                  - generic [ref=e66] [cursor=pointer]: Internal market
+                  - generic [ref=e67]: The consignment is intended for sale or use in Great Britain (England, Scotland or Wales).
+                - generic [ref=e68]:
+                  - radio "Re-entry" [ref=e69] [cursor=pointer]
+                  - generic [ref=e70] [cursor=pointer]: Re-entry
+                  - generic [ref=e71]: The consignment is authorised for re-entry or includes rejected exports that are re-entering Great Britain.
+            - button "Save and continue" [ref=e72] [cursor=pointer]
+  - contentinfo [ref=e73]:
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - heading "Support links" [level=2] [ref=e88]
+        - list [ref=e89]:
+          - listitem [ref=e90]:
+            - link "Privacy" [ref=e91] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e92]:
+            - link "Cookies" [ref=e93] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e94]:
+            - link "Accessibility statement" [ref=e95] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e96]
+        - generic [ref=e98]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e99] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e101] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  31  | 
+  32  | export type JourneyContext = {
+  33  |   notificationId?: string;
+  34  |   declarationDate?: string;
+  35  | };
+  36  | 
+  37  | export const defaultJourneyOptions: Required<JourneyOptions> = {
+  38  |   countryCode: countryCodes.eu.france,
+  39  |   requiresRegionCode: undefined,
+  40  |   internalReference: undefined,
+  41  |   commodityCode: commodityCodes.dog,
+  42  |   commodityType: commodityTypes.domestic,
+  43  |   species: [commoditySpecies.bisonBison, commoditySpecies.bosSpp],
+  44  |   importReason: importReasons.internalMarket,
+  45  |   noOfAnimals: [5, 19],
+  46  |   noOfPackages: [13, 21],
+  47  |   certificationPurpose: certificationPurposes.approvedBodies,
+  48  |   unweanedAnimals: undefined,
+  49  |   accompanyingDocuments: undefined,
+  50  |   pointOfEntry: pointOfEntries.aberdeen,
+  51  |   arrivalDate: getRelativeDateInput({ dayOffset: 14 }),
+  52  | };
+  53  | 
+  54  | export const EAR_TAG_PREFIX = 'FR';
+  55  | export const PASSPORT_PREFIX = 'FR-BOV-2024-';
+  56  | export const PLACE_OF_ORIGIN_NAME = 'Origin Farm';
+  57  | export const CONSIGNOR_NAME = 'Astra Rosales';
+  58  | export const CONSIGNEE_NAME = 'British Livestock Ltd';
+  59  | export const IMPORTER_NAME = 'Import Co UK';
+  60  | export const DESTINATION_NAME = 'Tech Imports Ltd';
+  61  | export const CPH_NUMBER = '123456789';
+  62  | export const TRANSPORTER_NAME = 'García Livestock Transport SL';
+  63  | export const CONTACT_ADDRESS_NAME = 'Animal and Plant Health Agency';
+  64  | 
+  65  | export class Journeys {
+  66  |   constructor(
+  67  |     private readonly pages: PageObjects,
+  68  |     private readonly journeyContext?: JourneyContext,
+  69  |   ) {}
+  70  | 
+  71  |   async toSignIn(open: (attemptSignIn: boolean) => Promise<void>): Promise<void> {
+  72  |     await open(false);
+  73  |   }
+  74  | 
+  75  |   async toNotificationDashboard(): Promise<void> {
+  76  |     await this.pages.notificationDashboard.open();
+  77  |   }
+  78  | 
+  79  |   async toOriginOfImport(): Promise<void> {
+  80  |     await this.toNotificationDashboard();
+  81  |     await this.pages.notificationDashboard.btnCreateNewNotification.click();
+  82  |     await this.pages.originOfImport.heading.waitFor();
+  83  |   }
+  84  | 
+  85  |   async toCommoditySelection(options: JourneyOptions = {}): Promise<void> {
+  86  |     const { countryCode, requiresRegionCode, internalReference } = { ...defaultJourneyOptions, ...options };
+  87  |     await this.toOriginOfImport();
+  88  |     await this.pages.originOfImport.dropdownCountry.selectOption(countryCode);
+  89  |     if (requiresRegionCode !== undefined) {
+  90  |       await this.pages.originOfImport.radioRequiresOriginCode(requiresRegionCode).click();
+  91  |     }
+  92  |     if (internalReference !== undefined) {
+  93  |       await this.pages.originOfImport.inputInternalReferenceNumber.fill(internalReference);
+  94  |     }
+  95  |     await this.pages.originOfImport.btnSaveAndContinue.click();
+  96  |     await this.pages.commoditySelection.heading.waitFor();
+  97  |     if (this.journeyContext) {
+  98  |       this.journeyContext.notificationId = await this.pages.commodityDetails.notificationId.textContent();
+  99  |     }
+  100 |   }
+  101 | 
+  102 |   async toSpeciesSelection(options: JourneyOptions = {}): Promise<void> {
+  103 |     const { commodityCode } = { ...defaultJourneyOptions, ...options };
+  104 |     await this.toCommoditySelection(options);
+  105 |     await this.pages.commoditySelection.dropdownCommodity.selectOption(commodityCode);
+  106 |     await this.pages.commoditySelection.btnSaveAndContinue.click();
+  107 |     await this.pages.speciesSelection.heading.waitFor();
+  108 |   }
+  109 | 
+  110 |   async toImportReason(options: JourneyOptions = {}): Promise<void> {
+  111 |     const { commodityType, species } = { ...defaultJourneyOptions, ...options };
+  112 |     await this.toSpeciesSelection(options);
+  113 |     await this.pages.speciesSelection.dropdownCommodityType.selectOption(commodityType);
+  114 |     const selectedSpecies = Array.isArray(species) ? species : [species];
+  115 |     for (const speciesOption of selectedSpecies) {
+  116 |       await this.pages.speciesSelection.checkboxSpecies(speciesOption).check();
+  117 |     }
+  118 |     await this.pages.speciesSelection.btnSaveAndContinue.click();
+  119 |     await this.pages.importReason.heading.waitFor();
+  120 |   }
+  121 | 
+  122 |   async toCommodityDetails(options: JourneyOptions = {}): Promise<void> {
+  123 |     const { importReason } = { ...defaultJourneyOptions, ...options };
+  124 |     await this.toImportReason(options);
+  125 |     if (importReason === importReasons.internalMarket) {
+  126 |       await this.pages.importReason.radioInternalMarket.click();
+  127 |     } else if (importReason === importReasons.reEntry) {
+  128 |       await this.pages.importReason.radioReEntry.click();
+  129 |     }
+  130 |     await this.pages.importReason.btnSaveAndContinue.click();
+> 131 |     await this.pages.commodityDetails.heading.waitFor();
+      |                                               ^ Error: locator.waitFor: Test timeout of 30000ms exceeded.
+  132 |   }
+  133 | 
+  134 |   async toAnimalIdentification(options: JourneyOptions = {}): Promise<void> {
+  135 |     const { commodityType, species, noOfAnimals, noOfPackages } = { ...defaultJourneyOptions, ...options };
+  136 |     await this.toCommodityDetails(options);
+  137 |     const speciesList = Array.isArray(species) ? species : [species];
+  138 |     const animalList = Array.isArray(noOfAnimals) ? noOfAnimals : [noOfAnimals];
+  139 |     const packageList = Array.isArray(noOfPackages) ? noOfPackages : [noOfPackages];
+  140 | 
+  141 |     if (animalList.length !== speciesList.length || packageList.length !== speciesList.length) {
+  142 |       throw new Error(
+  143 |         `Mismatched quantities: species=${speciesList.length}, noOfAnimals=${animalList.length}, noOfPackages=${packageList.length}`,
+  144 |       );
+  145 |     }
+  146 | 
+  147 |     for (let i = 0; i < speciesList.length; i += 1) {
+  148 |       const label = `${speciesList[i]}, ${commodityType}`;
+  149 |       await this.pages.commodityDetails.inputNoOfAnimals(label).fill(animalList[i].toString());
+  150 |       await this.pages.commodityDetails.inputNoOfPackages(label).fill(packageList[i].toString());
+  151 |     }
+  152 |     await this.pages.commodityDetails.btnSaveAndContinue.click();
+  153 |     await this.pages.animalIdentification.heading.waitFor();
+  154 |   }
+  155 | 
+  156 |   async toAdditionalDetails(options: JourneyOptions = {}): Promise<void> {
+  157 |     const { species } = { ...defaultJourneyOptions, ...options };
+  158 |     await this.toAnimalIdentification(options);
+  159 |     const speciesList = Array.isArray(species) ? species : [species];
+  160 | 
+  161 |     // Currently limited to one animal identifier per species
+  162 |     for (let i = 0; i < speciesList.length; i += 1) {
+  163 |       const digits = String(i + 1).padStart(12, '0');
+  164 |       await this.pages.animalIdentification.inputEarTag(i).fill(`${EAR_TAG_PREFIX}${digits}`);
+  165 |       await this.pages.animalIdentification.inputPassport(i).fill(`${PASSPORT_PREFIX}${digits.slice(-6)}`);
+  166 |     }
+  167 |     await this.pages.animalIdentification.btnSaveAndContinue.click();
+  168 |     await this.pages.additionalDetails.heading.waitFor();
+  169 |   }
+  170 | 
+  171 |   async toAccompanyingDocuments(options: JourneyOptions = {}): Promise<void> {
+  172 |     const { certificationPurpose, unweanedAnimals } = { ...defaultJourneyOptions, ...options };
+  173 |     await this.toAdditionalDetails(options);
+  174 |     if (certificationPurpose === certificationPurposes.approvedBodies) {
+  175 |       await this.pages.additionalDetails.radioApprovedBodies.click();
+  176 |     } else if (certificationPurpose === certificationPurposes.breedingAndOrProduction) {
+  177 |       await this.pages.additionalDetails.radioBreedingAndOrProduction.click();
+  178 |     } else if (certificationPurpose === certificationPurposes.slaughter) {
+  179 |       await this.pages.additionalDetails.radioSlaughter.click();
+  180 |     }
+  181 | 
+  182 |     if (unweanedAnimals !== undefined) {
+  183 |       await this.pages.additionalDetails.radioContainsUnweanedAnimals(unweanedAnimals).click();
+  184 |     }
+  185 |     await this.pages.additionalDetails.btnSaveAndContinue.click();
+  186 |     await this.pages.accompanyingDocuments.heading.waitFor();
+  187 |   }
+  188 | 
+  189 |   async toAddresses(options: JourneyOptions = {}): Promise<void> {
+  190 |     const { accompanyingDocuments } = { ...defaultJourneyOptions, ...options };
+  191 |     await this.toAccompanyingDocuments(options);
+  192 | 
+  193 |     const documents = accompanyingDocuments ? (Array.isArray(accompanyingDocuments) ? accompanyingDocuments : [accompanyingDocuments]) : [];
+  194 | 
+  195 |     if (documents.length === 0) {
+  196 |       await this.pages.accompanyingDocuments.btnContinueWithoutDocuments.click();
+  197 |       await this.pages.addresses.heading.waitFor();
+  198 |       return;
+  199 |     }
+  200 | 
+  201 |     for (const document of documents) {
+  202 |       await this.pages.accompanyingDocuments.fillTextFields({
+  203 |         documentType: document.documentType,
+  204 |         documentReference: document.documentReference,
+  205 |         issueDate: document.issueDate,
+  206 |       });
+  207 |       await this.pages.accompanyingDocuments.inputFileUpload.setInputFiles(document.filePath);
+  208 |       await this.pages.accompanyingDocuments.btnAddAttachment.click();
+  209 |     }
+  210 | 
+  211 |     await this.pages.accompanyingDocuments.btnSaveAndContinue.click({ timeout: fileUploadTimeouts.virusScanComplete });
+  212 |     await this.pages.addresses.heading.waitFor();
+  213 |   }
+  214 | 
+  215 |   async toCphNumber(options: JourneyOptions = {}): Promise<void> {
+  216 |     options = { ...defaultJourneyOptions, ...options };
+  217 |     await this.toAddresses(options);
+  218 |     await this.pages.addresses.linkAddCphNumber.click();
+  219 |     await this.pages.cphNumber.heading.waitFor();
+  220 |   }
+  221 | 
+  222 |   async toEntryPoint(options: JourneyOptions = {}): Promise<void> {
+  223 |     options = { ...defaultJourneyOptions, ...options };
+  224 |     await this.toAddresses(options);
+  225 |     await this.pages.addresses.linkAddPlaceOfOrigin.click();
+  226 |     await this.pages.placeOfOriginSelection.radioPlaceOfOrigin(PLACE_OF_ORIGIN_NAME).click();
+  227 |     await this.pages.placeOfOriginSelection.btnSaveAndContinue.click();
+  228 |     await this.pages.addresses.linkAddConsignorOrExporter.click();
+  229 |     await this.pages.consignorSelection.radioConsignorOrExporter(CONSIGNOR_NAME).click();
+  230 |     await this.pages.consignorSelection.btnSaveAndContinue.click();
+  231 |     await this.pages.addresses.linkAddConsignee.click();
+```
