@@ -5,9 +5,9 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
-import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import uk.gov.defra.trade.imports.stubs.mdm.countries.MdmCountry;
 import uk.gov.defra.trade.imports.stubs.mdm.poe.MdmPortOfEntry;
 import uk.gov.defra.trade.imports.stubs.mdm.poe.MdmPortsResponse;
 
@@ -21,26 +21,17 @@ class FileUtilsTest {
   }
 
   @Test
-  @SuppressWarnings("unchecked")
-  void getObjectFromFile_deserializesCountriesFixtureAsList() {
-    // TypeReference diamond inference erases to Object at runtime; actual runtime
-    // type is List<LinkedHashMap>. The stub re-serialises this via Jackson without
-    // accessing typed fields, which is why the countries endpoint works in production.
-    // Callers must NOT access typed elements from this method for concrete (non-List) types
-    // — use getObjectFromFile(String, Class<T>) instead.
-    List<Map<String, Object>> countries = fileUtils.getObjectFromFile("responses/countriesResponse.json");
+  void getObjectFromFile_deserializesCountriesFixtureAsArray() {
+    MdmCountry[] countries = fileUtils.getObjectFromFile(
+        "responses/countriesResponse.json", MdmCountry[].class);
 
     assertThat(countries).isNotEmpty();
-    assertThat(countries.get(0)).containsKey("name");
-    assertThat(countries.get(0)).containsKey("effectiveAlpha2");
-    assertThat(countries.get(0).get("name")).isNotNull();
+    assertThat(countries[0].getName()).isNotBlank();
+    assertThat(countries[0].getEffectiveAlpha2()).isNotBlank();
   }
 
   @Test
-  void getObjectFromFile_withClass_deserializesMdmPortsResponseFromFixture() {
-    // MdmPortsResponse is a concrete (non-generic) type — the Class<T> overload is
-    // required here. TypeReference diamond inference erases to Object, causing a
-    // ClassCastException on assignment (unlike List, where erasure is silent).
+  void getObjectFromFile_deserializesMdmPortsResponseFromFixture() {
     MdmPortsResponse response = fileUtils.getObjectFromFile(
         "responses/portsOfEntryResponse.json", MdmPortsResponse.class);
 
@@ -49,7 +40,7 @@ class FileUtilsTest {
   }
 
   @Test
-  void getObjectFromFile_withClass_returnsCorrectPortData() {
+  void getObjectFromFile_returnsCorrectPortData() {
     MdmPortsResponse response = fileUtils.getObjectFromFile(
         "responses/portsOfEntryResponse.json", MdmPortsResponse.class);
 
@@ -63,15 +54,8 @@ class FileUtilsTest {
 
   @Test
   void getObjectFromFile_throwsRuntimeException_whenFileNotFound() {
-    assertThatThrownBy(() -> fileUtils.getObjectFromFile("responses/does-not-exist.json"))
-        .isInstanceOf(RuntimeException.class)
-        .hasMessageContaining("Failed to read from json file");
-  }
-
-  @Test
-  void getObjectFromFile_withClass_throwsRuntimeException_whenFileNotFound() {
     assertThatThrownBy(
-            () -> fileUtils.getObjectFromFile("responses/does-not-exist.json", MdmPortsResponse.class))
+            () -> fileUtils.getObjectFromFile("responses/does-not-exist.json", MdmCountry[].class))
         .isInstanceOf(RuntimeException.class)
         .hasMessageContaining("Failed to read from json file");
   }

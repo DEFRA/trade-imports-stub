@@ -22,14 +22,13 @@ public class CountriesController {
   ResponseEntity<List<MdmCountry>> getCountries(
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
       @RequestParam(value = "system", required = false) String system,
-      @RequestParam(value = "blocks", required = false) String blocks){
+      @RequestParam(value = "blocks", required = false) String blocks) {
 
-    List<MdmCountry> countries = fileUtils.getObjectFromFile(
-        "responses/countriesResponse.json"
-    );
+    List<MdmCountry> countries = List.of(
+        fileUtils.getObjectFromFile("responses/countriesResponse.json", MdmCountry[].class));
 
     return ResponseEntity.ok()
         .header("x-ms-middleware-request-id", "stub-trace-id")
         .body(countries);
-  };
+  }
 }
