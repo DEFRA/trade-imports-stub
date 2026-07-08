@@ -1,0 +1,427 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/pages/admin/admin-notifications.spec.ts >> Notifications (admin) >> allows deleting all current-page notifications by select all
+- Location: tests/e2e/pages/admin/admin-notifications.spec.ts:86:3
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 35
+Received: 36
+
+Call Log:
+- Timeout 10000ms exceeded while waiting on the predicate
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "trade-imports-animals-admin" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - navigation "Breadcrumb" [ref=e43]:
+      - list [ref=e44]:
+        - listitem [ref=e45]:
+          - link "Home" [ref=e46] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e47]: Notifications
+    - main [ref=e48]:
+      - generic [ref=e50]:
+        - heading "Notifications" [level=1] [ref=e51]
+        - generic [ref=e52]: trade-imports-animals-admin
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: Reference number
+            - textbox "Reference number" [ref=e59]
+          - button "Delete notification by reference number" [ref=e61] [cursor=pointer]: Delete
+        - paragraph [ref=e62]: 36 notifications
+        - table [ref=e63]:
+          - rowgroup [ref=e64]:
+            - row "Reference number Select" [ref=e65]:
+              - columnheader "Reference number" [ref=e66]
+              - columnheader "Select" [ref=e67]:
+                - checkbox "Select all notifications" [ref=e68]
+          - rowgroup [ref=e69]:
+            - row "GBN-AG-26-GYF15Z Select notification GBN-AG-26-GYF15Z" [ref=e70]:
+              - cell "GBN-AG-26-GYF15Z" [ref=e71]
+              - cell "Select notification GBN-AG-26-GYF15Z" [ref=e72]:
+                - checkbox "Select notification GBN-AG-26-GYF15Z" [ref=e73]
+            - row "GBN-AG-26-000034 Select notification GBN-AG-26-000034" [ref=e74]:
+              - cell "GBN-AG-26-000034" [ref=e75]
+              - cell "Select notification GBN-AG-26-000034" [ref=e76]:
+                - checkbox "Select notification GBN-AG-26-000034" [ref=e77]
+            - row "GBN-AG-26-000052 Select notification GBN-AG-26-000052" [ref=e78]:
+              - cell "GBN-AG-26-000052" [ref=e79]
+              - cell "Select notification GBN-AG-26-000052" [ref=e80]:
+                - checkbox "Select notification GBN-AG-26-000052" [ref=e81]
+            - row "GBN-AG-26-000015 Select notification GBN-AG-26-000015" [ref=e82]:
+              - cell "GBN-AG-26-000015" [ref=e83]
+              - cell "Select notification GBN-AG-26-000015" [ref=e84]:
+                - checkbox "Select notification GBN-AG-26-000015" [ref=e85]
+            - row "GBN-AG-26-000033 Select notification GBN-AG-26-000033" [ref=e86]:
+              - cell "GBN-AG-26-000033" [ref=e87]
+              - cell "Select notification GBN-AG-26-000033" [ref=e88]:
+                - checkbox "Select notification GBN-AG-26-000033" [ref=e89]
+            - row "GBN-AG-26-000051 Select notification GBN-AG-26-000051" [ref=e90]:
+              - cell "GBN-AG-26-000051" [ref=e91]
+              - cell "Select notification GBN-AG-26-000051" [ref=e92]:
+                - checkbox "Select notification GBN-AG-26-000051" [ref=e93]
+            - row "GBN-AG-26-000014 Select notification GBN-AG-26-000014" [ref=e94]:
+              - cell "GBN-AG-26-000014" [ref=e95]
+              - cell "Select notification GBN-AG-26-000014" [ref=e96]:
+                - checkbox "Select notification GBN-AG-26-000014" [ref=e97]
+            - row "GBN-AG-26-000032 Select notification GBN-AG-26-000032" [ref=e98]:
+              - cell "GBN-AG-26-000032" [ref=e99]
+              - cell "Select notification GBN-AG-26-000032" [ref=e100]:
+                - checkbox "Select notification GBN-AG-26-000032" [ref=e101]
+            - row "GBN-AG-26-000050 Select notification GBN-AG-26-000050" [ref=e102]:
+              - cell "GBN-AG-26-000050" [ref=e103]
+              - cell "Select notification GBN-AG-26-000050" [ref=e104]:
+                - checkbox "Select notification GBN-AG-26-000050" [ref=e105]
+            - row "GBN-AG-26-000013 Select notification GBN-AG-26-000013" [ref=e106]:
+              - cell "GBN-AG-26-000013" [ref=e107]
+              - cell "Select notification GBN-AG-26-000013" [ref=e108]:
+                - checkbox "Select notification GBN-AG-26-000013" [ref=e109]
+            - row "GBN-AG-26-000031 Select notification GBN-AG-26-000031" [ref=e110]:
+              - cell "GBN-AG-26-000031" [ref=e111]
+              - cell "Select notification GBN-AG-26-000031" [ref=e112]:
+                - checkbox "Select notification GBN-AG-26-000031" [ref=e113]
+            - row "GBN-AG-26-000049 Select notification GBN-AG-26-000049" [ref=e114]:
+              - cell "GBN-AG-26-000049" [ref=e115]
+              - cell "Select notification GBN-AG-26-000049" [ref=e116]:
+                - checkbox "Select notification GBN-AG-26-000049" [ref=e117]
+            - row "GBN-AG-26-000012 Select notification GBN-AG-26-000012" [ref=e118]:
+              - cell "GBN-AG-26-000012" [ref=e119]
+              - cell "Select notification GBN-AG-26-000012" [ref=e120]:
+                - checkbox "Select notification GBN-AG-26-000012" [ref=e121]
+            - row "GBN-AG-26-000030 Select notification GBN-AG-26-000030" [ref=e122]:
+              - cell "GBN-AG-26-000030" [ref=e123]
+              - cell "Select notification GBN-AG-26-000030" [ref=e124]:
+                - checkbox "Select notification GBN-AG-26-000030" [ref=e125]
+            - row "GBN-AG-26-000048 Select notification GBN-AG-26-000048" [ref=e126]:
+              - cell "GBN-AG-26-000048" [ref=e127]
+              - cell "Select notification GBN-AG-26-000048" [ref=e128]:
+                - checkbox "Select notification GBN-AG-26-000048" [ref=e129]
+            - row "GBN-AG-26-000047 Select notification GBN-AG-26-000047" [ref=e130]:
+              - cell "GBN-AG-26-000047" [ref=e131]
+              - cell "Select notification GBN-AG-26-000047" [ref=e132]:
+                - checkbox "Select notification GBN-AG-26-000047" [ref=e133]
+            - row "GBN-AG-26-000011 Select notification GBN-AG-26-000011" [ref=e134]:
+              - cell "GBN-AG-26-000011" [ref=e135]
+              - cell "Select notification GBN-AG-26-000011" [ref=e136]:
+                - checkbox "Select notification GBN-AG-26-000011" [ref=e137]
+            - row "GBN-AG-26-000029 Select notification GBN-AG-26-000029" [ref=e138]:
+              - cell "GBN-AG-26-000029" [ref=e139]
+              - cell "Select notification GBN-AG-26-000029" [ref=e140]:
+                - checkbox "Select notification GBN-AG-26-000029" [ref=e141]
+            - row "GBN-AG-26-000046 Select notification GBN-AG-26-000046" [ref=e142]:
+              - cell "GBN-AG-26-000046" [ref=e143]
+              - cell "Select notification GBN-AG-26-000046" [ref=e144]:
+                - checkbox "Select notification GBN-AG-26-000046" [ref=e145]
+            - row "GBN-AG-26-000010 Select notification GBN-AG-26-000010" [ref=e146]:
+              - cell "GBN-AG-26-000010" [ref=e147]
+              - cell "Select notification GBN-AG-26-000010" [ref=e148]:
+                - checkbox "Select notification GBN-AG-26-000010" [ref=e149]
+            - row "GBN-AG-26-000028 Select notification GBN-AG-26-000028" [ref=e150]:
+              - cell "GBN-AG-26-000028" [ref=e151]
+              - cell "Select notification GBN-AG-26-000028" [ref=e152]:
+                - checkbox "Select notification GBN-AG-26-000028" [ref=e153]
+            - row "GBN-AG-26-000045 Select notification GBN-AG-26-000045" [ref=e154]:
+              - cell "GBN-AG-26-000045" [ref=e155]
+              - cell "Select notification GBN-AG-26-000045" [ref=e156]:
+                - checkbox "Select notification GBN-AG-26-000045" [ref=e157]
+            - row "GBN-AG-26-000009 Select notification GBN-AG-26-000009" [ref=e158]:
+              - cell "GBN-AG-26-000009" [ref=e159]
+              - cell "Select notification GBN-AG-26-000009" [ref=e160]:
+                - checkbox "Select notification GBN-AG-26-000009" [ref=e161]
+            - row "GBN-AG-26-000027 Select notification GBN-AG-26-000027" [ref=e162]:
+              - cell "GBN-AG-26-000027" [ref=e163]
+              - cell "Select notification GBN-AG-26-000027" [ref=e164]:
+                - checkbox "Select notification GBN-AG-26-000027" [ref=e165]
+            - row "GBN-AG-26-000044 Select notification GBN-AG-26-000044" [ref=e166]:
+              - cell "GBN-AG-26-000044" [ref=e167]
+              - cell "Select notification GBN-AG-26-000044" [ref=e168]:
+                - checkbox "Select notification GBN-AG-26-000044" [ref=e169]
+            - row "GBN-AG-26-000008 Select notification GBN-AG-26-000008" [ref=e170]:
+              - cell "GBN-AG-26-000008" [ref=e171]
+              - cell "Select notification GBN-AG-26-000008" [ref=e172]:
+                - checkbox "Select notification GBN-AG-26-000008" [ref=e173]
+            - row "GBN-AG-26-000026 Select notification GBN-AG-26-000026" [ref=e174]:
+              - cell "GBN-AG-26-000026" [ref=e175]
+              - cell "Select notification GBN-AG-26-000026" [ref=e176]:
+                - checkbox "Select notification GBN-AG-26-000026" [ref=e177]
+            - row "GBN-AG-26-000043 Select notification GBN-AG-26-000043" [ref=e178]:
+              - cell "GBN-AG-26-000043" [ref=e179]
+              - cell "Select notification GBN-AG-26-000043" [ref=e180]:
+                - checkbox "Select notification GBN-AG-26-000043" [ref=e181]
+            - row "GBN-AG-26-000007 Select notification GBN-AG-26-000007" [ref=e182]:
+              - cell "GBN-AG-26-000007" [ref=e183]
+              - cell "Select notification GBN-AG-26-000007" [ref=e184]:
+                - checkbox "Select notification GBN-AG-26-000007" [ref=e185]
+            - row "GBN-AG-26-000025 Select notification GBN-AG-26-000025" [ref=e186]:
+              - cell "GBN-AG-26-000025" [ref=e187]
+              - cell "Select notification GBN-AG-26-000025" [ref=e188]:
+                - checkbox "Select notification GBN-AG-26-000025" [ref=e189]
+            - row "GBN-AG-26-000042 Select notification GBN-AG-26-000042" [ref=e190]:
+              - cell "GBN-AG-26-000042" [ref=e191]
+              - cell "Select notification GBN-AG-26-000042" [ref=e192]:
+                - checkbox "Select notification GBN-AG-26-000042" [ref=e193]
+            - row "GBN-AG-26-000006 Select notification GBN-AG-26-000006" [ref=e194]:
+              - cell "GBN-AG-26-000006" [ref=e195]
+              - cell "Select notification GBN-AG-26-000006" [ref=e196]:
+                - checkbox "Select notification GBN-AG-26-000006" [ref=e197]
+            - row "GBN-AG-26-000024 Select notification GBN-AG-26-000024" [ref=e198]:
+              - cell "GBN-AG-26-000024" [ref=e199]
+              - cell "Select notification GBN-AG-26-000024" [ref=e200]:
+                - checkbox "Select notification GBN-AG-26-000024" [ref=e201]
+            - row "GBN-AG-26-000023 Select notification GBN-AG-26-000023" [ref=e202]:
+              - cell "GBN-AG-26-000023" [ref=e203]
+              - cell "Select notification GBN-AG-26-000023" [ref=e204]:
+                - checkbox "Select notification GBN-AG-26-000023" [ref=e205]
+            - row "GBN-AG-26-000041 Select notification GBN-AG-26-000041" [ref=e206]:
+              - cell "GBN-AG-26-000041" [ref=e207]
+              - cell "Select notification GBN-AG-26-000041" [ref=e208]:
+                - checkbox "Select notification GBN-AG-26-000041" [ref=e209]
+            - row "GBN-AG-26-000005 Select notification GBN-AG-26-000005" [ref=e210]:
+              - cell "GBN-AG-26-000005" [ref=e211]
+              - cell "Select notification GBN-AG-26-000005" [ref=e212]:
+                - checkbox "Select notification GBN-AG-26-000005" [ref=e213]
+        - paragraph [ref=e214]:
+          - generic [ref=e215]: "Error:"
+          - text: Select at least one notification to delete
+        - button "Delete" [ref=e216] [cursor=pointer]
+  - contentinfo [ref=e217]:
+    - generic [ref=e230]:
+      - generic [ref=e231]:
+        - heading "Support links" [level=2] [ref=e232]
+        - list [ref=e233]:
+          - listitem [ref=e234]:
+            - link "Privacy" [ref=e235] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e236]:
+            - link "Cookies" [ref=e237] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e238]:
+            - link "Accessibility statement" [ref=e239] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e240]
+        - generic [ref=e242]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e243] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e245] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  5   | import { skipIfCdpEnvironment } from '@utils/playwright/environment';
+  6   | 
+  7   | // Requires `seeds/mongodb/20-seed-notifications.js` to seed notifications into the local MongoDB.
+  8   | 
+  9   | test.describe('Notifications (admin)', { tag: '@compose' }, () => {
+  10  |   test.describe.configure({ mode: 'default' });
+  11  |   test.beforeEach(async ({ adminJourneys }) => {
+  12  |     await adminJourneys.toNotifications();
+  13  |   });
+  14  | 
+  15  |   test('shows notifications for deletion', async ({ pages }) => {
+  16  |     await expect.poll(() => pages.adminNotifications.tableRows.count()).toBeGreaterThan(4);
+  17  |     for (const referenceNumber of ['GBN-AG-26-000001', 'GBN-AG-26-000002', 'GBN-AG-26-000003', 'GBN-AG-26-000004']) {
+  18  |       await pages.adminNotifications.findRowByReference(referenceNumber);
+  19  |       await expect(pages.adminNotifications.tableRowByReference(referenceNumber)).toBeVisible();
+  20  |     }
+  21  |   });
+  22  | 
+  23  |   test('allows deleting a notification by reference number', async ({ pages }) => {
+  24  |     const referenceNumber = 'GBN-AG-26-000001';
+  25  |     const initialTotalElements = await pages.adminNotifications.getTotalElements();
+  26  |     await pages.adminNotifications.inputReferenceNumber.fill(referenceNumber);
+  27  |     await pages.adminNotifications.btnDeleteByReferenceNumber.click();
+  28  |     await pages.adminNotifications.btnConfirm.click();
+  29  |     await expect(pages.adminNotifications.alertSuccess).toContainText('Notifications deleted successfully. Redirecting in 3 seconds...');
+  30  |     await expect.poll(() => pages.adminNotifications.getTotalElements(), { timeout: timeouts.medium }).toBe(initialTotalElements - 1);
+  31  |     await expect
+  32  |       .poll(async () => pages.adminNotifications.tableRowByReference(referenceNumber).isVisible(), { timeout: timeouts.medium })
+  33  |       .toBe(false);
+  34  |   });
+  35  | 
+  36  |   test('allows cancelling checkbox deletion and keeps notification visible', async ({ pages }) => {
+  37  |     const referenceNumber = 'GBN-AG-26-000002';
+  38  |     await pages.adminNotifications.findRowByReference(referenceNumber);
+  39  |     await pages.adminNotifications.checkboxNotificationByReference(referenceNumber).check();
+  40  |     await pages.adminNotifications.btnDelete.click();
+  41  |     await pages.adminNotifications.btnCancel.click();
+  42  |     await expect(pages.adminNotifications.tableRowByReference(referenceNumber)).toBeVisible();
+  43  |   });
+  44  | 
+  45  |   test('allows deleting a notification by checkbox', { tag: ['@integration', '@mongodb'] }, async ({ pages }) => {
+  46  |     const referenceNumber = 'GBN-AG-26-000002';
+  47  | 
+  48  |     await test.step('delete notification by checkbox', async () => {
+  49  |       const initialTotalElements = await pages.adminNotifications.getTotalElements();
+  50  |       await pages.adminNotifications.findRowByReference(referenceNumber);
+  51  |       await pages.adminNotifications.checkboxNotificationByReference(referenceNumber).check();
+  52  |       await pages.adminNotifications.btnDelete.click();
+  53  |       await pages.adminNotifications.btnConfirm.click();
+  54  |       await expect(pages.adminNotifications.alertSuccess).toContainText('Notifications deleted successfully. Redirecting in 3 seconds...');
+  55  |       await expect.poll(() => pages.adminNotifications.getTotalElements(), { timeout: timeouts.medium }).toBe(initialTotalElements - 1);
+  56  |     });
+  57  | 
+  58  |     await test.step('writes a successful delete audit record for one notification delete', async () => {
+  59  |       const client = new MongoDbClient();
+  60  | 
+  61  |       try {
+  62  |         await client.connect();
+  63  |         const collection = client.collection('trade-imports-animals-backend', 'audit');
+  64  | 
+  65  |         const docs = await collection
+  66  |           .find({
+  67  |             notificationReferenceNumbers: referenceNumber,
+  68  |           })
+  69  |           .toArray();
+  70  | 
+  71  |         expect(docs).toHaveLength(1);
+  72  |         expect(String(docs[0]._id)).toMatch(/^[a-f0-9]{24}$/i);
+  73  |         expect(docs[0].action).toBe('DELETE_NOTIFICATIONS');
+  74  |         expect(docs[0].result).toBe('SUCCESS');
+  75  |         expect(String(docs[0].timestamp)).toMatch(/\b\d{2}\s\d{4}\s\d{2}:\d{2}:\d{2}\b/);
+  76  |         expect(docs[0].numberOfNotifications).toBe(1);
+  77  |         expect(docs[0].notificationReferenceNumbers).toEqual([referenceNumber]);
+  78  |         expect(docs[0].traceId).toBe('test-trace-id');
+  79  |         expect(docs[0].userId).toBe('2100010101');
+  80  |       } finally {
+  81  |         await client.close();
+  82  |       }
+  83  |     });
+  84  |   });
+  85  | 
+  86  |   test('allows deleting all current-page notifications by select all', { tag: ['@integration', '@mongodb'] }, async ({ pages }) => {
+  87  |     skipIfCdpEnvironment('Compose/local only: destructive (deletes the current page of notifications); never run on CDP environments.');
+  88  | 
+  89  |     const currentPageRefs = await pages.adminNotifications.currentPageReferences();
+  90  |     const expectedDeletes = currentPageRefs.length;
+  91  |     let pageOneReference = '';
+  92  | 
+  93  |     await test.step('select all deletes only the current page', async () => {
+  94  |       const initialCount = await pages.adminNotifications.getTotalElements();
+  95  | 
+  96  |       expect(currentPageRefs.length).toBeGreaterThan(0);
+  97  |       pageOneReference = currentPageRefs[0];
+  98  | 
+  99  |       await pages.adminNotifications.checkBoxSelectAll.check();
+  100 |       await pages.adminNotifications.btnDelete.click();
+  101 |       await pages.adminNotifications.btnConfirm.click();
+  102 |       await expect(pages.adminNotifications.alertSuccess).toContainText('Notifications deleted successfully. Redirecting in 3 seconds...');
+  103 |       await expect
+  104 |         .poll(() => pages.adminNotifications.getTotalElements(), { timeout: timeouts.medium })
+> 105 |         .toBe(initialCount - expectedDeletes);
+      |          ^ Error: expect(received).toBe(expected) // Object.is equality
+  106 |     });
+  107 | 
+  108 |     await test.step('writes a successful delete audit record covering a page-1 reference', async () => {
+  109 |       const client = new MongoDbClient();
+  110 | 
+  111 |       try {
+  112 |         await client.connect();
+  113 |         const auditCollection = client.collection('trade-imports-animals-backend', 'audit');
+  114 |         const docs = await auditCollection
+  115 |           .find({
+  116 |             action: 'DELETE_NOTIFICATIONS',
+  117 |             notificationReferenceNumbers: pageOneReference,
+  118 |           })
+  119 |           .toArray();
+  120 | 
+  121 |         expect(docs).toHaveLength(1);
+  122 |         expect(String(docs[0]._id)).toMatch(/^[a-f0-9]{24}$/i);
+  123 |         expect(docs[0].action).toBe('DELETE_NOTIFICATIONS');
+  124 |         expect(docs[0].result).toBe('SUCCESS');
+  125 |         expect(String(docs[0].timestamp)).toMatch(/\b\d{2}\s\d{4}\s\d{2}:\d{2}:\d{2}\b/);
+  126 |         expect(docs[0].numberOfNotifications).toBe(expectedDeletes);
+  127 |         expect(docs[0].notificationReferenceNumbers).toContain(pageOneReference);
+  128 |         expect(docs[0].traceId).toBe('test-trace-id');
+  129 |         expect(docs[0].userId).toBe('2100010101');
+  130 |       } finally {
+  131 |         await client.close();
+  132 |       }
+  133 |     });
+  134 |   });
+  135 | 
+  136 |   test('does not allow deleting a notification by invalid reference number', { tag: ['@integration', '@mongodb'] }, async ({ pages }) => {
+  137 |     const randomId = new ObjectId().toString();
+  138 |     const invalidReference = `EXIST.NON.2026.${randomId}`;
+  139 | 
+  140 |     await test.step('attempt delete by invalid reference number shows an error', async () => {
+  141 |       await pages.adminNotifications.inputReferenceNumber.fill(invalidReference);
+  142 |       await pages.adminNotifications.btnDeleteByReferenceNumber.click();
+  143 |       await pages.adminNotifications.btnConfirm.click();
+  144 |       await expect(pages.adminNotifications.alertImportant).toContainText(
+  145 |         'There was a problem deleting the notifications. Please try again.',
+  146 |       );
+  147 |     });
+  148 | 
+  149 |     await test.step('writes a failed delete audit record for one notification delete', async () => {
+  150 |       const client = new MongoDbClient();
+  151 | 
+  152 |       try {
+  153 |         await client.connect();
+  154 |         const collection = client.collection('trade-imports-animals-backend', 'audit');
+  155 | 
+  156 |         const docs = await collection
+  157 |           .find({
+  158 |             notificationReferenceNumbers: invalidReference,
+  159 |           })
+  160 |           .toArray();
+  161 | 
+  162 |         expect(docs).toHaveLength(1);
+  163 |         expect(String(docs[0]._id)).toMatch(/^[a-f0-9]{24}$/i);
+  164 |         expect(docs[0].action).toBe('DELETE_NOTIFICATIONS');
+  165 |         expect(docs[0].result).toBe('FAILURE');
+  166 |         expect(String(docs[0].timestamp)).toMatch(/\b\d{2}\s\d{4}\s\d{2}:\d{2}:\d{2}\b/);
+  167 |         expect(docs[0].numberOfNotifications).toBe(1);
+  168 |         expect(docs[0].notificationReferenceNumbers).toEqual([invalidReference]);
+  169 |         expect(docs[0].traceId).toBe('test-trace-id');
+  170 |         expect(docs[0].userId).toBe('2100010101');
+  171 |       } finally {
+  172 |         await client.close();
+  173 |       }
+  174 |     });
+  175 |   });
+  176 | });
+  177 | 
+```

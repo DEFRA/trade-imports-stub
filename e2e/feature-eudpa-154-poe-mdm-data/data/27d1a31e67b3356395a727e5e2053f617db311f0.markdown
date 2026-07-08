@@ -1,0 +1,419 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/pages/admin/admin-outbox-events.spec.ts >> Outbox events (admin) >> shows outbox event for a submitted notification
+- Location: tests/e2e/pages/admin/admin-outbox-events.spec.ts:8:3
+
+# Error details
+
+```
+TypeError: expect({
+  "eventId": "ad91ad0d-3452-4b12-9f27-1c7b509a1e46",
+  "aggregateId": "Imports.Notification.GBN-AG.GBN-AG-26-GYF15Z",
+  "aggregateType": "Notification",
+  "subType": "GBN-AG",
+  "aggregateVersion": 1,
+  "eventType": "uk.gov.defra.imports.notification.NotificationSubmitted",
+  "timestamp": "2026-07-08T10:01:40.225Z",
+  "data": {
+    "referenceNumber": "GBN-AG-26-GYF15Z",
+    "origin": {
+      "countryCode": "FR",
+      "requiresRegionCode": "no",
+      "internalReference": null
+    },
+    "commodity": {
+      "name": "Dog",
+      "commodityComplement": [
+        {
+          "typeOfCommodity": "Domestic",
+          "totalNoOfAnimals": 24,
+          "totalNoOfPackages": 34,
+          "species": [
+            {
+              "value": "716661",
+              "text": "Bison bison",
+              "noOfAnimals": 5,
+              "noOfPackages": 13,
+              "earTag": "FR000000000001",
+              "passport": "FR-BOV-2024-000001"
+            },
+            {
+              "value": "1388624",
+              "text": "Bos spp.",
+              "noOfAnimals": 19,
+              "noOfPackages": 21,
+              "earTag": "FR000000000002",
+              "passport": "FR-BOV-2024-000002"
+            }
+          ]
+        }
+      ]
+    },
+    "reasonForImport": "internalMarket",
+    "additionalDetails": {
+      "certifiedFor": "approvedBodies",
+      "unweanedAnimals": "no"
+    },
+    "cphNumber": "123456789",
+    "transport": {
+      "portOfEntry": "GBABE",
+      "arrivalDate": "2026-07-22",
+      "transporter": {
+        "name": "García Livestock Transport SL",
+        "address": {
+          "addressLine1": "43 East Hague Extension",
+          "addressLine2": "Delectus sitodio p. Laborum Odio tempor",
+          "addressLine3": "Quasoccaecat ut ear, 30055",
+          "city": null,
+          "country": "Switzerland"
+        },
+        "approvalNumber": "ES-T2-45001294",
+        "type": "Commercial"
+      }
+    },
+    "placeOfOrigin": {
+      "name": "Origin Farm",
+      "address": {
+        "addressLine1": "1 Farm Lane",
+        "addressLine2": "County Clare",
+        "addressLine3": null,
+        "city": null,
+        "country": "Ireland"
+      }
+    },
+    "consignor": {
+      "name": "Astra Rosales",
+      "address": {
+        "addressLine1": "43 East Hague Extension",
+        "addressLine2": "Delectus sitodio p. Laborum Odio tempor",
+        "addressLine3": "Quasoccaecat ut ear, 30055",
+        "city": null,
+        "country": "Switzerland"
+      }
+    },
+    "consignee": {
+      "name": "British Livestock Ltd",
+      "address": {
+        "addressLine1": "10 Market Street",
+        "addressLine2": "Leeds LS1 6HB",
+        "addressLine3": null,
+        "city": null,
+        "country": "United Kingdom"
+      }
+    },
+    "importer": {
+      "name": "Import Co UK",
+      "address": {
+        "addressLine1": "20 Trade Road",
+        "addressLine2": "London EC1A 1BB",
+        "addressLine3": null,
+        "city": null,
+        "country": "United Kingdom"
+      }
+    },
+    "destination": {
+      "name": "Tech Imports Ltd",
+      "address": {
+        "addressLine1": "643 Main Street",
+        "addressLine2": "Birmingham G1 3AZ",
+        "addressLine3": null,
+        "city": null,
+        "country": "United Kingdom"
+      }
+    },
+    "consignment": {
+      "name": "Animal and Plant Health Agency",
+      "address": {
+        "addressLine1": "Woodham Lane",
+        "addressLine2": "New Haw",
+        "addressLine3": "Addlestone, KT15 3NB",
+        "city": null,
+        "country": "United Kingdom"
+      }
+    }
+  },
+  "metadata": {
+    "correlationId": "",
+    "schemaVersion": "1"
+  },
+  "publishedAt": "2026-07-08T10:01:40.602Z"
+}).toContain([object Object]) // indexOf
+
+Matcher error: expected value must be a string if received value is a string
+
+Expected has type:  object
+Expected has value: {"code": "GBABE", "display": "Aberdeen (GBABE)"}
+Received has type:  string
+Received has value: "{
+  \"eventId\": \"ad91ad0d-3452-4b12-9f27-1c7b509a1e46\",
+  \"aggregateId\": \"Imports.Notification.GBN-AG.GBN-AG-26-GYF15Z\",
+  \"aggregateType\": \"Notification\",
+  \"subType\": \"GBN-AG\",
+  \"aggregateVersion\": 1,
+  \"eventType\": \"uk.gov.defra.imports.notification.NotificationSubmitted\",
+  \"timestamp\": \"2026-07-08T10:01:40.225Z\",
+  \"data\": {
+    \"referenceNumber\": \"GBN-AG-26-GYF15Z\",
+    \"origin\": {
+      \"countryCode\": \"FR\",
+      \"requiresRegionCode\": \"no\",
+      \"internalReference\": null
+    },
+    \"commodity\": {
+      \"name\": \"Dog\",
+      \"commodityComplement\": [
+        {
+          \"typeOfCommodity\": \"Domestic\",
+          \"totalNoOfAnimals\": 24,
+          \"totalNoOfPackages\": 34,
+          \"species\": [
+            {
+              \"value\": \"716661\",
+              \"text\": \"Bison bison\",
+              \"noOfAnimals\": 5,
+              \"noOfPackages\": 13,
+              \"earTag\": \"FR000000000001\",
+              \"passport\": \"FR-BOV-2024-000001\"
+            },
+            {
+              \"value\": \"1388624\",
+              \"text\": \"Bos spp.\",
+              \"noOfAnimals\": 19,
+              \"noOfPackages\": 21,
+              \"earTag\": \"FR000000000002\",
+              \"passport\": \"FR-BOV-2024-000002\"
+            }
+          ]
+        }
+      ]
+    },
+    \"reasonForImport\": \"internalMarket\",
+    \"additionalDetails\": {
+      \"certifiedFor\": \"approvedBodies\",
+      \"unweanedAnimals\": \"no\"
+    },
+    \"cphNumber\": \"123456789\",
+    \"transport\": {
+      \"portOfEntry\": \"GBABE\",
+      \"arrivalDate\": \"2026-07-22\",
+      \"transporter\": {
+        \"name\": \"García Livestock Transport SL\",
+        \"address\": {
+          \"addressLine1\": \"43 East Hague Extension\",
+          \"addressLine2\": \"Delectus sitodio p. Laborum Odio tempor\",
+          \"addressLine3\": \"Quasoccaecat ut ear, 30055\",
+          \"city\": null,
+          \"country\": \"Switzerland\"
+        },
+        \"approvalNumber\": \"ES-T2-45001294\",
+        \"type\": \"Commercial\"
+      }
+    },
+    \"placeOfOrigin\": {
+      \"name\": \"Origin Farm\",
+      \"address\": {
+        \"addressLine1\": \"1 Farm Lane\",
+        \"addressLine2\": \"County Clare\",
+        \"addressLine3\": null,
+        \"city\": null,
+        \"country\": \"Ireland\"
+      }
+    },
+    \"consignor\": {
+      \"name\": \"Astra Rosales\",
+      \"address\": {
+        \"addressLine1\": \"43 East Hague Extension\",
+        \"addressLine2\": \"Delectus sitodio p. Laborum Odio tempor\",
+        \"addressLine3\": \"Quasoccaecat ut ear, 30055\",
+        \"city\": null,
+        \"country\": \"Switzerland\"
+      }
+    },
+    \"consignee\": {
+      \"name\": \"British Livestock Ltd\",
+      \"address\": {
+        \"addressLine1\": \"10 Market Street\",
+        \"addressLine2\": \"Leeds LS1 6HB\",
+        \"addressLine3\": null,
+        \"city\": null,
+        \"country\": \"United Kingdom\"
+      }
+    },
+    \"importer\": {
+      \"name\": \"Import Co UK\",
+      \"address\": {
+        \"addressLine1\": \"20 Trade Road\",
+        \"addressLine2\": \"London EC1A 1BB\",
+        \"addressLine3\": null,
+        \"city\": null,
+        \"country\": \"United Kingdom\"
+      }
+    },
+    \"destination\": {
+      \"name\": \"Tech Imports Ltd\",
+      \"address\": {
+        \"addressLine1\": \"643 Main Street\",
+        \"addressLine2\": \"Birmingham G1 3AZ\",
+        \"addressLine3\": null,
+        \"city\": null,
+        \"country\": \"United Kingdom\"
+      }
+    },
+    \"consignment\": {
+      \"name\": \"Animal and Plant Health Agency\",
+      \"address\": {
+        \"addressLine1\": \"Woodham Lane\",
+        \"addressLine2\": \"New Haw\",
+        \"addressLine3\": \"Addlestone, KT15 3NB\",
+        \"city\": null,
+        \"country\": \"United Kingdom\"
+      }
+    }
+  },
+  \"metadata\": {
+    \"correlationId\": \"\",
+    \"schemaVersion\": \"1\"
+  },
+  \"publishedAt\": \"2026-07-08T10:01:40.602Z\"
+}"
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "trade-imports-animals-admin" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - navigation "Breadcrumb" [ref=e43]:
+      - list [ref=e44]:
+        - listitem [ref=e45]:
+          - link "Home" [ref=e46] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e47]: Outbox events
+    - main [ref=e48]:
+      - generic [ref=e50]:
+        - heading "Outbox events" [level=1] [ref=e51]
+        - generic [ref=e52]: trade-imports-animals-admin
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]: Notification reference number
+          - textbox "Notification reference number" [ref=e58]: GBN-AG-26-GYF15Z
+        - button "Search" [ref=e59] [cursor=pointer]
+      - table [ref=e62]:
+        - rowgroup [ref=e63]:
+          - row "Version Event type Timestamp Data" [ref=e64]:
+            - columnheader "Version" [ref=e65]
+            - columnheader "Event type" [ref=e66]
+            - columnheader "Timestamp" [ref=e67]
+            - columnheader "Data" [ref=e68]
+        - rowgroup [ref=e69]:
+          - row "1 uk.gov.defra.imports.notification.NotificationSubmitted 2026-07-08T10:01:40.225Z" [ref=e70]:
+            - cell "1" [ref=e71]
+            - cell "uk.gov.defra.imports.notification.NotificationSubmitted" [ref=e72]
+            - cell "2026-07-08T10:01:40.225Z" [ref=e73]
+            - cell [ref=e74]:
+              - group [ref=e75]:
+                - generic "View JSON" [active] [ref=e76] [cursor=pointer]
+                - generic [ref=e78]: "{ \"eventId\": \"ad91ad0d-3452-4b12-9f27-1c7b509a1e46\", \"aggregateId\": \"Imports.Notification.GBN-AG.GBN-AG-26-GYF15Z\", \"aggregateType\": \"Notification\", \"subType\": \"GBN-AG\", \"aggregateVersion\": 1, \"eventType\": \"uk.gov.defra.imports.notification.NotificationSubmitted\", \"timestamp\": \"2026-07-08T10:01:40.225Z\", \"data\": { \"referenceNumber\": \"GBN-AG-26-GYF15Z\", \"origin\": { \"countryCode\": \"FR\", \"requiresRegionCode\": \"no\", \"internalReference\": null }, \"commodity\": { \"name\": \"Dog\", \"commodityComplement\": [ { \"typeOfCommodity\": \"Domestic\", \"totalNoOfAnimals\": 24, \"totalNoOfPackages\": 34, \"species\": [ { \"value\": \"716661\", \"text\": \"Bison bison\", \"noOfAnimals\": 5, \"noOfPackages\": 13, \"earTag\": \"FR000000000001\", \"passport\": \"FR-BOV-2024-000001\" }, { \"value\": \"1388624\", \"text\": \"Bos spp.\", \"noOfAnimals\": 19, \"noOfPackages\": 21, \"earTag\": \"FR000000000002\", \"passport\": \"FR-BOV-2024-000002\" } ] } ] }, \"reasonForImport\": \"internalMarket\", \"additionalDetails\": { \"certifiedFor\": \"approvedBodies\", \"unweanedAnimals\": \"no\" }, \"cphNumber\": \"123456789\", \"transport\": { \"portOfEntry\": \"GBABE\", \"arrivalDate\": \"2026-07-22\", \"transporter\": { \"name\": \"García Livestock Transport SL\", \"address\": { \"addressLine1\": \"43 East Hague Extension\", \"addressLine2\": \"Delectus sitodio p. Laborum Odio tempor\", \"addressLine3\": \"Quasoccaecat ut ear, 30055\", \"city\": null, \"country\": \"Switzerland\" }, \"approvalNumber\": \"ES-T2-45001294\", \"type\": \"Commercial\" } }, \"placeOfOrigin\": { \"name\": \"Origin Farm\", \"address\": { \"addressLine1\": \"1 Farm Lane\", \"addressLine2\": \"County Clare\", \"addressLine3\": null, \"city\": null, \"country\": \"Ireland\" } }, \"consignor\": { \"name\": \"Astra Rosales\", \"address\": { \"addressLine1\": \"43 East Hague Extension\", \"addressLine2\": \"Delectus sitodio p. Laborum Odio tempor\", \"addressLine3\": \"Quasoccaecat ut ear, 30055\", \"city\": null, \"country\": \"Switzerland\" } }, \"consignee\": { \"name\": \"British Livestock Ltd\", \"address\": { \"addressLine1\": \"10 Market Street\", \"addressLine2\": \"Leeds LS1 6HB\", \"addressLine3\": null, \"city\": null, \"country\": \"United Kingdom\" } }, \"importer\": { \"name\": \"Import Co UK\", \"address\": { \"addressLine1\": \"20 Trade Road\", \"addressLine2\": \"London EC1A 1BB\", \"addressLine3\": null, \"city\": null, \"country\": \"United Kingdom\" } }, \"destination\": { \"name\": \"Tech Imports Ltd\", \"address\": { \"addressLine1\": \"643 Main Street\", \"addressLine2\": \"Birmingham G1 3AZ\", \"addressLine3\": null, \"city\": null, \"country\": \"United Kingdom\" } }, \"consignment\": { \"name\": \"Animal and Plant Health Agency\", \"address\": { \"addressLine1\": \"Woodham Lane\", \"addressLine2\": \"New Haw\", \"addressLine3\": \"Addlestone, KT15 3NB\", \"city\": null, \"country\": \"United Kingdom\" } } }, \"metadata\": { \"correlationId\": \"\", \"schemaVersion\": \"1\" }, \"publishedAt\": \"2026-07-08T10:01:40.602Z\" }"
+  - contentinfo [ref=e79]:
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - heading "Support links" [level=2] [ref=e94]
+        - list [ref=e95]:
+          - listitem [ref=e96]:
+            - link "Privacy" [ref=e97] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e98]:
+            - link "Cookies" [ref=e99] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e100]:
+            - link "Accessibility statement" [ref=e101] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e102]
+        - generic [ref=e104]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e105] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e107] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@fixtures';
+  2  | import { defaultJourneyOptions, CONSIGNOR_NAME } from '@flows/journeys';
+  3  | import { timeouts } from '@config/timeouts';
+  4  | 
+  5  | test.describe('Outbox events (admin)', () => {
+  6  |   const defaults = defaultJourneyOptions;
+  7  | 
+  8  |   test('shows outbox event for a submitted notification', async ({ journeys, adminJourneys, journeyContext, pages }) => {
+  9  |     await journeys.submitNotification();
+  10 |     const referenceNumber = journeyContext.notificationId;
+  11 | 
+  12 |     await adminJourneys.toOutboxEvents(referenceNumber);
+  13 | 
+  14 |     await test.step('renders the outbox events table with one row', async () => {
+  15 |       await expect(pages.adminOutboxEvents.heading).toBeVisible();
+  16 |       await expect.poll(() => pages.adminOutboxEvents.tableRows.count(), { timeout: timeouts.short }).toBe(1);
+  17 |     });
+  18 | 
+  19 |     await test.step('displays correct envelope fields', async () => {
+  20 |       await expect(pages.adminOutboxEvents.cellVersion(0)).toHaveText('1');
+  21 |       await expect(pages.adminOutboxEvents.cellEventType(0)).toContainText('NotificationSubmitted');
+  22 |       await expect(pages.adminOutboxEvents.cellTimestamp(0)).not.toBeEmpty();
+  23 |     });
+  24 | 
+  25 |     await test.step('displays event data as JSON containing key notification fields', async () => {
+  26 |       await pages.adminOutboxEvents.linkViewJson(0).click();
+  27 |       const json = await pages.adminOutboxEvents.cellDataPre(0).textContent();
+  28 |       expect(json).toContain(referenceNumber);
+  29 |       expect(json).toContain(defaults.countryCode);
+  30 |       expect(json).toContain(defaults.commodityCode);
+> 31 |       expect(json).toContain(defaults.pointOfEntry);
+     |                    ^ TypeError: expect({
+  32 |       expect(json).toContain(CONSIGNOR_NAME);
+  33 |     });
+  34 |   });
+  35 | 
+  36 |   test('shows empty state for an unknown reference number', async ({ adminJourneys, pages }) => {
+  37 |     const unknownRef = 'GBN-AG-00-000000';
+  38 |     await adminJourneys.toOutboxEvents(unknownRef);
+  39 |     await expect(pages.adminOutboxEvents.emptyStateMessage).toBeVisible();
+  40 |     await expect(pages.adminOutboxEvents.emptyStateMessage).toContainText(unknownRef);
+  41 |   });
+  42 | });
+  43 | 
+```
