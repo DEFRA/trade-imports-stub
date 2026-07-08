@@ -1,0 +1,288 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/features/notification-cancel-amend.spec.ts >> Notification cancel amend >> cancel amend button and confirmation page >> returns to the notification view without cancelling when No is selected
+- Location: tests/e2e/features/notification-cancel-amend.spec.ts:44:5
+
+# Error details
+
+```
+"beforeAll" hook timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "Animals" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - main [ref=e43]:
+      - generic [ref=e45]:
+        - link "Back" [ref=e46] [cursor=pointer]:
+          - /url: /addresses
+        - paragraph [ref=e47]:
+          - generic [ref=e48]: GBN-AG-26-WA5HH4
+        - heading "Transport Entry point and arrival at destination" [level=1] [ref=e50]:
+          - generic [ref=e51]: Transport
+          - text: Entry point and arrival at destination
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: What is the port of entry into Great Britain?
+            - combobox "What is the port of entry into Great Britain?" [ref=e56]:
+              - option "Select port of entry" [selected]
+              - option "──────────" [disabled]
+              - option "Aberdeen Airport (GB DYC)"
+              - option "Aberdeen Harbour (GB ABD)"
+              - option "Avonmouth Docks (GB AVO)"
+              - option "Ayr Port (GB AYR)"
+              - option "Barking Port (GB BKG)"
+              - option "Birmingham International Airport (GB BHM)"
+              - option "Cambridge Airport (GB CBG)"
+              - option "Chatham Docks (GB CTM)"
+              - option "Coventry Airport (GB CVT)"
+              - option "Dartford, Thames Europort (GB DFD)"
+              - option "Dundee Port (GB DUN)"
+              - option "East Midlands Airport (GB EMA)"
+              - option "Edinburgh Airport (GB EDI)"
+              - option "Farnborough Airport (GB FBO)"
+              - option "Felixstowe Port (GB FXT)"
+              - option "Fishguard Port (GB FIS)"
+              - option "Folkestone (GB FOL)"
+              - option "Fraserburgh Harbour (GB FRB)"
+              - option "Gatwick Airport (GB LGW)"
+              - option "Glasgow Airport (GB GLW)"
+              - option "Glasgow Prestwick Airport (GB PIK)"
+              - option "Grangemouth Port (GB GRG)"
+              - option "Greenock Port (GB GRK)"
+              - option "Grimsby and Immingham Port (GB IMM)"
+              - option "HES Humber Bulk Terminal (GB HMR)"
+              - option "Harwich Port (GB HRW)"
+              - option "Heathrow Airport (GB LHR)"
+              - option "Heysham Port (GB HYM)"
+              - option "Holyhead Port (GB HLY)"
+              - option "Hull Port (GB HUL)"
+              - option "Humberside Airport (GB HUY)"
+              - option "Hythe Port (GB HTH)"
+              - option "Invergordon Port (GB IVG)"
+              - option "Killingholme Port (GB KGH)"
+              - option "Leith Port (GB LEI)"
+              - option "Liverpool Airport (GB LPL)"
+              - option "Liverpool Docks (GB LIV)"
+              - option "London Gateway Port (GB LGP)"
+              - option "London Thamesport (GB THP)"
+              - option "Luton Airport (GB LUT)"
+              - option "Manchester Airport (GB MAN)"
+              - option "Methil Port (GB MTH)"
+              - option "Newhaven Port (GB NHV)"
+              - option "Northampton Airport (GB NHP)"
+              - option "Nottingham Port (GB NTG)"
+              - option "Pembroke Port (GB PED)"
+              - option "Pembroke Port (GB PEM)"
+              - option "Perth Port (GB PER)"
+              - option "Peterhead Port (GB PHD)"
+              - option "Plymouth Port (GB PLY)"
+              - option "Poole Port (GB POO)"
+              - option "Port of Birkenhead (GB BRK)"
+              - option "Port of Blyth (GB BLY)"
+              - option "Port of Bristol (GB BRS)"
+              - option "Port of Cairnryan (GB CYN)"
+              - option "Port of Dagenham (GB DAG)"
+              - option "Port of Dover (GB DVR)"
+              - option "Port of Dover (Eastern) (GB DVRE)"
+              - option "Port of Dover (Western) (GB DVRW)"
+              - option "Port of Grimsby (GB GSY)"
+              - option "Port of Isle of Grain (GB IOG)"
+              - option "Port of Manchester (GB MNC)"
+              - option "Port of Middlesbrough (GB MID)"
+              - option "Port of Sheerness (GBSHS)"
+              - option "Port of Sheerness (GB SHS)"
+              - option "Port of Tyne (GB TYN)"
+              - option "Portsmouth Port (GB PME)"
+              - option "Purfleet Port (GB PFT)"
+              - option "Royal Portbury Dock (GB PRU)"
+              - option "Silloth Port (GB SIL)"
+              - option "Southampton Port (GB SOU)"
+              - option "Stansted Airport (GB STN)"
+              - option "Stranraer Harbour (GB STR)"
+              - option "TILBURY (GB TIL)"
+              - option "Teesside International Airport (GB MME)"
+              - option "Teestort (GB TEE)"
+              - option "Tilbury 2 Ro-Ro Terminal (GB TILR)"
+              - option "Tilbury Port (GB TILL)"
+          - group "When will the consignment arrive at its final destination?" [ref=e58]:
+            - generic [ref=e59]: When will the consignment arrive at its final destination?
+            - generic [ref=e60]: For example, 27 3 2026
+            - generic [ref=e61]:
+              - generic [ref=e63]:
+                - generic [ref=e64]: Day
+                - textbox "Day" [ref=e65]
+              - generic [ref=e67]:
+                - generic [ref=e68]: Month
+                - textbox "Month" [ref=e69]
+              - generic [ref=e71]:
+                - generic [ref=e72]: Year
+                - textbox "Year" [ref=e73]
+          - button "Save and continue" [ref=e75] [cursor=pointer]
+  - contentinfo [ref=e76]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - heading "Support links" [level=2] [ref=e91]
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "Privacy" [ref=e94] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e95]:
+            - link "Cookies" [ref=e96] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e97]:
+            - link "Accessibility statement" [ref=e98] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e99]
+        - generic [ref=e101]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e102] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e104] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  1   | import { test, expect } from '@fixtures';
+  2   | import { createPageObjects } from '@page-objects';
+  3   | import { CPH_NUMBER, Journey, type JourneyContext } from '@flows/journey';
+  4   | import { NotificationActions } from '@flows/notification-actions';
+  5   | 
+  6   | const EDITED_CPH_NUMBER = '987654321';
+  7   | 
+  8   | test.describe('Notification cancel amend', () => {
+  9   |   test.describe('cancel amend button and confirmation page', () => {
+  10  |     let referenceNumber: string;
+  11  | 
+> 12  |     test.beforeAll(async ({ browser }) => {
+      |          ^ "beforeAll" hook timeout of 30000ms exceeded.
+  13  |       const context = await browser.newContext();
+  14  |       const page = await context.newPage();
+  15  |       const pages = createPageObjects(page);
+  16  |       const journeyContext: JourneyContext = {};
+  17  |       const journey = new Journey(pages, journeyContext);
+  18  |       await journey.submitNotification();
+  19  |       referenceNumber = journeyContext.notificationId;
+  20  |       const notificationActions = new NotificationActions(pages);
+  21  |       await notificationActions.amendNotification(referenceNumber);
+  22  |       await context.close();
+  23  |     });
+  24  | 
+  25  |     test.beforeEach(async ({ notificationActions }) => {
+  26  |       await notificationActions.toNotificationView(referenceNumber);
+  27  |     });
+  28  | 
+  29  |     test('shows the Cancel amendment option when notification is in Amend status', async ({ pages }) => {
+  30  |       await expect(pages.notificationView.amendStatusTag).toBeVisible();
+  31  |       await expect(pages.notificationView.btnCancelAmend).toBeVisible();
+  32  |     });
+  33  | 
+  34  |     test('shows the confirmation page when Cancel amendment is selected', async ({ pages }) => {
+  35  |       await pages.notificationView.btnCancelAmend.click();
+  36  | 
+  37  |       await expect(pages.page).toHaveURL(new RegExp(pages.notificationCancelAmend.expectedUrl(referenceNumber)));
+  38  |       await expect(pages.notificationCancelAmend.heading).toBeVisible();
+  39  |       await expect(pages.notificationCancelAmend.confirmationQuestion).toBeVisible();
+  40  |       await expect(pages.notificationCancelAmend.btnYesCancelAmendment).toBeVisible();
+  41  |       await expect(pages.notificationCancelAmend.btnNoReturnToNotification).toBeVisible();
+  42  |     });
+  43  | 
+  44  |     test('returns to the notification view without cancelling when No is selected', async ({ pages }) => {
+  45  |       await pages.notificationCancelAmend.open(referenceNumber);
+  46  |       await pages.notificationCancelAmend.btnNoReturnToNotification.click();
+  47  | 
+  48  |       await expect(pages.page).toHaveURL(new RegExp(pages.notificationView.expectedUrl(referenceNumber)));
+  49  |       await expect(pages.notificationView.amendStatusTag).toBeVisible();
+  50  |       await expect(pages.notificationView.btnCancelAmend).toBeVisible();
+  51  |       await expect(pages.notificationView.changeLink('County Parish Holding number (CPH)')).toBeVisible();
+  52  |     });
+  53  |   });
+  54  | 
+  55  |   test(
+  56  |     'does not show the Cancel amendment option when notification is Submitted',
+  57  |     { tag: ['@integration'] },
+  58  |     async ({ pages, journey, notificationActions, journeyContext }) => {
+  59  |       await journey.submitNotification();
+  60  |       const submittedReference = journeyContext.notificationId;
+  61  |       await notificationActions.toNotificationView(submittedReference);
+  62  | 
+  63  |       await expect(pages.notificationView.btnCancelAmend).not.toBeVisible();
+  64  |       await expect(pages.notificationView.btnAmend).toBeVisible();
+  65  |     },
+  66  |   );
+  67  | 
+  68  |   test(
+  69  |     'cancels the amendment and restores the submitted notification',
+  70  |     { tag: ['@integration'] },
+  71  |     async ({ pages, journey, notificationActions, journeyContext }) => {
+  72  |       await journey.submitNotification();
+  73  |       const referenceNumber = journeyContext.notificationId;
+  74  | 
+  75  |       await notificationActions.amendNotification(referenceNumber);
+  76  |       await expect(pages.notificationView.summaryValue('County Parish Holding number (CPH)')).toHaveText(CPH_NUMBER);
+  77  | 
+  78  |       await pages.notificationView.changeLink('County Parish Holding number (CPH)').click();
+  79  |       await pages.cphNumber.inputCphNumber.fill(EDITED_CPH_NUMBER);
+  80  |       await pages.cphNumber.btnSaveAndContinue.click();
+  81  |       await expect(pages.addresses.heading).toBeVisible();
+  82  |       await expect(pages.addresses.cphNumber).toContainText(EDITED_CPH_NUMBER);
+  83  | 
+  84  |       await notificationActions.toNotificationView(referenceNumber);
+  85  |       await expect(pages.notificationView.summaryValue('County Parish Holding number (CPH)')).toHaveText(EDITED_CPH_NUMBER);
+  86  | 
+  87  |       await pages.notificationView.btnCancelAmend.click();
+  88  |       await pages.notificationCancelAmend.btnYesCancelAmendment.click();
+  89  | 
+  90  |       await expect(pages.notificationView.amendCancelledBanner).toBeVisible();
+  91  |       await expect(pages.notificationView.amendCancelledBanner).toContainText('The amendment has been cancelled');
+  92  | 
+  93  |       await expect(pages.page).toHaveURL(new RegExp(`${pages.notificationView.expectedUrl(referenceNumber)}$`), {
+  94  |         timeout: 10000,
+  95  |       });
+  96  | 
+  97  |       await expect(pages.notificationView.amendStatusTag).not.toBeVisible();
+  98  |       await expect(pages.notificationView.btnCancelAmend).not.toBeVisible();
+  99  |       await expect(pages.notificationView.btnAmend).toBeVisible();
+  100 |       await expect(pages.notificationView.changeLink('Where is this consignment coming from?')).not.toBeVisible();
+  101 |       await expect(pages.notificationView.summaryValue('County Parish Holding number (CPH)')).toHaveText(CPH_NUMBER);
+  102 |     },
+  103 |   );
+  104 | });
+  105 | 
+```

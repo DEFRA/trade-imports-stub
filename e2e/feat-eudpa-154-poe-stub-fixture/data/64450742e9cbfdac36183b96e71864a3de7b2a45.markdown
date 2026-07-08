@@ -1,0 +1,244 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/features/notification-delete.spec.ts >> Notification delete >> delete button and dialog >> shows the delete button for a submitted notification
+- Location: tests/e2e/features/notification-delete.spec.ts:24:5
+
+# Error details
+
+```
+"beforeAll" hook timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "Animals" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - main [ref=e43]:
+      - generic [ref=e45]:
+        - link "Back" [ref=e46] [cursor=pointer]:
+          - /url: /addresses
+        - paragraph [ref=e47]:
+          - generic [ref=e48]: GBN-AG-26-CCMB44
+        - heading "Transport Entry point and arrival at destination" [level=1] [ref=e50]:
+          - generic [ref=e51]: Transport
+          - text: Entry point and arrival at destination
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: What is the port of entry into Great Britain?
+            - combobox "What is the port of entry into Great Britain?" [ref=e56]:
+              - option "Select port of entry" [selected]
+              - option "──────────" [disabled]
+              - option "Aberdeen Airport (GB DYC)"
+              - option "Aberdeen Harbour (GB ABD)"
+              - option "Avonmouth Docks (GB AVO)"
+              - option "Ayr Port (GB AYR)"
+              - option "Barking Port (GB BKG)"
+              - option "Birmingham International Airport (GB BHM)"
+              - option "Cambridge Airport (GB CBG)"
+              - option "Chatham Docks (GB CTM)"
+              - option "Coventry Airport (GB CVT)"
+              - option "Dartford, Thames Europort (GB DFD)"
+              - option "Dundee Port (GB DUN)"
+              - option "East Midlands Airport (GB EMA)"
+              - option "Edinburgh Airport (GB EDI)"
+              - option "Farnborough Airport (GB FBO)"
+              - option "Felixstowe Port (GB FXT)"
+              - option "Fishguard Port (GB FIS)"
+              - option "Folkestone (GB FOL)"
+              - option "Fraserburgh Harbour (GB FRB)"
+              - option "Gatwick Airport (GB LGW)"
+              - option "Glasgow Airport (GB GLW)"
+              - option "Glasgow Prestwick Airport (GB PIK)"
+              - option "Grangemouth Port (GB GRG)"
+              - option "Greenock Port (GB GRK)"
+              - option "Grimsby and Immingham Port (GB IMM)"
+              - option "HES Humber Bulk Terminal (GB HMR)"
+              - option "Harwich Port (GB HRW)"
+              - option "Heathrow Airport (GB LHR)"
+              - option "Heysham Port (GB HYM)"
+              - option "Holyhead Port (GB HLY)"
+              - option "Hull Port (GB HUL)"
+              - option "Humberside Airport (GB HUY)"
+              - option "Hythe Port (GB HTH)"
+              - option "Invergordon Port (GB IVG)"
+              - option "Killingholme Port (GB KGH)"
+              - option "Leith Port (GB LEI)"
+              - option "Liverpool Airport (GB LPL)"
+              - option "Liverpool Docks (GB LIV)"
+              - option "London Gateway Port (GB LGP)"
+              - option "London Thamesport (GB THP)"
+              - option "Luton Airport (GB LUT)"
+              - option "Manchester Airport (GB MAN)"
+              - option "Methil Port (GB MTH)"
+              - option "Newhaven Port (GB NHV)"
+              - option "Northampton Airport (GB NHP)"
+              - option "Nottingham Port (GB NTG)"
+              - option "Pembroke Port (GB PED)"
+              - option "Pembroke Port (GB PEM)"
+              - option "Perth Port (GB PER)"
+              - option "Peterhead Port (GB PHD)"
+              - option "Plymouth Port (GB PLY)"
+              - option "Poole Port (GB POO)"
+              - option "Port of Birkenhead (GB BRK)"
+              - option "Port of Blyth (GB BLY)"
+              - option "Port of Bristol (GB BRS)"
+              - option "Port of Cairnryan (GB CYN)"
+              - option "Port of Dagenham (GB DAG)"
+              - option "Port of Dover (GB DVR)"
+              - option "Port of Dover (Eastern) (GB DVRE)"
+              - option "Port of Dover (Western) (GB DVRW)"
+              - option "Port of Grimsby (GB GSY)"
+              - option "Port of Isle of Grain (GB IOG)"
+              - option "Port of Manchester (GB MNC)"
+              - option "Port of Middlesbrough (GB MID)"
+              - option "Port of Sheerness (GBSHS)"
+              - option "Port of Sheerness (GB SHS)"
+              - option "Port of Tyne (GB TYN)"
+              - option "Portsmouth Port (GB PME)"
+              - option "Purfleet Port (GB PFT)"
+              - option "Royal Portbury Dock (GB PRU)"
+              - option "Silloth Port (GB SIL)"
+              - option "Southampton Port (GB SOU)"
+              - option "Stansted Airport (GB STN)"
+              - option "Stranraer Harbour (GB STR)"
+              - option "TILBURY (GB TIL)"
+              - option "Teesside International Airport (GB MME)"
+              - option "Teestort (GB TEE)"
+              - option "Tilbury 2 Ro-Ro Terminal (GB TILR)"
+              - option "Tilbury Port (GB TILL)"
+          - group "When will the consignment arrive at its final destination?" [ref=e58]:
+            - generic [ref=e59]: When will the consignment arrive at its final destination?
+            - generic [ref=e60]: For example, 27 3 2026
+            - generic [ref=e61]:
+              - generic [ref=e63]:
+                - generic [ref=e64]: Day
+                - textbox "Day" [ref=e65]
+              - generic [ref=e67]:
+                - generic [ref=e68]: Month
+                - textbox "Month" [ref=e69]
+              - generic [ref=e71]:
+                - generic [ref=e72]: Year
+                - textbox "Year" [ref=e73]
+          - button "Save and continue" [ref=e75] [cursor=pointer]
+  - contentinfo [ref=e76]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - heading "Support links" [level=2] [ref=e91]
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "Privacy" [ref=e94] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e95]:
+            - link "Cookies" [ref=e96] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e97]:
+            - link "Accessibility statement" [ref=e98] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e99]
+        - generic [ref=e101]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e102] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e104] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@fixtures';
+  2  | import { createPageObjects } from '@page-objects';
+  3  | import { Journey, type JourneyContext } from '@flows/journey';
+  4  | 
+  5  | test.describe('Notification delete', () => {
+  6  |   test.describe('delete button and dialog', () => {
+  7  |     let referenceNumber: string;
+  8  | 
+> 9  |     test.beforeAll(async ({ browser }) => {
+     |          ^ "beforeAll" hook timeout of 30000ms exceeded.
+  10 |       const context = await browser.newContext();
+  11 |       const page = await context.newPage();
+  12 |       const pages = createPageObjects(page);
+  13 |       const journeyContext: JourneyContext = {};
+  14 |       const journey = new Journey(pages, journeyContext);
+  15 |       await journey.submitNotification();
+  16 |       referenceNumber = journeyContext.notificationId;
+  17 |       await context.close();
+  18 |     });
+  19 | 
+  20 |     test.beforeEach(async ({ notificationActions }) => {
+  21 |       await notificationActions.toNotificationView(referenceNumber);
+  22 |     });
+  23 | 
+  24 |     test('shows the delete button for a submitted notification', async ({ pages }) => {
+  25 |       await expect(pages.notificationView.btnDelete).toBeVisible();
+  26 |     });
+  27 | 
+  28 |     test('opens the confirmation dialog when delete is clicked', async ({ pages }) => {
+  29 |       await pages.notificationView.btnDelete.click();
+  30 |       await expect(pages.notificationView.deleteDialog).toBeVisible();
+  31 |     });
+  32 | 
+  33 |     test('closes the dialog without deleting when cancel is clicked', async ({ pages }) => {
+  34 |       await pages.notificationView.btnDelete.click();
+  35 |       await pages.notificationView.btnCancelDelete.click();
+  36 |       await expect(pages.notificationView.deleteDialog).not.toBeVisible();
+  37 |       await expect(pages.notificationView.heading).toBeVisible();
+  38 |     });
+  39 |   });
+  40 | 
+  41 |   test(
+  42 |     'deletes the notification and removes it from the dashboard',
+  43 |     { tag: ['@integration'] },
+  44 |     async ({ pages, journey, journeyContext, notificationActions }) => {
+  45 |       await journey.submitNotification();
+  46 |       const referenceNumber = journeyContext.notificationId;
+  47 | 
+  48 |       await notificationActions.toNotificationView(referenceNumber);
+  49 | 
+  50 |       await pages.notificationView.btnDelete.click();
+  51 |       await pages.notificationView.btnConfirmDelete.click();
+  52 | 
+  53 |       await expect(pages.notificationView.successBanner).toBeVisible();
+  54 | 
+  55 |       // The JS redirects to / after 3 seconds
+  56 |       await pages.notificationDashboard.heading.waitFor({ timeout: 10000 });
+  57 |       await expect(pages.notificationDashboard.viewLink(referenceNumber)).not.toBeVisible();
+  58 |     },
+  59 |   );
+  60 | });
+  61 | 
+```

@@ -1,0 +1,386 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/pages/transporters-select.spec.ts >> Transporter selection >> shows matching transporter details when selecting a different transporter
+- Location: tests/e2e/pages/transporters-select.spec.ts:36:3
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded while running "beforeEach" hook.
+```
+
+```
+Error: locator.selectOption: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('combobox', { name: 'What is the port of entry into Great Britain?' })
+    - locator resolved to <select id="portOfEntry" name="portOfEntry" class="govuk-select">…</select>
+  - attempting select option action
+    2 × waiting for element to be visible and enabled
+      - did not find some options
+    - retrying select option action
+    - waiting 20ms
+    2 × waiting for element to be visible and enabled
+      - did not find some options
+    - retrying select option action
+      - waiting 100ms
+    54 × waiting for element to be visible and enabled
+       - did not find some options
+     - retrying select option action
+       - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - generic [ref=e23]:
+        - link "Animals" [ref=e25] [cursor=pointer]:
+          - /url: /
+        - navigation "Menu" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Home" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]:
+              - link "About" [ref=e31] [cursor=pointer]:
+                - /url: /about
+  - generic [ref=e32]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - img [ref=e37]
+        - generic [ref=e40]: test.user11@defra.gov.uk
+      - generic [ref=e41]: "|"
+      - link "Sign out" [ref=e42] [cursor=pointer]:
+        - /url: /signout
+    - main [ref=e43]:
+      - generic [ref=e45]:
+        - link "Back" [ref=e46] [cursor=pointer]:
+          - /url: /addresses
+        - paragraph [ref=e47]:
+          - generic [ref=e48]: GBN-AG-26-N34ZAJ
+        - heading "Transport Entry point and arrival at destination" [level=1] [ref=e50]:
+          - generic [ref=e51]: Transport
+          - text: Entry point and arrival at destination
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: What is the port of entry into Great Britain?
+            - combobox "What is the port of entry into Great Britain?" [ref=e56]:
+              - option "Select port of entry" [selected]
+              - option "──────────" [disabled]
+              - option "Aberdeen Airport (GB DYC)"
+              - option "Aberdeen Harbour (GB ABD)"
+              - option "Avonmouth Docks (GB AVO)"
+              - option "Ayr Port (GB AYR)"
+              - option "Barking Port (GB BKG)"
+              - option "Birmingham International Airport (GB BHM)"
+              - option "Cambridge Airport (GB CBG)"
+              - option "Chatham Docks (GB CTM)"
+              - option "Coventry Airport (GB CVT)"
+              - option "Dartford, Thames Europort (GB DFD)"
+              - option "Dundee Port (GB DUN)"
+              - option "East Midlands Airport (GB EMA)"
+              - option "Edinburgh Airport (GB EDI)"
+              - option "Farnborough Airport (GB FBO)"
+              - option "Felixstowe Port (GB FXT)"
+              - option "Fishguard Port (GB FIS)"
+              - option "Folkestone (GB FOL)"
+              - option "Fraserburgh Harbour (GB FRB)"
+              - option "Gatwick Airport (GB LGW)"
+              - option "Glasgow Airport (GB GLW)"
+              - option "Glasgow Prestwick Airport (GB PIK)"
+              - option "Grangemouth Port (GB GRG)"
+              - option "Greenock Port (GB GRK)"
+              - option "Grimsby and Immingham Port (GB IMM)"
+              - option "HES Humber Bulk Terminal (GB HMR)"
+              - option "Harwich Port (GB HRW)"
+              - option "Heathrow Airport (GB LHR)"
+              - option "Heysham Port (GB HYM)"
+              - option "Holyhead Port (GB HLY)"
+              - option "Hull Port (GB HUL)"
+              - option "Humberside Airport (GB HUY)"
+              - option "Hythe Port (GB HTH)"
+              - option "Invergordon Port (GB IVG)"
+              - option "Killingholme Port (GB KGH)"
+              - option "Leith Port (GB LEI)"
+              - option "Liverpool Airport (GB LPL)"
+              - option "Liverpool Docks (GB LIV)"
+              - option "London Gateway Port (GB LGP)"
+              - option "London Thamesport (GB THP)"
+              - option "Luton Airport (GB LUT)"
+              - option "Manchester Airport (GB MAN)"
+              - option "Methil Port (GB MTH)"
+              - option "Newhaven Port (GB NHV)"
+              - option "Northampton Airport (GB NHP)"
+              - option "Nottingham Port (GB NTG)"
+              - option "Pembroke Port (GB PED)"
+              - option "Pembroke Port (GB PEM)"
+              - option "Perth Port (GB PER)"
+              - option "Peterhead Port (GB PHD)"
+              - option "Plymouth Port (GB PLY)"
+              - option "Poole Port (GB POO)"
+              - option "Port of Birkenhead (GB BRK)"
+              - option "Port of Blyth (GB BLY)"
+              - option "Port of Bristol (GB BRS)"
+              - option "Port of Cairnryan (GB CYN)"
+              - option "Port of Dagenham (GB DAG)"
+              - option "Port of Dover (GB DVR)"
+              - option "Port of Dover (Eastern) (GB DVRE)"
+              - option "Port of Dover (Western) (GB DVRW)"
+              - option "Port of Grimsby (GB GSY)"
+              - option "Port of Isle of Grain (GB IOG)"
+              - option "Port of Manchester (GB MNC)"
+              - option "Port of Middlesbrough (GB MID)"
+              - option "Port of Sheerness (GBSHS)"
+              - option "Port of Sheerness (GB SHS)"
+              - option "Port of Tyne (GB TYN)"
+              - option "Portsmouth Port (GB PME)"
+              - option "Purfleet Port (GB PFT)"
+              - option "Royal Portbury Dock (GB PRU)"
+              - option "Silloth Port (GB SIL)"
+              - option "Southampton Port (GB SOU)"
+              - option "Stansted Airport (GB STN)"
+              - option "Stranraer Harbour (GB STR)"
+              - option "TILBURY (GB TIL)"
+              - option "Teesside International Airport (GB MME)"
+              - option "Teestort (GB TEE)"
+              - option "Tilbury 2 Ro-Ro Terminal (GB TILR)"
+              - option "Tilbury Port (GB TILL)"
+          - group "When will the consignment arrive at its final destination?" [ref=e58]:
+            - generic [ref=e59]: When will the consignment arrive at its final destination?
+            - generic [ref=e60]: For example, 27 3 2026
+            - generic [ref=e61]:
+              - generic [ref=e63]:
+                - generic [ref=e64]: Day
+                - textbox "Day" [ref=e65]
+              - generic [ref=e67]:
+                - generic [ref=e68]: Month
+                - textbox "Month" [ref=e69]
+              - generic [ref=e71]:
+                - generic [ref=e72]: Year
+                - textbox "Year" [ref=e73]
+          - button "Save and continue" [ref=e75] [cursor=pointer]
+  - contentinfo [ref=e76]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - heading "Support links" [level=2] [ref=e91]
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "Privacy" [ref=e94] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e95]:
+            - link "Cookies" [ref=e96] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e97]:
+            - link "Accessibility statement" [ref=e98] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e99]
+        - generic [ref=e101]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e102] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e104] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  312 |   async fillConsignor(): Promise<void> {
+  313 |     await this.pages.consignorSelection.radioConsignorOrExporter(CONSIGNOR_NAME).click();
+  314 |   }
+  315 | 
+  316 |   async saveConsignor(): Promise<void> {
+  317 |     await this.pages.consignorSelection.btnSaveAndContinue.click();
+  318 |     await this.pages.addresses.heading.waitFor();
+  319 |   }
+  320 | 
+  321 |   async openConsignee(): Promise<void> {
+  322 |     await this.pages.addresses.linkAddConsignee.click();
+  323 |     await this.pages.consigneeSelection.heading.waitFor();
+  324 |   }
+  325 | 
+  326 |   async fillConsignee(): Promise<void> {
+  327 |     await this.pages.consigneeSelection.radioConsignee(CONSIGNEE_NAME).click();
+  328 |   }
+  329 | 
+  330 |   async saveConsignee(): Promise<void> {
+  331 |     await this.pages.consigneeSelection.btnSaveAndContinue.click();
+  332 |     await this.pages.addresses.heading.waitFor();
+  333 |   }
+  334 | 
+  335 |   async openImporter(): Promise<void> {
+  336 |     await this.pages.addresses.linkAddImporter.click();
+  337 |     await this.pages.importerSelection.heading.waitFor();
+  338 |   }
+  339 | 
+  340 |   async fillImporter(): Promise<void> {
+  341 |     await this.pages.importerSelection.radioImporter(IMPORTER_NAME).click();
+  342 |   }
+  343 | 
+  344 |   async saveImporter(): Promise<void> {
+  345 |     await this.pages.importerSelection.btnSaveAndContinue.click();
+  346 |     await this.pages.addresses.heading.waitFor();
+  347 |   }
+  348 | 
+  349 |   async openPlaceOfDestination(): Promise<void> {
+  350 |     await this.pages.addresses.linkAddPlaceOfDestination.click();
+  351 |     await this.pages.destinationSelection.heading.waitFor();
+  352 |   }
+  353 | 
+  354 |   async fillPlaceOfDestination(): Promise<void> {
+  355 |     await this.pages.destinationSelection.radioPlaceOfDestination(DESTINATION_NAME).click();
+  356 |   }
+  357 | 
+  358 |   async savePlaceOfDestination(): Promise<void> {
+  359 |     await this.pages.destinationSelection.btnSaveAndContinue.click();
+  360 |     await this.pages.addresses.heading.waitFor();
+  361 |   }
+  362 | 
+  363 |   async toCphNumber(options: JourneyOptions = {}): Promise<void> {
+  364 |     await this.toAddresses(options);
+  365 |     await this.openCphNumber();
+  366 |   }
+  367 | 
+  368 |   async openCphNumber(): Promise<void> {
+  369 |     await this.pages.addresses.linkAddCphNumber.click();
+  370 |     await this.pages.cphNumber.heading.waitFor();
+  371 |   }
+  372 | 
+  373 |   async fillCphNumber(): Promise<void> {
+  374 |     await this.pages.cphNumber.inputCphNumber.fill(CPH_NUMBER);
+  375 |   }
+  376 | 
+  377 |   async saveCphNumber(): Promise<void> {
+  378 |     await this.pages.cphNumber.btnSaveAndContinue.click();
+  379 |     await this.pages.addresses.heading.waitFor();
+  380 |   }
+  381 | 
+  382 |   async saveAddresses(): Promise<void> {
+  383 |     await this.pages.addresses.btnSaveAndContinue.click();
+  384 |     await this.pages.entryPoint.heading.waitFor();
+  385 |   }
+  386 | 
+  387 |   async toEntryPoint(options: JourneyOptions = {}): Promise<void> {
+  388 |     await this.toAddresses(options);
+  389 |     await this.openPlaceOfOrigin();
+  390 |     await this.fillPlaceOfOrigin();
+  391 |     await this.savePlaceOfOrigin();
+  392 |     await this.openConsignor();
+  393 |     await this.fillConsignor();
+  394 |     await this.saveConsignor();
+  395 |     await this.openConsignee();
+  396 |     await this.fillConsignee();
+  397 |     await this.saveConsignee();
+  398 |     await this.openImporter();
+  399 |     await this.fillImporter();
+  400 |     await this.saveImporter();
+  401 |     await this.openPlaceOfDestination();
+  402 |     await this.fillPlaceOfDestination();
+  403 |     await this.savePlaceOfDestination();
+  404 |     await this.openCphNumber();
+  405 |     await this.fillCphNumber();
+  406 |     await this.saveCphNumber();
+  407 |     await this.saveAddresses();
+  408 |   }
+  409 | 
+  410 |   async fillEntryPoint(options: JourneyOptions = {}): Promise<void> {
+  411 |     const { pointOfEntry, arrivalDate } = { ...defaultJourneyOptions, ...options };
+> 412 |     await this.pages.entryPoint.dropdownPortOfEntry.selectOption(pointOfEntry.code);
+      |                                                     ^ Error: locator.selectOption: Test timeout of 30000ms exceeded.
+  413 |     await this.pages.entryPoint.fillArrivalDate(arrivalDate);
+  414 |   }
+  415 | 
+  416 |   async saveEntryPoint(): Promise<void> {
+  417 |     await this.pages.entryPoint.btnSaveAndContinue.click();
+  418 |     await this.pages.transporter.heading.waitFor();
+  419 |   }
+  420 | 
+  421 |   async toTransporter(options: JourneyOptions = {}): Promise<void> {
+  422 |     await this.toEntryPoint(options);
+  423 |     await this.fillEntryPoint(options);
+  424 |     await this.saveEntryPoint();
+  425 |   }
+  426 | 
+  427 |   async openTransporterSelection(): Promise<void> {
+  428 |     await this.pages.transporter.linkAddTransporter.click();
+  429 |     await this.pages.transporterSelection.heading.waitFor();
+  430 |   }
+  431 | 
+  432 |   async selectTransporter(): Promise<void> {
+  433 |     await this.pages.transporterSelection.linkSelectTransporterByName(TRANSPORTER_NAME).click();
+  434 |     await this.pages.transporter.heading.waitFor();
+  435 |   }
+  436 | 
+  437 |   async saveTransporter(): Promise<void> {
+  438 |     await this.pages.transporter.btnSaveAndContinue.click();
+  439 |     await this.pages.contactAddress.heading.waitFor();
+  440 |   }
+  441 | 
+  442 |   async toContactAddress(options: JourneyOptions = {}): Promise<void> {
+  443 |     await this.toTransporter(options);
+  444 |     await this.openTransporterSelection();
+  445 |     await this.selectTransporter();
+  446 |     await this.saveTransporter();
+  447 |   }
+  448 | 
+  449 |   async fillContactAddress(): Promise<void> {
+  450 |     await this.pages.contactAddress.radioAddress(CONTACT_ADDRESS_NAME).click();
+  451 |   }
+  452 | 
+  453 |   async saveContactAddress(): Promise<void> {
+  454 |     await this.pages.contactAddress.btnSaveAndContinue.click();
+  455 |     await this.pages.notificationView.heading.waitFor();
+  456 |   }
+  457 | 
+  458 |   async toReview(options: JourneyOptions = {}): Promise<void> {
+  459 |     await this.toContactAddress(options);
+  460 |     await this.fillContactAddress();
+  461 |     await this.saveContactAddress();
+  462 |   }
+  463 | 
+  464 |   async confirmReview(): Promise<void> {
+  465 |     await this.pages.notificationView.btnConfirmAndSubmit.click();
+  466 |     await this.pages.declaration.heading.waitFor();
+  467 |   }
+  468 | 
+  469 |   async toDeclaration(options: JourneyOptions = {}): Promise<void> {
+  470 |     await this.toReview(options);
+  471 |     await this.confirmReview();
+  472 |   }
+  473 | 
+  474 |   async fillDeclaration(): Promise<void> {
+  475 |     if (this.journeyContext) {
+  476 |       const declarationDate = await this.pages.declaration.dateOfDeclaration.textContent();
+  477 |       this.journeyContext.declarationDate = declarationDate?.replace('Date of declaration: ', '');
+  478 |     }
+  479 |     await this.pages.declaration.checkboxDeclaration.click();
+  480 |   }
+  481 | 
+  482 |   async submitDeclaration(): Promise<void> {
+  483 |     // TODO: replace with submissionConfirmation.heading.waitFor() once confirmation page exists
+  484 |     await Promise.all([this.pages.page.waitForNavigation({ waitUntil: 'commit' }), this.pages.declaration.btnSubmitNotification.click()]);
+  485 |   }
+  486 | 
+  487 |   async submitNotification(options: JourneyOptions = {}): Promise<void> {
+  488 |     await this.toDeclaration(options);
+  489 |     await this.fillDeclaration();
+  490 |     await this.submitDeclaration();
+  491 |   }
+  492 | }
+  493 | 
+```
