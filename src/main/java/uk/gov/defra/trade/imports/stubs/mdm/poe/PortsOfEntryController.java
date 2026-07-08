@@ -1,6 +1,5 @@
-package uk.gov.defra.trade.imports.stubs.mdm.countries;
+package uk.gov.defra.trade.imports.stubs.mdm.poe;
 
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -13,22 +12,21 @@ import uk.gov.defra.trade.imports.utils.FileUtils;
 @Slf4j
 @RestController
 @AllArgsConstructor
-public class CountriesController {
+public class PortsOfEntryController {
+
   private final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
 
   private FileUtils fileUtils;
 
-  @GetMapping(value = "/mdm/geo/countries")
-  ResponseEntity<List<MdmCountry>> getCountries(
+  @GetMapping(value = "/mdm/trade/bcp/poes")
+  ResponseEntity<MdmPortsResponse> getPortsOfEntry(
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
-      @RequestParam(value = "system", required = false) String system,
-      @RequestParam(value = "blocks", required = false) String blocks) {
+      @RequestParam(value = "system", required = false) String system) {
 
-    List<MdmCountry> countries = List.of(
-        fileUtils.getObjectFromFile("responses/countriesResponse.json", MdmCountry[].class));
+    MdmPortsResponse response = fileUtils.getObjectFromFile("responses/portsOfEntryResponse.json", MdmPortsResponse.class);
 
     return ResponseEntity.ok()
         .header("x-ms-middleware-request-id", "stub-trace-id")
-        .body(countries);
+        .body(response);
   }
 }
