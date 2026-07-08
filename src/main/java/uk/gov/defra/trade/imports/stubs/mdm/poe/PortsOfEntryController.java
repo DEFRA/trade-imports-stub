@@ -23,7 +23,7 @@ public class PortsOfEntryController {
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
       @RequestParam(value = "system", required = false) String system) {
 
-    MdmPortsResponse response = fileUtils.getObjectFromFile("responses/portsOfEntryResponse.json");
+    MdmPortsResponse response = fileUtils.getObjectFromFile("responses/portsOfEntryResponse.json", MdmPortsResponse.class);
 
     return ResponseEntity.ok()
         .header("x-ms-middleware-request-id", "stub-trace-id")

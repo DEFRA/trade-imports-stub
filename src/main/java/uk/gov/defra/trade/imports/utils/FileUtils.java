@@ -29,4 +29,20 @@ public class FileUtils {
       throw new RuntimeException("Failed to read from json file: " + fileName, e);
     }
   }
+
+  public <T> T getObjectFromFile(String fileName, Class<T> clazz) {
+    try {
+      var inputStream = getClass().getClassLoader()
+          .getResourceAsStream(fileName);
+
+      if (inputStream == null) {
+        throw new IllegalArgumentException("File not found: " + fileName);
+      }
+
+      return objectMapper.readValue(inputStream, clazz);
+    } catch (Exception e) {
+      log.error("Failed to read from JSON file: {}", fileName, e);
+      throw new RuntimeException("Failed to read from json file: " + fileName, e);
+    }
+  }
 }
