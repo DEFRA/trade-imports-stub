@@ -21,6 +21,19 @@ class FileUtilsTest {
   }
 
   @Test
+  void getObjectFromFile_deserializesIsoCountriesFixtureAsArray() {
+    MdmCountry[] countries = fileUtils.getObjectFromFile(
+        "responses/isoCountriesResponse.json", MdmCountry[].class);
+
+    assertThat(countries).isNotEmpty();
+    assertThat(countries[0].getName()).isNotBlank();
+    assertThat(countries[0].getEffectiveAlpha2()).isNotBlank();
+    assertThat(countries).extracting(MdmCountry::getEffectiveAlpha2)
+        .contains("FR", "DE")
+        .doesNotContain("GB");
+  }
+
+  @Test
   void getObjectFromFile_deserializesCountriesFixtureAsArray() {
     MdmCountry[] countries = fileUtils.getObjectFromFile(
         "responses/countriesResponse.json", MdmCountry[].class);
