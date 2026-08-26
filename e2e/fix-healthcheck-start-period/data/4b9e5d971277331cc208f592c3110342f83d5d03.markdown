@@ -1,0 +1,180 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/features/ins/aggregated-notification.spec.ts >> Aggregated notification store >> creates and updates aggregated notification document through the submission lifecycle
+- Location: tests/e2e/features/ins/aggregated-notification.spec.ts:16:3
+
+# Error details
+
+```
+Error: expect(received).toBeInstanceOf(expected)
+
+Expected constructor: Date
+
+Received value has no prototype
+Received value: undefined
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - link "GOV.UK" [ref=e7] [cursor=pointer]:
+      - /url: https://www.gov.uk/
+      - img "GOV.UK" [ref=e8]
+    - region "Service information" [ref=e21]:
+      - link "Import notification service" [ref=e25] [cursor=pointer]:
+        - /url: /
+  - generic [ref=e26]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e31]
+        - generic [ref=e34]: test.user11@defra.gov.uk
+      - generic [ref=e35]: "|"
+      - link "Sign out" [ref=e36] [cursor=pointer]:
+        - /url: /auth/sign-out
+    - paragraph [ref=e38]:
+      - strong [ref=e39]: Alpha
+      - generic [ref=e40]:
+        - text: This is a new service. Help us improve it and
+        - link "give your feedback by email" [ref=e41] [cursor=pointer]:
+          - /url: mailto:APHAServiceDesk@apha.gov.uk
+        - text: .
+    - navigation "Breadcrumb" [ref=e42]:
+      - list [ref=e43]:
+        - listitem [ref=e44]:
+          - link "Your notifications" [ref=e45] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e46]: Declaration
+    - link "Back" [ref=e47] [cursor=pointer]:
+      - /url: /notifications/GBN-AG-26-0E29FW/notification-view
+    - main [ref=e48]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - strong [ref=e52]: Draft
+          - text: GBN-AG-26-0E29FW
+        - heading "Declaration" [level=1] [ref=e53]
+        - heading "I am the contact for the authorities and located in the UK." [level=2] [ref=e54]
+        - heading "I confirm I am responsible for this consignment until it has cleared border control checks or reached the place of destination." [level=2] [ref=e55]
+        - heading "I confirm that I am accountable for:" [level=2] [ref=e56]
+        - list [ref=e57]:
+          - listitem [ref=e58]: payments for border control checks
+          - listitem [ref=e59]: re-dispatch of the consignment
+          - listitem [ref=e60]: quarantine or isolation of the animals
+          - listitem [ref=e61]: the costs of destruction and disposal
+        - paragraph [ref=e62]: I am authorised as being accountable for these things if raising notifications on behalf of a third party.
+        - paragraph [ref=e63]: I can legally act on behalf of a third party in relation to the conditions of this declaration.
+        - generic [ref=e64]:
+          - generic [ref=e67]:
+            - checkbox "I confirm that I have reviewed and comply with this declaration and that the information submitted in this notification is true and correct." [ref=e68] [cursor=pointer]
+            - generic [ref=e69] [cursor=pointer]: I confirm that I have reviewed and comply with this declaration and that the information submitted in this notification is true and correct.
+          - paragraph [ref=e70]: "Date of declaration: 26 August 2026"
+          - button "Continue" [ref=e71] [cursor=pointer]
+  - contentinfo [ref=e72]:
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - heading "Support links" [level=2] [ref=e87]
+        - list [ref=e88]:
+          - listitem [ref=e89]:
+            - link "Privacy" [ref=e90] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/privacy-notice
+          - listitem [ref=e91]:
+            - link "Cookies" [ref=e92] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/cookies
+          - listitem [ref=e93]:
+            - link "Accessibility statement" [ref=e94] [cursor=pointer]:
+              - /url: https://www.gov.uk/help/accessibility-statement
+        - img [ref=e95]
+        - generic [ref=e97]:
+          - text: All content is available under the
+          - link "Open Government Licence v3.0" [ref=e98] [cursor=pointer]:
+            - /url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+          - text: ", except where otherwise stated"
+      - link "© Crown copyright" [ref=e100] [cursor=pointer]:
+        - /url: https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@fixtures';
+  2  | import { MongoDbClient } from '@adapters/db/mongodb-client';
+  3  | import { defaultJourneyOptions } from '@domain/constants/journey-options';
+  4  | import { type AggregatedNotificationDocument } from '@domain/models/db/aggregated-notification-document';
+  5  | import { timeouts } from '@config/timeouts';
+  6  | import { getInsBackendMongoDbUri } from '@config/service-base-urls';
+  7  | import { skipUnlessComposeEnvironment } from '@utils/playwright/environment';
+  8  | 
+  9  | const aggregateIdFor = (referenceNumber: string): string => `Imports.Notification.GBN-AG.${referenceNumber}`;
+  10 | 
+  11 | test.describe('Aggregated notification store', { tag: ['@compose', '@integration', '@mongodb'] }, () => {
+  12 |   test.beforeEach(() => {
+  13 |     skipUnlessComposeEnvironment('aggregated notification assertions read Mongo directly, which only the compose stack exposes');
+  14 |   });
+  15 | 
+  16 |   test('creates and updates aggregated notification document through the submission lifecycle', async ({ journey, journeyContext }) => {
+  17 |     test.slow();
+  18 | 
+  19 |     // Given — complete the journey up to the declaration page (notification is in DRAFT)
+  20 |     await journey.toDeclaration();
+  21 |     const referenceNumber = journeyContext.journeyId;
+  22 |     const aggregateId = aggregateIdFor(referenceNumber);
+  23 |     const client = new MongoDbClient(getInsBackendMongoDbUri());
+  24 | 
+  25 |     try {
+  26 |       await client.connect();
+  27 |       const collection = client.collection<AggregatedNotificationDocument>('trade-imports-ins-backend', 'notifications');
+  28 | 
+  29 |       // When — notification has been edited but not yet submitted
+  30 |       // Then — aggregated store should reflect DRAFT status with all fields populated
+  31 |       await expect.poll(() => collection.findOne({ _id: aggregateId, status: 'DRAFT' }), { timeout: timeouts.long }).not.toBeNull();
+  32 | 
+  33 |       const draftDoc = await collection.findOne({ _id: aggregateId });
+  34 |       expect(draftDoc._id).toBe(aggregateId);
+  35 |       expect(draftDoc.referenceNumber).toBe(referenceNumber);
+  36 |       expect(draftDoc.status).toBe('DRAFT');
+  37 |       expect(draftDoc.originCountry).toBe(defaultJourneyOptions.countryCode.value);
+  38 |       // commodity omitted: see EUDPA-348 — Commodity.name not included in outbox event
+> 39 |       expect(draftDoc.arrivalDate).toBeInstanceOf(Date);
+     |                                    ^ Error: expect(received).toBeInstanceOf(expected)
+  40 |       expect(draftDoc.arrivalDate.getTime()).toBeGreaterThan(Date.now());
+  41 |       expect(draftDoc.lastUpdated).toBeInstanceOf(Date);
+  42 |       expect(draftDoc.aggregateVersion).toBeGreaterThan(0);
+  43 | 
+  44 |       const draftVersion = draftDoc.aggregateVersion;
+  45 | 
+  46 |       // When — notification is submitted
+  47 |       await journey.pages.declaration.confirmation.check();
+  48 |       await journey.pages.declaration.continueButton.click();
+  49 |       await journey.pages.page.getByRole('heading', { name: 'Import notification submitted' }).waitFor();
+  50 | 
+  51 |       // Then — same document is updated to SUBMITTED (no duplicate created)
+  52 |       await expect.poll(() => collection.findOne({ _id: aggregateId, status: 'SUBMITTED' }), { timeout: timeouts.long }).not.toBeNull();
+  53 | 
+  54 |       expect(await collection.countDocuments({ _id: aggregateId })).toBe(1);
+  55 | 
+  56 |       const submittedDoc = await collection.findOne({ _id: aggregateId });
+  57 |       expect(submittedDoc._id).toBe(aggregateId);
+  58 |       expect(submittedDoc.referenceNumber).toBe(referenceNumber);
+  59 |       expect(submittedDoc.status).toBe('SUBMITTED');
+  60 |       expect(submittedDoc.originCountry).toBe(defaultJourneyOptions.countryCode.value);
+  61 |       // commodity omitted: see EUDPA-348 — Commodity.name not included in outbox event
+  62 |       expect(submittedDoc.arrivalDate).toBeInstanceOf(Date);
+  63 |       expect(submittedDoc.arrivalDate.getTime()).toBeGreaterThan(Date.now());
+  64 |       expect(submittedDoc.lastUpdated).toBeInstanceOf(Date);
+  65 |       expect(submittedDoc.aggregateVersion).toBeGreaterThan(draftVersion);
+  66 |     } finally {
+  67 |       await client.close();
+  68 |     }
+  69 |   });
+  70 | });
+  71 | 
+```
