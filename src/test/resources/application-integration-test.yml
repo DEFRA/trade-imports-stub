@@ -77,3 +77,10 @@ info:
     name: ${spring.application.name}
     version: ${cdp.service-version}
     environment: ${cdp.environment}
+
+# EUDPA-390 — webEnvironment=RANDOM_PORT only randomises server.port, not this app's extra
+# Tomcat connector (StsSimulatorPortConfig); a fixed port here would conflict across the many
+# full-context ITs that share this profile. Nothing in the automated suite calls the simulators
+# over real HTTP yet, so an ephemeral port is fine.
+sts-simulator:
+  port: 0
