@@ -114,13 +114,14 @@ class AddressLookupSimulatorController {
     }
 
     /**
-     * Word for word what the real gateway's {@code validate-jwt} policy returned in dev while the
-     * audience was wrong — the message a developer will search for, so the simulator should answer
-     * with the same one.
+     * Word for word what the real gateway's {@code validate-jwt} policy returned in dev, taken from
+     * the logged body of the 401s on 2026-09-17 — the response a developer will compare against, so
+     * the simulator answers with the same one, {@code statusCode} field included. The gateway sends
+     * no {@code WWW-Authenticate} header with it, and neither does this.
      */
     private ResponseEntity<String> unauthorized() {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).contentType(MediaType.APPLICATION_JSON)
-            .body("{\"message\":\"Unauthorized. Access token is missing or invalid.\"}");
+            .body("{ \"statusCode\": 401, \"message\": \"Unauthorized. Access token is missing or invalid.\" }");
     }
 
     /**

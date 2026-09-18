@@ -10,6 +10,7 @@ import com.nimbusds.jwt.SignedJWT;
 import java.time.Instant;
 import java.util.Date;
 import org.junit.jupiter.api.Test;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -49,7 +50,11 @@ class AddressLookupSimulatorControllerTest {
             bearer("33333333-3333-3333-3333-333333333333", Instant.now().plusSeconds(900)), "SW1A 1AA", null);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
-        assertThat(response.getBody()).isEqualTo("{\"message\":\"Unauthorized. Access token is missing or invalid.\"}");
+        assertThat(response.getBody())
+            .isEqualTo("{ \"statusCode\": 401, \"message\": \"Unauthorized. Access token is missing or invalid.\" }");
+        // The real gateway sends none, which is why Spring's own authorization failure handler
+        // cannot be used to evict a stale token (plan, iteration 1 gaps).
+        assertThat(response.getHeaders().getFirst(HttpHeaders.WWW_AUTHENTICATE)).isNull();
     }
 
     @Test
