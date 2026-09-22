@@ -58,6 +58,25 @@ class AddressLookupSimulatorControllerTest {
     }
 
     @Test
+    void addresses_shouldServeTheReservedFreeTextTerms_soFindCanBeDemonstrated() throws Exception {
+        ResponseEntity<String> response = controller.addresses(
+            bearer(EXPECTED_AUDIENCE, Instant.now().plusSeconds(900)), null, "Buckingham Palace");
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).contains("BUCKINGHAM PALACE");
+    }
+
+    @Test
+    void addresses_shouldReturnNoResults_forFreeTextThatIsNotReserved() throws Exception {
+        // The reserved terms are fixtures, not a model of what find matches.
+        ResponseEntity<String> response = controller.addresses(
+            bearer(EXPECTED_AUDIENCE, Instant.now().plusSeconds(900)), null, "Buckingham");
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).contains("\"totalResults\": \"0\"");
+    }
+
+    @Test
     void addresses_shouldReturn204_forTheReservedNoResultsPostcode() throws Exception {
         ResponseEntity<String> response = controller.addresses(bearer(EXPECTED_AUDIENCE, Instant.now().plusSeconds(900)), "ZZ1 1ZZ", null);
 

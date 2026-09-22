@@ -48,7 +48,15 @@ class AddressLookupSimulatorController {
             return rejection;
         }
 
+        // Deliberately identical for both parameters. What find really matches — a postcode, a
+        // building name or number, a street, a town — is a question only the real gateway can
+        // answer, and a simulator that guessed would look like an answer. Local runs prove the
+        // plumbing carries the parameter through; dev settles the behaviour.
         String term = postcode != null ? postcode : find;
+        if (term == null) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).contentType(MediaType.APPLICATION_JSON)
+                .body("{ \"statusCode\": 400, \"message\": \"Either postcode or find is required\" }");
+        }
         return switch (term) {
             case "SW1A 1AA" -> jsonOk(THREE_ADDRESSES_FIXTURE);
             case "ZZ1 1ZZ" -> ResponseEntity.noContent().build();
@@ -58,6 +66,12 @@ class AddressLookupSimulatorController {
                 .body("{\"statusCode\":503,\"message\":\"Service Unavailable\"}");
             case "YY1 1YY" -> ResponseEntity.ok().contentType(MediaType.TEXT_HTML).body("<html><body>Bad Gateway</body></html>");
             case "TT1 1TT" -> delayedOk();
+            // Free-text fixtures, so the find half of the spike page can be demonstrated without
+            // deploying. These are reserved terms like the postcodes above, NOT a model of what
+            // find matches — that is the question the spike exists to answer, and only the real
+            // gateway can. A search here returning results says nothing about whether the same
+            // search would return results in dev.
+            case "Buckingham Palace", "Downing Street" -> jsonOk(THREE_ADDRESSES_FIXTURE);
             default -> jsonOk(NO_RESULTS_FIXTURE);
         };
     }
