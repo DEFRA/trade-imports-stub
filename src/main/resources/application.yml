@@ -102,3 +102,18 @@ info:
     name: ${spring.application.name}
     version: ${cdp.service-version}
     environment: ${ENVIRONMENT:local}
+
+# EUDPA-390 address lookup spike — the three federated-credential simulators (plan Step 6).
+# sts-simulator.port is a dedicated port: the AWS SDK always POSTs GetWebIdentityToken to the
+# root path of the endpoint override, so it can't share a sub-path on this app's main port.
+sts-simulator:
+  port: ${STS_SIMULATOR_PORT:8098}
+  issuer: ${STS_SIMULATOR_ISSUER:http://host.docker.internal:8098/}
+  subject: ${STS_SIMULATOR_SUBJECT:arn:aws:iam::000000000000:role/trade-imports-ins-backend}
+
+address-lookup-simulator:
+  # The audience ins-backend's Entra token request resolves to once /.default is stripped — must
+  # match the local/stack "Scope" value in the EUDPA-390 plan exactly, api:// prefix included.
+  # The real gateway policy in dev wants the api:// form and rejects the bare GUID, so this does
+  # too: a simulator that accepted either would not have caught the 401 the spike hit.
+  expected-audience: ${ADDRESS_LOOKUP_SIMULATOR_EXPECTED_AUDIENCE:api://33333333-3333-3333-3333-333333333333}

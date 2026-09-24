@@ -32,3 +32,8 @@ spring:
     restart:
       enabled: true
       trigger-file: .reloadtrigger   # restart once per compile batch, not mid-build
+
+# EUDPA-390 — running outside the stack, ins-backend reaches this on localhost, not
+# host.docker.internal.
+sts-simulator:
+  issuer: ${STS_SIMULATOR_ISSUER:http://localhost:8098/}
