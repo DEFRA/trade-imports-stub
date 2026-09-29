@@ -31,6 +31,21 @@ class FileUtilsTest {
   }
 
   @Test
+  void getObjectFromFile_deserializesCountrySubdivisionsFromFixture() {
+    MdmCountry[] countries = fileUtils.getObjectFromFile(
+        "responses/countriesResponse.json", MdmCountry[].class);
+
+    MdmCountry spain = List.of(countries).stream()
+        .filter((country) -> "ES".equals(country.getEffectiveAlpha2()))
+        .findFirst()
+        .orElseThrow();
+
+    assertThat(spain.getSubDivisions()).hasSize(1);
+    assertThat(spain.getSubDivisions().get(0).getCode().getValue()).isEqualTo("ES-CN");
+    assertThat(spain.getSubDivisions().get(0).getName()).isEqualTo("Canary Islands");
+  }
+
+  @Test
   void getObjectFromFile_deserializesMdmPortsResponseFromFixture() {
     MdmPortsResponse response = fileUtils.getObjectFromFile(
         "responses/portsOfEntryResponse.json", MdmPortsResponse.class);
