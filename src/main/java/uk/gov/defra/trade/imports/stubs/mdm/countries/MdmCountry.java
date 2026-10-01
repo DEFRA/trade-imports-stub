@@ -25,5 +25,6 @@ public class MdmCountry {
   private String systemAlpha2;
   private String systemAlpha3;
   private String systemLongName;
+  private List<MdmSubDivision> subDivisions;
   private List<MdmBlock> blocks;
 }

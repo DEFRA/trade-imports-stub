@@ -14,8 +14,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Belgium",
@@ -32,8 +37,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Bulgaria",
@@ -50,8 +60,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Croatia",
@@ -68,8 +83,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Cyprus",
@@ -86,8 +106,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Czechia",
@@ -104,8 +129,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Denmark",
@@ -122,8 +152,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Estonia",
@@ -140,8 +175,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Finland",
@@ -158,8 +198,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "France",
@@ -176,7 +221,49 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": [
+      {
+        "code": {
+          "value": "FR-MQ"
+        },
+        "name": "Martinique"
+      },
+      {
+        "code": {
+          "value": "FR-GP"
+        },
+        "name": "Guadeloupe"
+      },
+      {
+        "code": {
+          "value": "FR-MF"
+        },
+        "name": "Saint Martin (French part)"
+      },
+      {
+        "code": {
+          "value": "FR-LRE"
+        },
+        "name": "Reunion"
+      },
+      {
+        "code": {
+          "value": "FR-GF"
+        },
+        "name": "French Guiana"
+      },
+      {
+        "code": {
+          "value": "FR-YT"
+        },
+        "name": "Mayotte"
+      }
     ]
   },
   {
@@ -194,8 +281,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Greece",
@@ -212,8 +304,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Hungary",
@@ -230,8 +327,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Iceland",
@@ -248,8 +350,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Ireland",
@@ -266,8 +373,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Italy",
@@ -284,8 +396,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Latvia",
@@ -302,8 +419,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Liechtenstein",
@@ -320,8 +442,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Lithuania",
@@ -338,8 +465,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Luxembourg",
@@ -356,8 +488,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Malta",
@@ -374,8 +511,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Netherlands (the)",
@@ -392,8 +534,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Norway",
@@ -410,8 +557,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Poland",
@@ -428,8 +580,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Portugal",
@@ -446,7 +603,25 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": [
+      {
+        "code": {
+          "value": "PT-30"
+        },
+        "name": "Madeira"
+      },
+      {
+        "code": {
+          "value": "PT-20"
+        },
+        "name": "Azores"
+      }
     ]
   },
   {
@@ -464,8 +639,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Slovakia",
@@ -482,8 +662,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Slovenia",
@@ -500,8 +685,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Spain",
@@ -518,7 +708,19 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": [
+      {
+        "code": {
+          "value": "ES-CN"
+        },
+        "name": "Canary Islands"
+      }
     ]
   },
   {
@@ -536,8 +738,13 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   },
   {
     "name": "Switzerland",
@@ -554,7 +761,12 @@
     "systemAlpha3": null,
     "systemLongName": null,
     "blocks": [
-      { "name": "GBNAG_SPS_EX", "includeCountry": true, "tags": [] }
-    ]
+      {
+        "name": "GBNAG_SPS_EX",
+        "includeCountry": true,
+        "tags": []
+      }
+    ],
+    "subDivisions": []
   }
 ]
