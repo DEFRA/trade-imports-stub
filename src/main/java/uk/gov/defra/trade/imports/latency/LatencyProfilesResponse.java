@@ -75,11 +75,17 @@ public record LatencyProfilesResponse(String stub, List<IntegrationReport> integ
      * The latency a stub actually answered with.
      *
      * @param count how many answers were recorded since the last clear
+     * @param peakPerSecond the most answers recorded within one wall-clock second since the last
+     *     clear
      * @param p50Ms the median, or null when there are no answers
      * @param p95Ms the 95th percentile, or null when there are no answers
      * @param p99Ms the 99th percentile, or null when there are no answers
      */
     public record AnsweredReport(
-        long count, @Nullable Long p50Ms, @Nullable Long p95Ms, @Nullable Long p99Ms) {
+        long count,
+        long peakPerSecond,
+        @Nullable Long p50Ms,
+        @Nullable Long p95Ms,
+        @Nullable Long p99Ms) {
     }
 }

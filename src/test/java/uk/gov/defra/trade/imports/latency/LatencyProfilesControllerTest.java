@@ -40,7 +40,8 @@ class LatencyProfilesControllerTest {
             .andExpect(jsonPath(MDM + ".slaTargets.p95Ms").value(400))
             .andExpect(jsonPath(MDM + ".targets.p95Ms").value(400))
             .andExpect(jsonPath(MDM + ".fitted.p95Ms").value(470))
-            .andExpect(jsonPath(MDM + ".answered.count").value(0));
+            .andExpect(jsonPath(MDM + ".answered.count").value(0))
+            .andExpect(jsonPath(MDM + ".answered.peakPerSecond").value(0));
     }
 
     @Test

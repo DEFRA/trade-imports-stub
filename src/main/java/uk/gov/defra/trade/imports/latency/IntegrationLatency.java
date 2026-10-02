@@ -100,6 +100,10 @@ public class IntegrationLatency {
             fitted,
             targets,
             new AnsweredReport(
-                snapshot.count(), snapshot.p50Ms(), snapshot.p95Ms(), snapshot.p99Ms()));
+                snapshot.count(),
+                snapshot.peakPerSecond(),
+                snapshot.p50Ms(),
+                snapshot.p95Ms(),
+                snapshot.p99Ms()));
     }
 }

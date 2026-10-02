@@ -43,6 +43,7 @@ class LatencyProfilesIT extends IntegrationBase {
         assertThat(mdm.get("profile").asText()).isEqualTo("sla");
         assertThat(mdm.get("answered").get("count").asInt()).isGreaterThanOrEqualTo(1);
         assertThat(mdm.get("answered").get("p50Ms").asLong()).isGreaterThanOrEqualTo(MDM_DELAY_MS);
+        assertThat(mdm.get("answered").get("peakPerSecond").asInt()).isGreaterThanOrEqualTo(1);
     }
 
     @Test
@@ -85,6 +86,7 @@ class LatencyProfilesIT extends IntegrationBase {
 
         assertThat(cleared.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
         assertThat(integration("mdm").get("answered").get("count").asInt()).isZero();
+        assertThat(integration("mdm").get("answered").get("peakPerSecond").asInt()).isZero();
         assertThat(integration("trade-token").get("answered").get("count").asInt()).isZero();
     }
 
