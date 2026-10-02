@@ -117,3 +117,36 @@ address-lookup-simulator:
   # The real gateway policy in dev wants the api:// form and rejects the bare GUID, so this does
   # too: a simulator that accepted either would not have caught the 401 the spike hit.
   expected-audience: ${ADDRESS_LOOKUP_SIMULATOR_EXPECTED_AUDIENCE:api://33333333-3333-3333-3333-333333333333}
+
+# Latency profiles (inc-007). Each integration answers with zero-delay (no added delay) or sla
+# (a lognormal fitted to its targets). The interim targets are c-011's default until section 9.5
+# of the volumetrics page agrees them.
+stub-latency:
+  integrations:
+    trade-token:
+      interface-name: Trade Platform OAuth token endpoint used before MDM calls
+      owner: "Trade Platform (TBC: no §9.5 row)"
+      service-level-source: "Interim (c-011 default): §9.5 has no row for this token endpoint"
+      agreed: ${STUB_LATENCY_TRADE_TOKEN_AGREED:false}
+      last-conformed: ${STUB_LATENCY_TRADE_TOKEN_LAST_CONFORMED:}
+      profile: ${STUB_LATENCY_TRADE_TOKEN_PROFILE:${STUB_LATENCY_PROFILE:zero-delay}}
+      paths:
+        - /tenant/oauth2/v2.0/token
+      sla:
+        p50-ms: ${STUB_LATENCY_TRADE_TOKEN_P50_MS:100}
+        p95-ms: ${STUB_LATENCY_TRADE_TOKEN_P95_MS:400}
+        p99-ms: ${STUB_LATENCY_TRADE_TOKEN_P99_MS:1000}
+    mdm:
+      interface-name: "MDM reference data through APIM: countries and border control posts"
+      owner: MDM / data platform team
+      service-level-source: "Interim (c-011 default): §9.5 MDM through APIM latency is TBC"
+      agreed: ${STUB_LATENCY_MDM_AGREED:false}
+      last-conformed: ${STUB_LATENCY_MDM_LAST_CONFORMED:}
+      profile: ${STUB_LATENCY_MDM_PROFILE:${STUB_LATENCY_PROFILE:zero-delay}}
+      paths:
+        - /mdm/geo/countries
+        - /mdm/trade/bcp/poes
+      sla:
+        p50-ms: ${STUB_LATENCY_MDM_P50_MS:100}
+        p95-ms: ${STUB_LATENCY_MDM_P95_MS:400}
+        p99-ms: ${STUB_LATENCY_MDM_P99_MS:1000}
