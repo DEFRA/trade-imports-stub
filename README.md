@@ -33,6 +33,35 @@ The metadata is set when the container starts, like the profile:
 | `STUB_LATENCY_MDM_AGREED` | Whether MDM's targets are agreed | `false` |
 | `STUB_LATENCY_MDM_LAST_CONFORMED` | Date MDM's profile was last conformed, `YYYY-MM-DD` | unset |
 
+### Fault injection
+
+The same two integrations can be made to fail, so the resilience runs in `trade-imports-performance-tests` can show how `trade-imports-reference-data` copes. A fault is switched on and off while the stub runs, with no rebuild or restart.
+
+| Integration | Paths a fault can apply to |
+|---|---|
+| `trade-token` | `POST /tenant/oauth2/v2.0/token` |
+| `mdm` | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes` |
+
+There are five kinds of fault, and an integration has one active fault at a time:
+
+| Kind | What a faulted request gets |
+|---|---|
+| `slow` | Waits `delayMs`, then is answered normally. |
+| `hang` | Is held for `delayMs`, far longer than any caller should wait, then the connection is dropped with no answer. |
+| `reset` | The connection is dropped at once, with no complete answer. |
+| `throttle` | Answers 429 with a `Retry-After` of `retryAfterSeconds` seconds. The real handler does not run. |
+| `error` | Answers `status` (500 to 599, default 503). The real handler does not run. |
+
+A connection is dropped by answering 200 with a `Content-Length` of 1,024 bytes, sending 17 bytes and closing the connection, so the client reads a premature end of body.
+
+A fault applies to each request on its paths with probability `rate` (0 to 1). `paths` limits it to some of the integration's paths, and omitting it means all of them. Only those paths are ever faulted: never `/faults`, `/latency-profiles`, `/health` or the other simulators. A fault applies after the latency profile, so the latency the stub answered with includes the fault's time.
+
+- `PUT /faults/{integration}` switches a fault on, replacing any active one, and answers 200 with that integration's report. The body is `{"kind":"error","rate":0.5,"status":503,"expiresInSeconds":150}`. `rate` (0.0 to 1.0) is required alongside `kind` and `expiresInSeconds`, and a body without it answers 400. `delayMs` is required for `slow` and `hang`. `expiresInSeconds` (1 to 86,400) is required: every fault expires by itself, so a run that dies cannot leave the stub broken. An unknown integration is 404, and an invalid body or a path outside the integration is 400.
+- `DELETE /faults/{integration}` switches one integration's fault off and answers 204. `DELETE /faults` does the same for every integration. The counters are kept.
+- `GET /faults` reports `stub` and, for each integration, `integration`, `paths`, `fault` (null when none is on, otherwise `kind`, `rate`, `delayMs`, `status`, `retryAfterSeconds`, `paths` and `expiresAt`), `requests` (every request to its paths since the stub started) and `injected` (faults injected since the stub started, counted for each of `slow`, `hang`, `reset`, `throttle` and `error`). The counters are never reset, so a reader works in differences between two readings.
+
+Behind a load balancer a fault reaches only the instance that answered the `PUT`, so run one stub instance when you inject faults; the `injected` count against `requests` shows any shortfall. The Defra ID stub serves the same contract for `defra-id`.
+
 ### About the licence
 
 The Open Government Licence (OGL) was developed by the Controller of Her Majesty's Stationery Office (HMSO) to enable
