@@ -1,6 +1,6 @@
 package uk.gov.defra.trade.imports.stubs.mdm.poe;
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,22 +11,26 @@ import uk.gov.defra.trade.imports.utils.FileUtils;
 
 @Slf4j
 @RestController
-@AllArgsConstructor
 public class PortsOfEntryController {
 
-  private final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
+  private static final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
+  private static final String PORTS_FIXTURE = "responses/portsOfEntryResponse.json";
+  private static final String TRACE_HEADER = "x-ms-middleware-request-id";
 
-  private FileUtils fileUtils;
+  private final JsonNode ports;
 
+  public PortsOfEntryController(FileUtils fileUtils) {
+    this.ports = fileUtils.getObjectFromFile(PORTS_FIXTURE, JsonNode.class);
+  }
+
+  /** Answers MDM's own port records, served whole and in MDM's order. */
   @GetMapping(value = "/mdm/trade/bcp/poes")
-  ResponseEntity<MdmPortsResponse> getPortsOfEntry(
+  ResponseEntity<JsonNode> getPortsOfEntry(
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
       @RequestParam(value = "system", required = false) String system) {
 
-    MdmPortsResponse response = fileUtils.getObjectFromFile("responses/portsOfEntryResponse.json", MdmPortsResponse.class);
-
     return ResponseEntity.ok()
-        .header("x-ms-middleware-request-id", "stub-trace-id")
-        .body(response);
+        .header(TRACE_HEADER, "stub-trace-id")
+        .body(ports);
   }
 }
