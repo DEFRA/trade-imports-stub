@@ -103,7 +103,7 @@ info:
     version: ${cdp.service-version}
     environment: ${ENVIRONMENT:local}
 
-# EUDPA-390 address lookup spike — the three federated-credential simulators (plan Step 6).
+# The federated-credential simulators for the address lookup.
 # sts-simulator.port is a dedicated port: the AWS SDK always POSTs GetWebIdentityToken to the
 # root path of the endpoint override, so it can't share a sub-path on this app's main port.
 sts-simulator:
@@ -113,13 +113,13 @@ sts-simulator:
 
 address-lookup-simulator:
   # The audience ins-backend's Entra token request resolves to once /.default is stripped — must
-  # match the local/stack "Scope" value in the EUDPA-390 plan exactly, api:// prefix included.
+  # match the local and stack "Scope" value exactly, api:// prefix included.
   # The real gateway policy in dev wants the api:// form and rejects the bare GUID, so this does
   # too: a simulator that accepted either would not have caught the 401 the spike hit.
   expected-audience: ${ADDRESS_LOOKUP_SIMULATOR_EXPECTED_AUDIENCE:api://33333333-3333-3333-3333-333333333333}
 
-# Latency profiles (inc-007). Each integration answers with zero-delay (no added delay) or sla
-# (a lognormal fitted to its targets). The interim targets are c-011's default until section 9.5
+# Latency profiles. Each integration answers with zero-delay (no added delay) or sla
+# (a lognormal fitted to its targets). The targets are interim defaults until section 9.5
 # of the volumetrics page agrees them.
 stub-latency:
   integrations:
