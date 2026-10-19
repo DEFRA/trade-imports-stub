@@ -78,4 +78,33 @@ class ProductControllerTest {
     mockMvc.perform(get(SEARCH).param("q", "cat"))
         .andExpect(status().isBadRequest());
   }
+
+  @Test
+  void getCommoditySpecies_shouldAnswerTheSavedPage_forASavedCode() throws Exception {
+    mockMvc.perform(get("/mdm/trade/product/commodities/0102/species").header(KEY_HEADER, ANY_KEY)
+            .param("dataset", "gbnag").param("page", "0").param("size", "100"))
+        .andExpect(status().isOk())
+        .andExpect(header().string("x-ms-middleware-request-id", "stub-trace-id"))
+        .andExpect(jsonPath("$.totalElements").value(15))
+        .andExpect(jsonPath("$.content.length()").value(15));
+  }
+
+  @Test
+  void getCommoditySpecies_shouldAnswerAnEmptyPage_forAnUnknownCode() throws Exception {
+    mockMvc.perform(get("/mdm/trade/product/commodities/030111/species").header(KEY_HEADER, ANY_KEY)
+            .param("page", "0").param("size", "100"))
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.content.length()").value(0))
+        .andExpect(jsonPath("$.totalElements").value(0));
+  }
+
+  @Test
+  void getCommoditySpecies_shouldAnswerAnEmptyPageWithTheSavedTotal_pastTheLastPage()
+      throws Exception {
+    mockMvc.perform(get("/mdm/trade/product/commodities/0101/species").header(KEY_HEADER, ANY_KEY)
+            .param("page", "1").param("size", "100"))
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.content.length()").value(0))
+        .andExpect(jsonPath("$.totalElements").value(5));
+  }
 }

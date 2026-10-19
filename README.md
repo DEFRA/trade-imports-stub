@@ -79,7 +79,7 @@ The stub simulates AWS STS, Entra and the address lookup gateway for the address
 
 ### MDM product search
 
-`GET /mdm/trade/product/search` answers responses saved from MDM in TST, kept by search term in `src/main/resources/responses/mdmProductSearchResponses.json`. A term that wasn't saved finds nothing.
+`GET /mdm/trade/product/search` and `GET /mdm/trade/product/commodities/{code}/species` answer responses saved from MDM in TST, kept in `src/main/resources/responses/mdmProductSearchResponses.json` (by search term) and `mdmProductSpeciesResponses.json` (by commodity code, one body per page). A term that wasn't saved finds nothing, and an unknown code answers an empty page. The species path is templated, so latency and faults don't apply to it.
 
 ### About the licence
 
