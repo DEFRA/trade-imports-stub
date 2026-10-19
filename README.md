@@ -13,7 +13,7 @@ This stub stands in for two integrations that `trade-imports-reference-data` cal
 | Integration | Stands in for | Paths |
 |---|---|---|
 | `trade-token` | The Trade Platform OAuth token endpoint, called before MDM | `POST /tenant/oauth2/v2.0/token` |
-| `mdm` | MDM reference data through APIM | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes` |
+| `mdm` | MDM reference data through APIM | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search` |
 
 Each profile is one of:
 
@@ -40,7 +40,7 @@ The same two integrations can be made to fail, so the resilience runs in `trade-
 | Integration | Paths a fault can apply to |
 |---|---|
 | `trade-token` | `POST /tenant/oauth2/v2.0/token` |
-| `mdm` | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes` |
+| `mdm` | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search` |
 
 There are five kinds of fault, and an integration has one active fault at a time:
 
@@ -76,6 +76,10 @@ The stub simulates AWS STS, Entra and the address lookup gateway for the address
 - The `local` profile turns on DevTools restart on `.reloadtrigger`, which `docker/dev-run.sh` touches once per compile, so the context restarts once per build and not part-way through one.
 - When `HTTP_PROXY` is set to `http://host:port`, every outbound HTTP and HTTPS call goes through it, as CDP requires for egress; without it, calls go direct. A malformed value is logged with its credentials masked and without the parse exception, whose message repeats the URL.
 - `GlobalExceptionHandler` answers only application exceptions. Spring's own exceptions, such as a 404 for an unknown path, keep Spring's answers.
+
+### MDM product search
+
+`GET /mdm/trade/product/search` answers responses saved from MDM in TST, kept by search term in `src/main/resources/responses/mdmProductSearchResponses.json`. A term that wasn't saved finds nothing.
 
 ### About the licence
 
