@@ -62,6 +62,21 @@ A fault applies to each request on its paths with probability `rate` (0 to 1). `
 
 Behind a load balancer a fault reaches only the instance that answered the `PUT`, so run one stub instance when you inject faults; the `injected` count against `requests` shows any shortfall. The Defra ID stub serves the same contract for `defra-id`.
 
+### Federated-credential simulators
+
+The stub simulates AWS STS, Entra and the address lookup gateway for the address lookup in `trade-imports-ins-backend`.
+
+- The STS simulator answers on its own port, `sts-simulator.port` (default 8098), because the AWS SDK posts `GetWebIdentityToken` to the root path of the endpoint override and so cannot share a sub-path on the main port.
+- `address-lookup-simulator.expected-audience` must match the `Scope` that ins-backend requests once `/.default` is stripped, `api://` prefix included. The gateway in dev rejects the bare GUID, so the simulator does too.
+- The `local` profile sets the STS issuer to `localhost`, for an ins-backend running outside the stack.
+- Integration tests set `sts-simulator.port` to 0. Random-port tests randomise only `server.port`, and a fixed simulator port would clash across the integration tests that share the profile.
+
+### Configuration notes
+
+- The `local` profile turns on DevTools restart on `.reloadtrigger`, which `docker/dev-run.sh` touches once per compile, so the context restarts once per build and not part-way through one.
+- When `HTTP_PROXY` is set to `http://host:port`, every outbound HTTP and HTTPS call goes through it, as CDP requires for egress; without it, calls go direct. A malformed value is logged with its credentials masked and without the parse exception, whose message repeats the URL.
+- `GlobalExceptionHandler` answers only application exceptions. Spring's own exceptions, such as a 404 for an unknown path, keep Spring's answers.
+
 ### About the licence
 
 The Open Government Licence (OGL) was developed by the Controller of Her Majesty's Stationery Office (HMSO) to enable

@@ -22,8 +22,6 @@ spring:
   lifecycle:
     timeout-per-shutdown-phase: 30s
 
-
-# CDP platform configuration
 cdp:
   certificate: ${TRUSTSTORE_CDP_ROOT_CA:}
   metrics:
@@ -35,7 +33,6 @@ cdp:
     endpoint: ${AWS_EMF_AGENT_ENDPOINT:http://localhost:4566}
   proxyUrl: ${HTTP_PROXY:}
 
-# AWS configuration
 aws:
   region: ${AWS_REGION:eu-west-2}
   sts:
@@ -50,7 +47,6 @@ aws:
       name: ${AWS_EMF_SERVICE_NAME:trade-imports-stub}
       type: ${AWS_EMF_SERVICE_TYPE:SpringBootApp}
 
-# Logging configuration
 logging:
   level:
     root: ${LOG_LEVEL:info}
@@ -60,9 +56,6 @@ logging:
     org.mongodb: ${LOGGING_LEVEL_ORG_MONGODB_DRIVER:WARN}
     io.netty.handler.logging.LoggingHandler: WARN
 
-# Actuator endpoints
-# Production: Only health endpoint exposed (secure by default)
-# Development: Use dev profile (application-local.yml) for debugging endpoints
 management:
   endpoints:
     web:
@@ -96,31 +89,20 @@ management:
           requests:
             active: true
 
-# Application info (exposed via /info endpoint)
 info:
   app:
     name: ${spring.application.name}
     version: ${cdp.service-version}
     environment: ${ENVIRONMENT:local}
 
-# EUDPA-390 address lookup spike — the three federated-credential simulators (plan Step 6).
-# sts-simulator.port is a dedicated port: the AWS SDK always POSTs GetWebIdentityToken to the
-# root path of the endpoint override, so it can't share a sub-path on this app's main port.
 sts-simulator:
   port: ${STS_SIMULATOR_PORT:8098}
   issuer: ${STS_SIMULATOR_ISSUER:http://host.docker.internal:8098/}
   subject: ${STS_SIMULATOR_SUBJECT:arn:aws:iam::000000000000:role/trade-imports-ins-backend}
 
 address-lookup-simulator:
-  # The audience ins-backend's Entra token request resolves to once /.default is stripped — must
-  # match the local/stack "Scope" value in the EUDPA-390 plan exactly, api:// prefix included.
-  # The real gateway policy in dev wants the api:// form and rejects the bare GUID, so this does
-  # too: a simulator that accepted either would not have caught the 401 the spike hit.
   expected-audience: ${ADDRESS_LOOKUP_SIMULATOR_EXPECTED_AUDIENCE:api://33333333-3333-3333-3333-333333333333}
 
-# Latency profiles (inc-007). Each integration answers with zero-delay (no added delay) or sla
-# (a lognormal fitted to its targets). The interim targets are c-011's default until section 9.5
-# of the volumetrics page agrees them.
 stub-latency:
   integrations:
     trade-token:

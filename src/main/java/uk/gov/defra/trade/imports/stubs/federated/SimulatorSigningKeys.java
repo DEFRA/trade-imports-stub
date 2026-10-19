@@ -12,9 +12,8 @@ import java.util.UUID;
 import org.springframework.stereotype.Component;
 
 /**
- * The RSA keypairs the three EUDPA-390 simulators sign and verify with (plan Step 6, D6). One
- * pair stands in for AWS STS, one for Entra — generated fresh at process startup, never
- * committed, matching every other hop's "the simulators validate rather than echo" design.
+ * The RSA keypairs the federated-credential simulators sign and verify with. One pair stands in
+ * for AWS STS, one for Entra. Both are generated at startup and never stored.
  */
 @Component
 class SimulatorSigningKeys {

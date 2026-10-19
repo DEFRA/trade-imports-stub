@@ -49,7 +49,7 @@ public class AwsConfig {
 
             return response.webIdentityToken();
         } catch (StsException ex) {
-            throw new TradeImportsStubException("Sts connection error: " +  ex.getMessage());
+            throw new TradeImportsStubException("Sts connection error", ex);
         }
         
     }
