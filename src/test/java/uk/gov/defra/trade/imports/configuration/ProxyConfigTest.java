@@ -31,7 +31,7 @@ class ProxyConfigTest {
         "proxy-user:s3cret-password@proxy.example:3128",
         "http://proxy-user:s3cret@password@proxy.example:3128"
     })
-    void configureProxy_unusableUrlWithCredentials_logsRedactedUrlWithoutCredentialsOrThrowable(String proxyUrl) {
+    void configureProxy_unusableUrlWithCredentials_setsNoProxyAndLogsTheUrlRedactedWithoutThrowable(String proxyUrl) {
         ReflectionTestUtils.setField(proxyConfig, "httpProxy", proxyUrl);
 
         List<ILoggingEvent> events = logEventsWhileConfiguringProxy();
