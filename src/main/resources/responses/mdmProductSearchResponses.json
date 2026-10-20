@@ -15039,5 +15039,228 @@
     "size": 100,
     "totalElements": 2,
     "totalPages": 1
+  },
+  "ostrich": {
+    "content": [
+      {
+        "resultType": "species",
+        "id": "01063300-6c3b4fba-e49e-119b-1c74-d14e9c38038a",
+        "speciesName": "Struthio",
+        "commonName": "Ostriches",
+        "commonNames": [
+          "Ostriches"
+        ],
+        "languageId": "la",
+        "eppoCode": "1STRUG",
+        "faoCode": null,
+        "taxonomy": {
+          "kingdom": null,
+          "phylum": null,
+          "class": "Aves",
+          "order": null,
+          "family": "Struthionidae"
+        },
+        "commodityCnCode": "01063300",
+        "chedType": null,
+        "dataset": "gbnag",
+        "certificateModelCodes": [],
+        "certificateModelIds": []
+      },
+      {
+        "resultType": "species",
+        "id": "01063980-6c3b4fba-e49e-119b-1c74-d14e9c38038a",
+        "speciesName": "Struthio",
+        "commonName": "Ostriches",
+        "commonNames": [
+          "Ostriches"
+        ],
+        "languageId": "la",
+        "eppoCode": "1STRUG",
+        "faoCode": null,
+        "taxonomy": {
+          "kingdom": null,
+          "phylum": null,
+          "class": "Aves",
+          "order": null,
+          "family": "Struthionidae"
+        },
+        "commodityCnCode": "01063980",
+        "chedType": null,
+        "dataset": "gbnag",
+        "certificateModelCodes": [],
+        "certificateModelIds": []
+      },
+      {
+        "resultType": "commodity",
+        "id": "01063300",
+        "docType": "commodity",
+        "dataset": "gbnag",
+        "code": "01063300",
+        "depth": 8,
+        "description": "Ostriches; emus (Dromaius novaehollandiae)",
+        "isSelectable": true,
+        "chedType": null,
+        "codes": {
+          "hs": null,
+          "cn": {
+            "value": "01063300",
+            "listId": "CN",
+            "listName": "Combined Nomenclature",
+            "listAgencyId": "EU",
+            "listAgencyName": "European Union"
+          },
+          "ukTariff": null,
+          "traces": null
+        },
+        "commodityGroup": "Great British notification - Animals & Germinals",
+        "isGerminal": false,
+        "certifiedAs": [],
+        "breedCategory": [],
+        "identificationSystems": [],
+        "animalSubcategory": [],
+        "natureOfCommodity": [],
+        "packageType": [],
+        "treatmentType": [],
+        "productTemperature": [],
+        "certificateModelCodes": [],
+        "certificateModelIds": [],
+        "ancestors": [],
+        "parentCode": "010633",
+        "parents": [
+          {
+            "code": "010633",
+            "depth": 6,
+            "description": null
+          }
+        ],
+        "children": [],
+        "speciesCount": 5,
+        "scientificNames": [
+          {
+            "resultType": "species",
+            "id": "01063300-6c3b4fba-e49e-119b-1c74-d14e9c38038a",
+            "speciesName": "Struthio",
+            "commonName": "Ostriches",
+            "commonNames": [
+              "Ostriches"
+            ],
+            "languageId": "la",
+            "eppoCode": "1STRUG",
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": "Aves",
+              "order": null,
+              "family": "Struthionidae"
+            },
+            "commodityCnCode": "01063300",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "01063300-f33748d2-5fd8-a2b7-a2f8-5c50a7a84d6e",
+            "speciesName": "Rhea",
+            "commonName": "The Rhea",
+            "commonNames": [
+              "The Rhea",
+              "Nandu"
+            ],
+            "languageId": "la",
+            "eppoCode": "1RHEAG",
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": "Aves",
+              "order": null,
+              "family": "Rheidae"
+            },
+            "commodityCnCode": "01063300",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "01063300-26e7cb3e-41bd-cf11-15db-f3d368f0f436",
+            "speciesName": "Casuarius",
+            "commonName": "Cassowaries",
+            "commonNames": [
+              "Cassowaries"
+            ],
+            "languageId": "la",
+            "eppoCode": "1CASUG",
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": "Aves",
+              "order": null,
+              "family": "Casuariidae"
+            },
+            "commodityCnCode": "01063300",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "01063300-48b4153d-0d5a-273d-0d36-d60a2197ae6d",
+            "speciesName": "Casuariiformes, Rheiformes, Struthioniformes",
+            "commonName": null,
+            "commonNames": [],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "01063300",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "01063300-0fffaff7-2568-ccf9-6696-964f705ae1f0",
+            "speciesName": "Dromaius",
+            "commonName": "Emu",
+            "commonNames": [
+              "Emu"
+            ],
+            "languageId": "la",
+            "eppoCode": "1DRUSG",
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": "Aves",
+              "order": null,
+              "family": "Dromaiidae"
+            },
+            "commodityCnCode": "01063300",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          }
+        ]
+      }
+    ],
+    "page": 0,
+    "size": 100,
+    "totalElements": 3,
+    "totalPages": 1
   }
 }
