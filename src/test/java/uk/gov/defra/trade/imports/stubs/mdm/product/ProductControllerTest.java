@@ -23,14 +23,14 @@ class ProductControllerTest {
 
   private static final String KEY_HEADER = "Ocp-Apim-Subscription-Key";
   private static final String ANY_KEY = "any-value-at-all";
-  private static final String SEARCH = "/mdm/trade/product/search";
+  private static final String SEARCH_PATH = "/mdm/trade/product/search";
 
   @Autowired
   private MockMvc mockMvc;
 
   @Test
   void search_shouldAnswerTheSavedResponse_forASavedTerm() throws Exception {
-    mockMvc.perform(get(SEARCH).header(KEY_HEADER, ANY_KEY)
+    mockMvc.perform(get(SEARCH_PATH).header(KEY_HEADER, ANY_KEY)
             .param("q", "cat").param("dataset", "gbnag").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(header().string("x-ms-middleware-request-id", "stub-trace-id"))
@@ -42,14 +42,14 @@ class ProductControllerTest {
 
   @Test
   void search_shouldMatchTheTermIgnoringCase() throws Exception {
-    mockMvc.perform(get(SEARCH).header(KEY_HEADER, ANY_KEY).param("q", "BOS TAURUS"))
+    mockMvc.perform(get(SEARCH_PATH).header(KEY_HEADER, ANY_KEY).param("q", "BOS TAURUS"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.totalElements").value(4));
   }
 
   @Test
   void search_shouldAnswerAnEmptyPage_forATermThatWasNotSaved() throws Exception {
-    mockMvc.perform(get(SEARCH).header(KEY_HEADER, ANY_KEY)
+    mockMvc.perform(get(SEARCH_PATH).header(KEY_HEADER, ANY_KEY)
             .param("q", "zebra").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
@@ -59,7 +59,8 @@ class ProductControllerTest {
 
   @Test
   void search_shouldAnswerAnEmptyPageWithTheSavedTotal_forALaterPage() throws Exception {
-    mockMvc.perform(get(SEARCH).header(KEY_HEADER, ANY_KEY).param("q", "cattle").param("page", "1"))
+    mockMvc.perform(get(SEARCH_PATH).header(KEY_HEADER, ANY_KEY)
+            .param("q", "cattle").param("page", "1"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
         .andExpect(jsonPath("$.page").value(1))
@@ -68,20 +69,20 @@ class ProductControllerTest {
 
   @Test
   void search_shouldRefuseTheCall_whenTheTermIsShorterThanTwoCharacters() throws Exception {
-    mockMvc.perform(get(SEARCH).header(KEY_HEADER, ANY_KEY).param("q", "c"))
+    mockMvc.perform(get(SEARCH_PATH).header(KEY_HEADER, ANY_KEY).param("q", "c"))
         .andExpect(status().isBadRequest())
         .andExpect(jsonPath("$.error").value("q must be at least 2 characters"));
   }
 
   @Test
   void search_shouldRefuseTheCall_whenTheSubscriptionKeyHeaderIsMissing() throws Exception {
-    mockMvc.perform(get(SEARCH).param("q", "cat"))
+    mockMvc.perform(get(SEARCH_PATH).param("q", "cat"))
         .andExpect(status().isBadRequest());
   }
 
   @Test
   void getCommoditySpecies_shouldAnswerTheSavedPage_forASavedCode() throws Exception {
-    mockMvc.perform(get("/mdm/trade/product/commodities/0102/species").header(KEY_HEADER, ANY_KEY)
+    mockMvc.perform(get(speciesPath("0102")).header(KEY_HEADER, ANY_KEY)
             .param("dataset", "gbnag").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(header().string("x-ms-middleware-request-id", "stub-trace-id"))
@@ -91,7 +92,7 @@ class ProductControllerTest {
 
   @Test
   void getCommoditySpecies_shouldAnswerAnEmptyPage_forAnUnknownCode() throws Exception {
-    mockMvc.perform(get("/mdm/trade/product/commodities/030111/species").header(KEY_HEADER, ANY_KEY)
+    mockMvc.perform(get(speciesPath("030111")).header(KEY_HEADER, ANY_KEY)
             .param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
@@ -101,10 +102,14 @@ class ProductControllerTest {
   @Test
   void getCommoditySpecies_shouldAnswerAnEmptyPageWithTheSavedTotal_pastTheLastPage()
       throws Exception {
-    mockMvc.perform(get("/mdm/trade/product/commodities/0101/species").header(KEY_HEADER, ANY_KEY)
+    mockMvc.perform(get(speciesPath("0101")).header(KEY_HEADER, ANY_KEY)
             .param("page", "1").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
         .andExpect(jsonPath("$.totalElements").value(5));
+  }
+
+  private static String speciesPath(String code) {
+    return "/mdm/trade/product/commodities/%s/species".formatted(code);
   }
 }

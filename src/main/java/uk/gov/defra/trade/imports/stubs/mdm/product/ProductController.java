@@ -1,5 +1,7 @@
 package uk.gov.defra.trade.imports.stubs.mdm.product;
 
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.withTraceHeader;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -15,10 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.defra.trade.imports.utils.FileUtils;
 
-/**
- * Answers MDM's product search and commodity species from responses saved from TST. It doesn't
- * search like MDM: a term that wasn't saved finds nothing, even where TST would find something.
- */
 @Slf4j
 @RestController
 public class ProductController {
@@ -26,7 +24,6 @@ public class ProductController {
   private static final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
   private static final String SEARCH_FIXTURE = "responses/mdmProductSearchResponses.json";
   private static final String SPECIES_FIXTURE = "responses/mdmProductSpeciesResponses.json";
-  private static final String TRACE_HEADER = "x-ms-middleware-request-id";
   private static final int MINIMUM_QUERY_LENGTH = 2;
 
   private final Map<String, JsonNode> searchByTerm = new HashMap<>();
@@ -38,7 +35,6 @@ public class ProductController {
     this.speciesByCode = fileUtils.getObjectFromFile(SPECIES_FIXTURE, JsonNode.class);
   }
 
-  /** Answers the saved response for {@code q}, matched ignoring case, on page 0 only. */
   @GetMapping(value = "/mdm/trade/product/search")
   ResponseEntity<JsonNode> search(
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
@@ -49,8 +45,8 @@ public class ProductController {
 
     if (query == null || query.trim().length() < MINIMUM_QUERY_LENGTH) {
       ObjectNode error = JsonNodeFactory.instance.objectNode()
-          .put("error", "q must be at least 2 characters");
-      return ResponseEntity.badRequest().header(TRACE_HEADER, "stub-trace-id").body(error);
+          .put("error", "q must be at least %d characters".formatted(MINIMUM_QUERY_LENGTH));
+      return withTraceHeader(ResponseEntity.badRequest()).body(error);
     }
 
     JsonNode saved = searchByTerm.get(normalise(query));
@@ -63,10 +59,9 @@ public class ProductController {
       body = emptyPage(page, size, saved.path("totalElements").asLong())
           .put("totalPages", saved.path("totalPages").asInt());
     }
-    return ResponseEntity.ok().header(TRACE_HEADER, "stub-trace-id").body(body);
+    return withTraceHeader(ResponseEntity.ok()).body(body);
   }
 
-  /** Answers the saved page for {@code code}; an unknown code or page answers an empty page. */
   @GetMapping(value = "/mdm/trade/product/commodities/{code}/species")
   ResponseEntity<JsonNode> getCommoditySpecies(
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
@@ -83,7 +78,7 @@ public class ProductController {
       long total = pages.isEmpty() ? 0 : pages.get(0).path("totalElements").asLong();
       body = emptyPage(page, size, total);
     }
-    return ResponseEntity.ok().header(TRACE_HEADER, "stub-trace-id").body(body);
+    return withTraceHeader(ResponseEntity.ok()).body(body);
   }
 
   private static ObjectNode emptyPage(int page, int size, long totalElements) {

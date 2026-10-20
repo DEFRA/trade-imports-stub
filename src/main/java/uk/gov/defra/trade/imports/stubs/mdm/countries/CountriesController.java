@@ -1,5 +1,7 @@
 package uk.gov.defra.trade.imports.stubs.mdm.countries;
 
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.withTraceHeader;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
@@ -17,7 +19,6 @@ import uk.gov.defra.trade.imports.utils.FileUtils;
 public class CountriesController {
   private static final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
   private static final String COUNTRIES_FIXTURE = "responses/countriesResponse.json";
-  private static final String TRACE_HEADER = "x-ms-middleware-request-id";
 
   private final JsonNode countries;
 
@@ -39,9 +40,7 @@ public class CountriesController {
 
     JsonNode body = blocks == null || blocks.isBlank() ? countries : inBlock(countries, blocks);
 
-    return ResponseEntity.ok()
-        .header(TRACE_HEADER, "stub-trace-id")
-        .body(body);
+    return withTraceHeader(ResponseEntity.ok()).body(body);
   }
 
   private static JsonNode inBlock(JsonNode allCountries, String block) {
