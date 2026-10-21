@@ -24,6 +24,7 @@ class ProductControllerTest {
   private static final String KEY_HEADER = "Ocp-Apim-Subscription-Key";
   private static final String ANY_KEY = "any-value-at-all";
   private static final String SEARCH_PATH = "/mdm/trade/product/search";
+  private static final String COMMODITIES_PATH = "/mdm/trade/product/commodities";
 
   @Autowired
   private MockMvc mockMvc;
@@ -107,6 +108,20 @@ class ProductControllerTest {
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
         .andExpect(jsonPath("$.totalElements").value(5));
+  }
+
+  @Test
+  void getCommodities_shouldAnswerTheSavedCommodityOfEachKnownCode_inTheOrderAsked()
+      throws Exception {
+    mockMvc.perform(get(COMMODITIES_PATH).header(KEY_HEADER, ANY_KEY)
+            .param("codes", "05111000,0102,030111").param("dataset", "gbnag"))
+        .andExpect(status().isOk())
+        .andExpect(header().string("x-ms-middleware-request-id", "stub-trace-id"))
+        .andExpect(jsonPath("$.length()").value(2))
+        .andExpect(jsonPath("$[0].code").value("05111000"))
+        .andExpect(jsonPath("$[0].isGerminal").value(true))
+        .andExpect(jsonPath("$[1].code").value("0102"))
+        .andExpect(jsonPath("$[1].isGerminal").value(false));
   }
 
   private static String speciesPath(String code) {

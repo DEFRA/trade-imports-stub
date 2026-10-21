@@ -3,8 +3,10 @@ package uk.gov.defra.trade.imports.stubs.mdm.product;
 import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.withTraceHeader;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -24,15 +26,33 @@ public class ProductController {
   private static final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
   private static final String SEARCH_FIXTURE = "responses/mdmProductSearchResponses.json";
   private static final String SPECIES_FIXTURE = "responses/mdmProductSpeciesResponses.json";
+  private static final String COMMODITIES_FIXTURE =
+      "responses/mdmProductCommoditiesResponses.json";
   private static final int MINIMUM_QUERY_LENGTH = 2;
 
   private final Map<String, JsonNode> searchByTerm = new HashMap<>();
   private final JsonNode speciesByCode;
+  private final JsonNode commodityByCode;
 
   public ProductController(FileUtils fileUtils) {
     fileUtils.getObjectFromFile(SEARCH_FIXTURE, JsonNode.class).properties()
         .forEach((entry) -> searchByTerm.put(normalise(entry.getKey()), entry.getValue()));
     this.speciesByCode = fileUtils.getObjectFromFile(SPECIES_FIXTURE, JsonNode.class);
+    this.commodityByCode = fileUtils.getObjectFromFile(COMMODITIES_FIXTURE, JsonNode.class);
+  }
+
+  @GetMapping(value = "/mdm/trade/product/commodities")
+  ResponseEntity<JsonNode> getCommodities(
+      @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
+      @RequestParam(value = "codes") String commaSeparatedCodes,
+      @RequestParam(value = "dataset", required = false) String dataset) {
+
+    ArrayNode body = JsonNodeFactory.instance.arrayNode();
+    Arrays.stream(commaSeparatedCodes.split(","))
+        .map(String::trim)
+        .filter(commodityByCode::has)
+        .forEach(code -> body.add(commodityByCode.get(code)));
+    return withTraceHeader(ResponseEntity.ok()).body(body);
   }
 
   @GetMapping(value = "/mdm/trade/product/search")
