@@ -1,5 +1,7 @@
 package uk.gov.defra.trade.imports.stubs.mdm.poe;
 
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.withTraceHeader;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +17,6 @@ public class PortsOfEntryController {
 
   private static final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
   private static final String PORTS_FIXTURE = "responses/portsOfEntryResponse.json";
-  private static final String TRACE_HEADER = "x-ms-middleware-request-id";
 
   private final JsonNode ports;
 
@@ -29,8 +30,6 @@ public class PortsOfEntryController {
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
       @RequestParam(value = "system", required = false) String system) {
 
-    return ResponseEntity.ok()
-        .header(TRACE_HEADER, "stub-trace-id")
-        .body(ports);
+    return withTraceHeader(ResponseEntity.ok()).body(ports);
   }
 }
