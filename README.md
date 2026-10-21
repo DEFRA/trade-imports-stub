@@ -13,7 +13,7 @@ This stub stands in for two integrations that `trade-imports-reference-data` cal
 | Integration | Stands in for | Paths |
 |---|---|---|
 | `trade-token` | The Trade Platform OAuth token endpoint, called before MDM | `POST /tenant/oauth2/v2.0/token` |
-| `mdm` | MDM reference data through APIM | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search` |
+| `mdm` | MDM reference data through APIM | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search`, `GET /mdm/trade/product/commodities` |
 
 Each profile is one of:
 
@@ -40,7 +40,7 @@ The same two integrations can be made to fail, so the resilience runs in `trade-
 | Integration | Paths a fault can apply to |
 |---|---|
 | `trade-token` | `POST /tenant/oauth2/v2.0/token` |
-| `mdm` | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search` |
+| `mdm` | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search`, `GET /mdm/trade/product/commodities` |
 
 There are five kinds of fault, and an integration has one active fault at a time:
 
