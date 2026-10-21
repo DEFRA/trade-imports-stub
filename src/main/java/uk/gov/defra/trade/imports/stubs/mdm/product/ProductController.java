@@ -64,6 +64,8 @@ public class ProductController {
       @RequestParam(value = "size", defaultValue = "25") int size) {
 
     if (query == null || query.trim().length() < MINIMUM_QUERY_LENGTH) {
+      log.warn("Refusing product search: q '{}' is shorter than {} characters", query,
+          MINIMUM_QUERY_LENGTH);
       ObjectNode error = JsonNodeFactory.instance.objectNode()
           .put("error", "q must be at least %d characters".formatted(MINIMUM_QUERY_LENGTH));
       return withTraceHeader(ResponseEntity.badRequest()).body(error);
