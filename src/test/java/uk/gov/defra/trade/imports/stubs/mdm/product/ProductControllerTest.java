@@ -92,6 +92,17 @@ class ProductControllerTest {
   }
 
   @Test
+  void getCommoditySpecies_shouldAnswerTheSavedSecondPage_forACodeWithTwoSavedPages()
+      throws Exception {
+    mockMvc.perform(get(speciesPath("01061900")).header(KEY_HEADER, ANY_KEY)
+            .param("dataset", "gbnag").param("page", "1").param("size", "100"))
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.content.length()").value(20))
+        .andExpect(jsonPath("$.page").value(1))
+        .andExpect(jsonPath("$.totalElements").value(120));
+  }
+
+  @Test
   void getCommoditySpecies_shouldAnswerAnEmptyPage_forAnUnknownCode() throws Exception {
     mockMvc.perform(get(speciesPath("030111")).header(KEY_HEADER, ANY_KEY)
             .param("page", "0").param("size", "100"))
