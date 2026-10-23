@@ -119,7 +119,7 @@ stub-latency:
         p95-ms: ${STUB_LATENCY_TRADE_TOKEN_P95_MS:400}
         p99-ms: ${STUB_LATENCY_TRADE_TOKEN_P99_MS:1000}
     mdm:
-      interface-name: "MDM reference data through APIM: countries and border control posts"
+      interface-name: "MDM reference data through APIM: countries, border control posts and products"
       owner: MDM / data platform team
       service-level-source: "Interim (c-011 default): §9.5 MDM through APIM latency is TBC"
       agreed: ${STUB_LATENCY_MDM_AGREED:false}
