@@ -1,28 +1,20 @@
 package uk.gov.defra.trade.imports.stubs.mdm.product;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.ANY_KEY;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.KEY_HEADER;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.carriesTheStubTraceHeader;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.Import;
 import org.springframework.test.web.servlet.MockMvc;
-import uk.gov.defra.trade.imports.exceptions.GlobalExceptionHandler;
-import uk.gov.defra.trade.imports.faults.StubFaults;
-import uk.gov.defra.trade.imports.latency.LatencyConfig;
-import uk.gov.defra.trade.imports.latency.StubLatencies;
-import uk.gov.defra.trade.imports.utils.FileUtils;
+import uk.gov.defra.trade.imports.stubs.mdm.MdmStubWebMvcTest;
 
-@WebMvcTest(ProductController.class)
-@Import({LatencyConfig.class, StubLatencies.class, StubFaults.class, GlobalExceptionHandler.class,
-    FileUtils.class})
+@MdmStubWebMvcTest(ProductController.class)
 class ProductControllerTest {
 
-  private static final String KEY_HEADER = "Ocp-Apim-Subscription-Key";
-  private static final String ANY_KEY = "any-value-at-all";
   private static final String SEARCH_PATH = "/mdm/trade/product/search";
   private static final String COMMODITIES_PATH = "/mdm/trade/product/commodities";
 
@@ -34,7 +26,7 @@ class ProductControllerTest {
     mockMvc.perform(get(SEARCH_PATH).header(KEY_HEADER, ANY_KEY)
             .param("q", "cat").param("dataset", "gbnag").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
-        .andExpect(header().string("x-ms-middleware-request-id", "stub-trace-id"))
+        .andExpect(carriesTheStubTraceHeader())
         .andExpect(jsonPath("$.totalElements").value(13))
         .andExpect(jsonPath("$.content.length()").value(13))
         .andExpect(jsonPath("$.content[0].speciesName").value("Felis"))
@@ -86,7 +78,7 @@ class ProductControllerTest {
     mockMvc.perform(get(speciesPath("0102")).header(KEY_HEADER, ANY_KEY)
             .param("dataset", "gbnag").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
-        .andExpect(header().string("x-ms-middleware-request-id", "stub-trace-id"))
+        .andExpect(carriesTheStubTraceHeader())
         .andExpect(jsonPath("$.totalElements").value(15))
         .andExpect(jsonPath("$.content.length()").value(15));
   }
@@ -127,7 +119,7 @@ class ProductControllerTest {
     mockMvc.perform(get(COMMODITIES_PATH).header(KEY_HEADER, ANY_KEY)
             .param("codes", "05111000,0102,030111").param("dataset", "gbnag"))
         .andExpect(status().isOk())
-        .andExpect(header().string("x-ms-middleware-request-id", "stub-trace-id"))
+        .andExpect(carriesTheStubTraceHeader())
         .andExpect(jsonPath("$.length()").value(2))
         .andExpect(jsonPath("$[0].code").value("05111000"))
         .andExpect(jsonPath("$[0].isGerminal").value(true))

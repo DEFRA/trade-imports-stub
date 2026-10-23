@@ -4,30 +4,21 @@ import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.ANY_KEY;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.KEY_HEADER;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.carriesTheStubTraceHeader;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.Import;
 import org.springframework.test.web.servlet.MockMvc;
-import uk.gov.defra.trade.imports.exceptions.GlobalExceptionHandler;
-import uk.gov.defra.trade.imports.faults.StubFaults;
-import uk.gov.defra.trade.imports.latency.LatencyConfig;
-import uk.gov.defra.trade.imports.latency.StubLatencies;
-import uk.gov.defra.trade.imports.utils.FileUtils;
+import uk.gov.defra.trade.imports.stubs.mdm.MdmStubWebMvcTest;
 
-@WebMvcTest(CountriesController.class)
-@Import({LatencyConfig.class, StubLatencies.class, StubFaults.class, GlobalExceptionHandler.class,
-    FileUtils.class})
+@MdmStubWebMvcTest(CountriesController.class)
 class CountriesControllerTest {
-
-  private static final String KEY_HEADER = "Ocp-Apim-Subscription-Key";
-  private static final String ANY_KEY = "any-value-at-all";
 
   @Autowired
   private MockMvc mockMvc;
@@ -37,7 +28,7 @@ class CountriesControllerTest {
       throws Exception {
     mockMvc.perform(get("/mdm/geo/countries").header(KEY_HEADER, ANY_KEY))
         .andExpect(status().isOk())
-        .andExpect(header().string("x-ms-middleware-request-id", "stub-trace-id"))
+        .andExpect(carriesTheStubTraceHeader())
         .andExpect(jsonPath("$.length()").value(250))
         .andExpect(jsonPath("$[0].alpha2.value").value("AW"))
         .andExpect(jsonPath("$[249]").exists());
