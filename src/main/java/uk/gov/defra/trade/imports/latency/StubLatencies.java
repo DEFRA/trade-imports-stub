@@ -7,7 +7,10 @@ import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.DoubleSupplier;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.server.PathContainer;
 import org.springframework.stereotype.Component;
+import org.springframework.web.util.pattern.PathPattern;
+import org.springframework.web.util.pattern.PathPatternParser;
 
 /** Every integration this stub stands in for, and the request paths each one answers. */
 @Component
@@ -15,6 +18,7 @@ public class StubLatencies {
 
     private final List<IntegrationLatency> integrations;
     private final Map<String, IntegrationLatency> byPath = new LinkedHashMap<>();
+    private final Map<PathPattern, String> configuredPathByPattern = new LinkedHashMap<>();
     private final DoubleSupplier gaussian;
 
     /**
@@ -40,18 +44,34 @@ public class StubLatencies {
                         "Path %s is claimed by both %s and %s"
                             .formatted(path, existing.name(), integration.name()));
                 }
+                configuredPathByPattern.put(PathPatternParser.defaultInstance.parse(path), path);
             }
         }
     }
 
     /**
+     * Finds the configured path that a request URI matches. A configured path matches a URI
+     * exactly, or with {@code *} standing for one path segment.
+     *
+     * @param requestUri the request URI
+     * @return the configured path, or empty when no integration answers the URI
+     */
+    public Optional<String> configuredPathFor(String requestUri) {
+        PathContainer requestPath = PathContainer.parsePath(requestUri);
+        return configuredPathByPattern.entrySet().stream()
+            .filter(entry -> entry.getKey().matches(requestPath))
+            .map(Map.Entry::getValue)
+            .findFirst();
+    }
+
+    /**
      * Finds the integration that answers a request path.
      *
-     * @param requestUri the request URI, matched exactly
+     * @param requestUri the request URI, matched as {@link #configuredPathFor} matches it
      * @return the integration, or empty when the path has no profile
      */
     public Optional<IntegrationLatency> forPath(String requestUri) {
-        return Optional.ofNullable(byPath.get(requestUri));
+        return configuredPathFor(requestUri).map(byPath::get);
     }
 
     /**

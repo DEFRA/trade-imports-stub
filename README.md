@@ -40,7 +40,9 @@ The same two integrations can be made to fail, so the resilience runs in `trade-
 | Integration | Paths a fault can apply to |
 |---|---|
 | `trade-token` | `POST /tenant/oauth2/v2.0/token` |
-| `mdm` | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search`, `GET /mdm/trade/product/commodities` |
+| `mdm` | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search`, `GET /mdm/trade/product/commodities`, `GET /mdm/trade/product/commodities/*/species` |
+
+A `*` in a path stands for one path segment, so `/mdm/trade/product/commodities/*/species` covers the species path for every commodity code. A fault's `paths` names a path as this table writes it.
 
 There are five kinds of fault, and an integration has one active fault at a time:
 
@@ -85,8 +87,7 @@ The stub simulates AWS STS, Entra and the address lookup gateway for the address
 
 ### MDM product search
 
-`GET /mdm/trade/product/search` and `GET /mdm/trade/product/commodities/{code}/species` answer responses saved from MDM in TST, kept in `src/main/resources/responses/mdmProductSearchResponses.json` (by search term) and `mdmProductSpeciesResponses.json` (by commodity code, one body per page). A term that wasn't saved finds nothing, and an unknown code answers an empty page. A search holds only page 0 of each saved term, so page 1 onwards answers an empty `content` array with the saved `totalElements` and `totalPages`. A `q` shorter than 2 characters answers 400 with `{"error":"q must be at least 2 characters"}`. The species path is templated, so latency and faults don't apply to it.
-
+`GET /mdm/trade/product/search` and `GET /mdm/trade/product/commodities/{code}/species` answer responses saved from MDM in TST, kept in `src/main/resources/responses/mdmProductSearchResponses.json` (by search term) and `mdmProductSpeciesResponses.json` (by commodity code, one body per page). A term that wasn't saved finds nothing, and an unknown code answers an empty page. A search holds only page 0 of each saved term, so page 1 onwards answers an empty `content` array with the saved `totalElements` and `totalPages`. A `q` shorter than 2 characters answers 400 with `{"error":"q must be at least 2 characters"}`.
 `GET /mdm/trade/product/commodities?codes=…` answers the saved commodity for each known code in the comma-separated list, in the order asked, from `mdmProductCommoditiesResponses.json`; an unknown code is left out. TST does not yet set `isGerminal`, so the saved file sets it to `true` for the germinal codes `05111000` and `05119985`, which lets `trade-imports-reference-data` show its germinal filter working against the stub.
 
 ### About the licence

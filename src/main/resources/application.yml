@@ -130,6 +130,7 @@ stub-latency:
         - /mdm/trade/bcp/poes
         - /mdm/trade/product/search
         - /mdm/trade/product/commodities
+        - /mdm/trade/product/commodities/*/species
       sla:
         p50-ms: ${STUB_LATENCY_MDM_P50_MS:100}
         p95-ms: ${STUB_LATENCY_MDM_P95_MS:400}
