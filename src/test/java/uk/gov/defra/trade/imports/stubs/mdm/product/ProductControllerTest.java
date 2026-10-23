@@ -29,7 +29,7 @@ class ProductControllerTest {
         .andExpect(carriesTheStubTraceHeader())
         .andExpect(jsonPath("$.totalElements").value(13))
         .andExpect(jsonPath("$.content.length()").value(13))
-        .andExpect(jsonPath("$.content[0].speciesName").value("Felis"))
+        .andExpect(jsonPath("$.content[0].speciesName").value("Felis catus"))
         .andExpect(jsonPath("$.content[0].commodityCnCode").value("01061900"));
   }
 

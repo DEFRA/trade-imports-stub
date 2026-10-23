@@ -76,6 +76,30 @@
       },
       {
         "resultType": "species",
+        "id": "0102-88305625-d9fd-3626-b16d-6c565c7b94c7",
+        "speciesName": "Bos sp.",
+        "commonName": "Cattle",
+        "commonNames": [
+          "Cattle"
+        ],
+        "languageId": "la",
+        "eppoCode": null,
+        "faoCode": null,
+        "taxonomy": {
+          "kingdom": null,
+          "phylum": null,
+          "class": null,
+          "order": null,
+          "family": null
+        },
+        "commodityCnCode": "0102",
+        "chedType": null,
+        "dataset": "gbnag",
+        "certificateModelCodes": [],
+        "certificateModelIds": []
+      },
+      {
+        "resultType": "species",
         "id": "0102-fe23d82c-1f24-c103-5b61-0e74322e5172",
         "speciesName": "Novibos spp.",
         "commonName": "Cattle",
@@ -150,30 +174,6 @@
       },
       {
         "resultType": "species",
-        "id": "0102-88305625-d9fd-3626-b16d-6c565c7b94c7",
-        "speciesName": "Bos sp.",
-        "commonName": "Cattle",
-        "commonNames": [
-          "Cattle"
-        ],
-        "languageId": "la",
-        "eppoCode": null,
-        "faoCode": null,
-        "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
-        },
-        "commodityCnCode": "0102",
-        "chedType": null,
-        "dataset": "gbnag",
-        "certificateModelCodes": [],
-        "certificateModelIds": []
-      },
-      {
-        "resultType": "species",
         "id": "05111000-2de1a45e-21b3-b839-5c78-20daaf9b5fd4",
         "speciesName": "Bos taurus",
         "commonName": "Cattle or Cow",
@@ -207,14 +207,14 @@
     "content": [
       {
         "resultType": "species",
-        "id": "01061900-77419069-bdce-cb8c-6946-62c3f6d186c0",
-        "speciesName": "Felis",
-        "commonName": "Cat",
+        "id": "01061900-b5d938bf-0b2e-cba3-9684-4725dee263e6",
+        "speciesName": "Felis catus",
+        "commonName": "Domestic Cat",
         "commonNames": [
-          "Cat"
+          "Domestic Cat"
         ],
         "languageId": "la",
-        "eppoCode": "1FELIG",
+        "eppoCode": "FELIDO",
         "faoCode": null,
         "taxonomy": {
           "kingdom": null,
@@ -231,14 +231,14 @@
       },
       {
         "resultType": "species",
-        "id": "01061900-b5d938bf-0b2e-cba3-9684-4725dee263e6",
-        "speciesName": "Felis catus",
-        "commonName": "Domestic Cat",
+        "id": "01061900-77419069-bdce-cb8c-6946-62c3f6d186c0",
+        "speciesName": "Felis",
+        "commonName": "Cat",
         "commonNames": [
-          "Domestic Cat"
+          "Cat"
         ],
         "languageId": "la",
-        "eppoCode": "FELIDO",
+        "eppoCode": "1FELIG",
         "faoCode": null,
         "taxonomy": {
           "kingdom": null,
@@ -938,6 +938,30 @@
       },
       {
         "resultType": "species",
+        "id": "0102-88305625-d9fd-3626-b16d-6c565c7b94c7",
+        "speciesName": "Bos sp.",
+        "commonName": "Cattle",
+        "commonNames": [
+          "Cattle"
+        ],
+        "languageId": "la",
+        "eppoCode": null,
+        "faoCode": null,
+        "taxonomy": {
+          "kingdom": null,
+          "phylum": null,
+          "class": null,
+          "order": null,
+          "family": null
+        },
+        "commodityCnCode": "0102",
+        "chedType": null,
+        "dataset": "gbnag",
+        "certificateModelCodes": [],
+        "certificateModelIds": []
+      },
+      {
+        "resultType": "species",
         "id": "0102-fe23d82c-1f24-c103-5b61-0e74322e5172",
         "speciesName": "Novibos spp.",
         "commonName": "Cattle",
@@ -1005,30 +1029,6 @@
           "family": "Bovidae"
         },
         "commodityCnCode": "05119985",
-        "chedType": null,
-        "dataset": "gbnag",
-        "certificateModelCodes": [],
-        "certificateModelIds": []
-      },
-      {
-        "resultType": "species",
-        "id": "0102-88305625-d9fd-3626-b16d-6c565c7b94c7",
-        "speciesName": "Bos sp.",
-        "commonName": "Cattle",
-        "commonNames": [
-          "Cattle"
-        ],
-        "languageId": "la",
-        "eppoCode": null,
-        "faoCode": null,
-        "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
-        },
-        "commodityCnCode": "0102",
         "chedType": null,
         "dataset": "gbnag",
         "certificateModelCodes": [],
@@ -2261,7 +2261,7 @@
             "isSelectable": true,
             "chedType": null,
             "childCount": 0,
-            "speciesCount": 4
+            "speciesCount": 3
           },
           {
             "code": "010420",
@@ -2320,7 +2320,7 @@
           }
         ],
         "children": [],
-        "speciesCount": 4,
+        "speciesCount": 3,
         "scientificNames": [
           {
             "resultType": "species",
@@ -2363,30 +2363,6 @@
               "class": "Mammalia",
               "order": null,
               "family": "Bovidae"
-            },
-            "commodityCnCode": "010410",
-            "chedType": null,
-            "dataset": "gbnag",
-            "certificateModelCodes": [],
-            "certificateModelIds": []
-          },
-          {
-            "resultType": "species",
-            "id": "010410-47fd6b08-ebf2-99c5-a037-a19350fc1d26",
-            "speciesName": "Ovis sp.",
-            "commonName": "sheep",
-            "commonNames": [
-              "sheep"
-            ],
-            "languageId": "la",
-            "eppoCode": null,
-            "faoCode": null,
-            "taxonomy": {
-              "kingdom": null,
-              "phylum": null,
-              "class": null,
-              "order": null,
-              "family": null
             },
             "commodityCnCode": "010410",
             "chedType": null,
@@ -14840,11 +14816,296 @@
     "totalPages": 1
   },
   "fish": {
-    "content": [],
+    "content": [
+      {
+        "resultType": "commodity",
+        "id": "0301",
+        "docType": "commodity",
+        "dataset": "gbnag",
+        "code": "0301",
+        "depth": 4,
+        "description": "Live fish",
+        "isSelectable": true,
+        "chedType": null,
+        "codes": {
+          "hs": null,
+          "cn": {
+            "value": "0301",
+            "listId": "CN",
+            "listName": "Combined Nomenclature",
+            "listAgencyId": "EU",
+            "listAgencyName": "European Union"
+          },
+          "ukTariff": null,
+          "traces": null
+        },
+        "commodityGroup": "Great British notification - Animals & Germinals",
+        "isGerminal": false,
+        "certifiedAs": [],
+        "breedCategory": [],
+        "identificationSystems": [],
+        "animalSubcategory": [],
+        "natureOfCommodity": [],
+        "packageType": [],
+        "treatmentType": [],
+        "productTemperature": [],
+        "certificateModelCodes": [],
+        "certificateModelIds": [],
+        "ancestors": [],
+        "parentCode": "03",
+        "parents": [
+          {
+            "code": "03",
+            "depth": 2,
+            "description": null
+          }
+        ],
+        "children": [
+          {
+            "code": "030192",
+            "depth": 6,
+            "description": "Eels (Anguilla spp.)",
+            "isSelectable": true,
+            "chedType": null,
+            "childCount": 0,
+            "speciesCount": 10
+          }
+        ],
+        "speciesCount": 10,
+        "scientificNames": [
+          {
+            "resultType": "species",
+            "id": "0301-2daa8eee-50c4-ee82-88e6-377d387926a6",
+            "speciesName": "Bacteria",
+            "commonName": null,
+            "commonNames": [],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "0301-46568a3b-f011-dd48-c259-5ff3ad8f857d",
+            "speciesName": "Chromista",
+            "commonName": "Kelp, Diatoms, And Allies",
+            "commonNames": [
+              "Kelp, Diatoms, And Allies"
+            ],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "0301-a67a7146-7a2e-d083-f685-6b23aecd48fa",
+            "speciesName": "Protista",
+            "commonName": null,
+            "commonNames": [],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "0301-d7428c92-124e-2323-522f-090fd92f8d0e",
+            "speciesName": "Archaea",
+            "commonName": null,
+            "commonNames": [],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "0301-89cc112b-7581-0507-b6e3-24bde061f238",
+            "speciesName": "Plantae",
+            "commonName": "plants",
+            "commonNames": [
+              "plants"
+            ],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "0301-c29cfe02-ec49-45d8-3bf2-0719a94e11af",
+            "speciesName": "Animalia",
+            "commonName": null,
+            "commonNames": [],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "0301-abb1d547-9a6b-ef92-2bb0-6bd04151640f",
+            "speciesName": "Viruses and viroids",
+            "commonName": null,
+            "commonNames": [],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "0301-81bb149b-c329-f001-97f7-6018b047615c",
+            "speciesName": "Unclassified",
+            "commonName": null,
+            "commonNames": [],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "0301-dbd599bf-1d5b-7d02-2730-d871c654ca60",
+            "speciesName": "Commodity group",
+            "commonName": null,
+            "commonNames": [],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          },
+          {
+            "resultType": "species",
+            "id": "0301-75b8d5f6-1d4c-bade-a6b3-052d55117ff9",
+            "speciesName": "Fungi",
+            "commonName": "fungi",
+            "commonNames": [
+              "fungi"
+            ],
+            "languageId": "la",
+            "eppoCode": null,
+            "faoCode": null,
+            "taxonomy": {
+              "kingdom": null,
+              "phylum": null,
+              "class": null,
+              "order": null,
+              "family": null
+            },
+            "commodityCnCode": "0301",
+            "chedType": null,
+            "dataset": "gbnag",
+            "certificateModelCodes": [],
+            "certificateModelIds": []
+          }
+        ]
+      }
+    ],
     "page": 0,
     "size": 100,
-    "totalElements": 0,
-    "totalPages": 0
+    "totalElements": 1,
+    "totalPages": 1
   },
   "Bison bison": {
     "content": [
@@ -14898,31 +15159,6 @@
       },
       {
         "resultType": "species",
-        "id": "0102-e3beccb7-294d-5478-8f8e-96e9b5027bff",
-        "speciesName": "Bison bison",
-        "commonName": "Bisons Spp",
-        "commonNames": [
-          "Bisons Spp",
-          "American Bison"
-        ],
-        "languageId": "la",
-        "eppoCode": "BISOBI",
-        "faoCode": null,
-        "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": "Mammalia",
-          "order": null,
-          "family": "Bovidae"
-        },
-        "commodityCnCode": "0102",
-        "chedType": null,
-        "dataset": "gbnag",
-        "certificateModelCodes": [],
-        "certificateModelIds": []
-      },
-      {
-        "resultType": "species",
         "id": "05111000-e3beccb7-294d-5478-8f8e-96e9b5027bff",
         "speciesName": "Bison bison",
         "commonName": "Bisons Spp",
@@ -14941,6 +15177,31 @@
           "family": "Bovidae"
         },
         "commodityCnCode": "05111000",
+        "chedType": null,
+        "dataset": "gbnag",
+        "certificateModelCodes": [],
+        "certificateModelIds": []
+      },
+      {
+        "resultType": "species",
+        "id": "0102-e3beccb7-294d-5478-8f8e-96e9b5027bff",
+        "speciesName": "Bison bison",
+        "commonName": "Bisons Spp",
+        "commonNames": [
+          "Bisons Spp",
+          "American Bison"
+        ],
+        "languageId": "la",
+        "eppoCode": "BISOBI",
+        "faoCode": null,
+        "taxonomy": {
+          "kingdom": null,
+          "phylum": null,
+          "class": "Mammalia",
+          "order": null,
+          "family": "Bovidae"
+        },
+        "commodityCnCode": "0102",
         "chedType": null,
         "dataset": "gbnag",
         "certificateModelCodes": [],

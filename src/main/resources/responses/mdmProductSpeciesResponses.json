@@ -3466,5 +3466,3326 @@
       "size": 100,
       "totalElements": 5
     }
+  ],
+  "01063200": [
+    {
+      "content": [
+        {
+          "resultType": "species",
+          "id": "01063200-6ed03820-03dc-2e23-893c-9e49986c00c5",
+          "speciesName": "Agapornis",
+          "commonName": "Lovebirds",
+          "commonNames": [
+            "Lovebirds"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-9e653621-5510-3efd-ba5c-c2c95869a148",
+          "speciesName": "Alisterus",
+          "commonName": "King Parrots",
+          "commonNames": [
+            "King Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-bafea652-45c1-1f1f-b215-341d9a54c6cd",
+          "speciesName": "Amazona",
+          "commonName": "Amazon Parrots",
+          "commonNames": [
+            "Amazon Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-89613b46-74ba-48a7-b7e9-8b35448cd4d9",
+          "speciesName": "Anodorhynchus",
+          "commonName": "Blue Macaws",
+          "commonNames": [
+            "Blue Macaws"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-03b3f703-6b64-535c-a9c8-0f757001dea9",
+          "speciesName": "Aprosmictus",
+          "commonName": "Red-winged and Jonquil Parrots",
+          "commonNames": [
+            "Red-winged and Jonquil Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-7f9a4a05-15bb-32c2-eba2-168d993b39de",
+          "speciesName": "Ara",
+          "commonName": "Macaw",
+          "commonNames": [
+            "Macaw"
+          ],
+          "languageId": "la",
+          "eppoCode": "1ARAXG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-c2978575-778b-a689-670c-780b51cd602e",
+          "speciesName": "Aratinga",
+          "commonName": "Parakeets",
+          "commonNames": [
+            "Parakeets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-3cd061d9-adb6-7698-a1f9-3c2c8b90861d",
+          "speciesName": "Barnardius",
+          "commonName": "Australian Ringneck",
+          "commonNames": [
+            "Australian Ringneck"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-39483540-80f1-8bf9-2274-521a4e16a3cb",
+          "speciesName": "Bolbopsittacus",
+          "commonName": "Guaiabero",
+          "commonNames": [
+            "Guaiabero"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-dd63e1f9-a7a3-6411-58c3-73644d392f4e",
+          "speciesName": "Bolborhynchus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-946adfc7-4a94-8e12-ffb4-209697a4887f",
+          "speciesName": "Brotogeris",
+          "commonName": "Canary-winged Parakeets",
+          "commonNames": [
+            "Canary-winged Parakeets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-10ad93de-376d-0dac-d398-45dc6b2281b0",
+          "speciesName": "Cacatua",
+          "commonName": "Cockatoos",
+          "commonNames": [
+            "Cockatoos"
+          ],
+          "languageId": "la",
+          "eppoCode": "1CCTUG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-f24ef03b-9c45-fe89-44d1-c0034e486e93",
+          "speciesName": "Callocephalon",
+          "commonName": "Gang-gang Cockatoos",
+          "commonNames": [
+            "Gang-gang Cockatoos"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-8c255419-b84e-056e-11f4-03423900167f",
+          "speciesName": "Calyptorhynchus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-36d6ab41-e924-70df-50aa-ed5c8c59ddc8",
+          "speciesName": "Chalcopsitta",
+          "commonName": "Cardinal and Dusky Lories",
+          "commonNames": [
+            "Cardinal and Dusky Lories"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-ca361f1d-bf40-378d-4311-3e9c712996fd",
+          "speciesName": "Charmosyna",
+          "commonName": "Charmosyna Lorikeets",
+          "commonNames": [
+            "Charmosyna Lorikeets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-ef75bb8d-7f98-05c0-7d1a-1e7514501e04",
+          "speciesName": "Conuropsis",
+          "commonName": "Carolina Parakeets",
+          "commonNames": [
+            "Carolina Parakeets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-89219910-9059-9f87-d3d3-5d1dcd0e6296",
+          "speciesName": "Cyanoliseus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-cf69542e-39a5-f545-396c-a09962752792",
+          "speciesName": "Cyanopsitta",
+          "commonName": "Spix's Macaws",
+          "commonNames": [
+            "Spix's Macaws"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-e9e11ec0-6439-5c7a-aef8-f7a890e698e2",
+          "speciesName": "Cyanoramphus",
+          "commonName": "Kakariki",
+          "commonNames": [
+            "Kakariki"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-fed82896-7d40-02a9-c3b4-911638d19715",
+          "speciesName": "Cyclopsitta",
+          "commonName": "Greater Fig Parrots",
+          "commonNames": [
+            "Greater Fig Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-7fdb7e6a-ac2b-1d54-3256-4f189aea3cab",
+          "speciesName": "Deroptyus",
+          "commonName": "Red-fan Parrot",
+          "commonNames": [
+            "Red-fan Parrot"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-891bcbb6-e6ec-16f6-7879-90e5efedda04",
+          "speciesName": "Diopsittaca",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-3d50f8b7-24c5-b1e2-b0c1-db60aedcb868",
+          "speciesName": "Eclectus",
+          "commonName": "Eclectus Parrots",
+          "commonNames": [
+            "Eclectus Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-798328ea-ebd2-f938-39f6-eb684a1b705d",
+          "speciesName": "Enicognathus",
+          "commonName": "Patagonian Parakeets",
+          "commonNames": [
+            "Patagonian Parakeets"
+          ],
+          "languageId": "la",
+          "eppoCode": "1ENICG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-73c8cdde-edcb-a392-1ffc-5cd451a6b5d9",
+          "speciesName": "Eolophus",
+          "commonName": "Galahs",
+          "commonNames": [
+            "Galahs"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-161b16b4-d34e-17c4-e233-bf20da7bb5a6",
+          "speciesName": "Eos",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-ad7fed95-47d4-a4e8-9143-509bc5f440bb",
+          "speciesName": "Eunymphicus",
+          "commonName": "Horned Parakeets",
+          "commonNames": [
+            "Horned Parakeets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-9ef70c87-b23f-ed3d-5eb0-2e7f7f34616a",
+          "speciesName": "Forpus",
+          "commonName": "Forpus Parrotlets",
+          "commonNames": [
+            "Forpus Parrotlets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-17b909d9-22d4-824e-86c5-cb2290d8005f",
+          "speciesName": "Geoffroyus",
+          "commonName": "Singing Parrots and allies",
+          "commonNames": [
+            "Singing Parrots and allies"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-2b88d005-6fa4-32d7-642d-815e95b68d8d",
+          "speciesName": "Glossopsitta",
+          "commonName": "lorikeet sp. (hybrid)",
+          "commonNames": [
+            "lorikeet sp. (hybrid)"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-40c53ceb-59cc-a534-a4c9-947a9f53b64d",
+          "speciesName": "Graydidascalus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-7865f768-7ce0-61da-63bf-389da823588a",
+          "speciesName": "Guarouba",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-3ae3103d-097e-08d8-b3c7-0d8a5becf95a",
+          "speciesName": "Hapalopsittaca",
+          "commonName": "Andean Parrots",
+          "commonNames": [
+            "Andean Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-f08fb707-0878-72b8-a3c9-4d1e3091e6cf",
+          "speciesName": "Lathamus",
+          "commonName": "Swift Parrots",
+          "commonNames": [
+            "Swift Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-c6474a4b-2c51-497e-f6e2-6eb234370968",
+          "speciesName": "Leptosittaca",
+          "commonName": "Golden-plumed Parakeet",
+          "commonNames": [
+            "Golden-plumed Parakeet"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-42ddd115-a4ab-4476-840f-a5be81a7ddd1",
+          "speciesName": "Loriculus",
+          "commonName": "Hanging Parrots",
+          "commonNames": [
+            "Hanging Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-15eb8bb1-7bca-f3f7-acfc-46fbae6de99f",
+          "speciesName": "Lorius",
+          "commonName": "Broad-tailed Lories",
+          "commonNames": [
+            "Broad-tailed Lories"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-7052e011-a136-3ce9-b5a4-84b870004e8b",
+          "speciesName": "Mascarinus",
+          "commonName": "Mascarene Parrots",
+          "commonNames": [
+            "Mascarene Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-25800af4-6bad-65a2-8438-491f0768dee0",
+          "speciesName": "Melopsittacus",
+          "commonName": "Budgerigars",
+          "commonNames": [
+            "Budgerigars"
+          ],
+          "languageId": "la",
+          "eppoCode": "1MPSIG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-18e9d420-34b1-f598-45f8-cb548bdbcf97",
+          "speciesName": "Micropsitta",
+          "commonName": "Pygmy Parrots",
+          "commonNames": [
+            "Pygmy Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-cc71ef11-96a4-2e56-8739-9bbcdd72d340",
+          "speciesName": "Myiopsitta",
+          "commonName": "Monk Parakeets",
+          "commonNames": [
+            "Monk Parakeets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-a2523b79-b030-384d-8595-9bb1969ee5d7",
+          "speciesName": "Nandayus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-d2941756-afc1-0487-589e-cf852c6dca98",
+          "speciesName": "Nannopsittaca",
+          "commonName": "Amazonian Parrotlets",
+          "commonNames": [
+            "Amazonian Parrotlets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-7e5affe2-6ed1-0afa-e92a-23fcdf3470e0",
+          "speciesName": "Neophema",
+          "commonName": "Grass Parrots",
+          "commonNames": [
+            "Grass Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-aafa0cda-e4fb-8f6d-8a43-11cd250584eb",
+          "speciesName": "Neopsephotus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-1d8a631d-6769-7363-da20-fcb1851c1a5d",
+          "speciesName": "Neopsittacus",
+          "commonName": "Highland Lorikeets",
+          "commonNames": [
+            "Highland Lorikeets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-d0af420f-a1b9-84f3-654a-f6268de4226b",
+          "speciesName": "Nestor",
+          "commonName": "Kaka and Kea",
+          "commonNames": [
+            "Kaka and Kea"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-336f0fd6-ccee-6730-70e1-93331b964c53",
+          "speciesName": "Northiella",
+          "commonName": "Blue Bonnet Parrots",
+          "commonNames": [
+            "Blue Bonnet Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-8e3081b0-a1fd-72ac-5f45-c1e38c7d2917",
+          "speciesName": "Nymphicus",
+          "commonName": "Cockatiel",
+          "commonNames": [
+            "Cockatiel"
+          ],
+          "languageId": "la",
+          "eppoCode": "1NYMKG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-93e06fe5-4bec-d645-3d56-2161d3ebb40f",
+          "speciesName": "Ognorhynchus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-f42e114b-969a-ede9-d812-f20f119e2a4a",
+          "speciesName": "Oreopsittacus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-d8e99aa4-df83-3277-10fb-3e73bad194a6",
+          "speciesName": "Pezoporus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-9186ead2-defc-a226-b42b-21ffa44c6749",
+          "speciesName": "Phigys",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-85754221-9fd4-fb25-6304-61e5816631dc",
+          "speciesName": "Pionites",
+          "commonName": "Caiques",
+          "commonNames": [
+            "Caiques"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-324fc6bc-45da-6ae8-874c-75918e5f93f2",
+          "speciesName": "Pionopsitta",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-6a37fcef-694a-f4d0-7486-158b7b1eefbb",
+          "speciesName": "Pionus",
+          "commonName": "Pionus",
+          "commonNames": [
+            "Pionus"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-798d9ad1-9f99-0166-65c9-69e92e7223ee",
+          "speciesName": "Platycercus",
+          "commonName": "Rosellas",
+          "commonNames": [
+            "Rosellas"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-3eabba78-3172-af57-e0ee-8d1811839410",
+          "speciesName": "Poicephalus",
+          "commonName": "African Green Parrots",
+          "commonNames": [
+            "African Green Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-1f1751c0-7e57-04d6-1532-0758b66a2fd9",
+          "speciesName": "Polytelis",
+          "commonName": "Australian Long-tailed Parrots",
+          "commonNames": [
+            "Australian Long-tailed Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-d5b473f3-b274-04f2-2b64-180bfb1e242c",
+          "speciesName": "Primolius",
+          "commonName": "Bald-faced Macaws",
+          "commonNames": [
+            "Bald-faced Macaws"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-0f21e465-94ba-4a56-13ef-4cbbde430121",
+          "speciesName": "Prioniturus",
+          "commonName": "Racquet-tails",
+          "commonNames": [
+            "Racquet-tails"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-f89f570d-449b-2193-1b00-df851b91246f",
+          "speciesName": "Probosciger",
+          "commonName": "Palm Cockatoo",
+          "commonNames": [
+            "Palm Cockatoo"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-1eafa4c2-b531-bad7-3741-e7635e6838cc",
+          "speciesName": "Prosopeia",
+          "commonName": "Musk Parrots",
+          "commonNames": [
+            "Musk Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-7be1d5d2-c27b-1bfa-99c8-cd927caef4e4",
+          "speciesName": "Psephotus",
+          "commonName": "Red-rumped Parrots",
+          "commonNames": [
+            "Red-rumped Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-62e2672c-52a0-71d9-6731-803d6213f1ae",
+          "speciesName": "Pseudeos",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-b3595837-a003-63bd-d814-ef01fe6f7445",
+          "speciesName": "Psilopsiagon",
+          "commonName": "Southern Montane Parakeets",
+          "commonNames": [
+            "Southern Montane Parakeets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-8ded268b-1d1a-166c-7d51-d3426adc6624",
+          "speciesName": "Psittacella",
+          "commonName": "Tiger Parrots",
+          "commonNames": [
+            "Tiger Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-cd87913d-f5b3-aea8-ae1a-48d5b95bb7aa",
+          "speciesName": "Psittaciformes",
+          "commonName": "Parrots",
+          "commonNames": [
+            "Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": "1PSITO",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-dde94165-9583-95db-11ac-3250accf4abe",
+          "speciesName": "Psittacula",
+          "commonName": "Rose-ringed Parakeets",
+          "commonNames": [
+            "Rose-ringed Parakeets"
+          ],
+          "languageId": "la",
+          "eppoCode": "1PSICG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-31d993c0-047f-ffd4-4423-bd5495dff13d",
+          "speciesName": "Psittaculirostris",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-1e0c4117-288c-4b44-1701-d65b2696bf0f",
+          "speciesName": "Psittacus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": "1PSTCG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-f0e8310f-d98c-9d6c-eba8-6a60eeefe846",
+          "speciesName": "Psitteuteles",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-3cc6a4f5-ca15-e531-35f7-a1a04bef2733",
+          "speciesName": "Psittinus",
+          "commonName": "Blue-rumped and Simeulue Parrots",
+          "commonNames": [
+            "Blue-rumped and Simeulue Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-dcfa2f5d-b44e-3ae1-58c9-d2ac0fd58c48",
+          "speciesName": "Psittrichas",
+          "commonName": "Pesquets parrot",
+          "commonNames": [
+            "Pesquets parrot"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-d624c8a5-1eaf-c597-3d16-3248628e1ffe",
+          "speciesName": "Purpureicephalus",
+          "commonName": "Red-capped Parrots",
+          "commonNames": [
+            "Red-capped Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-13b1e9c1-9450-d929-c804-fde2b1e4e574",
+          "speciesName": "Pyrrhura",
+          "commonName": "Lesser Neotropical Parakeets",
+          "commonNames": [
+            "Lesser Neotropical Parakeets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-37456ae6-a907-fc5c-4d8c-e5298f958dd6",
+          "speciesName": "Rhynchopsitta",
+          "commonName": "Thick-billed Parrots",
+          "commonNames": [
+            "Thick-billed Parrots"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-96681c66-4e54-ac0a-deb0-54e7084f58aa",
+          "speciesName": "Strigops",
+          "commonName": "Kakapo",
+          "commonNames": [
+            "Kakapo"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-6e1d73cb-34e5-5a96-562d-eb01a4c6e091",
+          "speciesName": "Tanygnathus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-4dc255dd-bd4d-9db6-a7a5-29c8da35b116",
+          "speciesName": "Touit",
+          "commonName": "Forest Parrotlets",
+          "commonNames": [
+            "Forest Parrotlets"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-9124d8ce-9eb0-b35f-627f-98af0b94aaf7",
+          "speciesName": "Trichoglossus",
+          "commonName": "Island Lories",
+          "commonNames": [
+            "Island Lories"
+          ],
+          "languageId": "la",
+          "eppoCode": "1TRGSG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-318f7b00-c948-6a7c-314d-c3cf6d2cf066",
+          "speciesName": "Triclaria",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063200-121450a4-cb94-e337-1b73-107de048792a",
+          "speciesName": "Vini",
+          "commonName": "Vini Lories",
+          "commonNames": [
+            "Vini Lories"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Psittacidae"
+          },
+          "commodityCnCode": "01063200",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        }
+      ],
+      "page": 0,
+      "size": 100,
+      "totalElements": 84
+    }
+  ],
+  "01063980": [
+    {
+      "content": [
+        {
+          "resultType": "species",
+          "id": "01063980-b9962ba0-c335-651a-c2e6-1cb77129c3fd",
+          "speciesName": "Acridotheres tristis",
+          "commonName": "Common Myna",
+          "commonNames": [
+            "Common Myna"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-9dd05231-8280-f0e3-fca1-99f1a8a47068",
+          "speciesName": "Alectoris",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-de3c04d0-bb86-2521-9d01-189618488b2f",
+          "speciesName": "Alopochen aegyptiacus",
+          "commonName": "Egyptian Goose",
+          "commonNames": [
+            "Egyptian Goose"
+          ],
+          "languageId": "la",
+          "eppoCode": "ALPCAE",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Anatidae"
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-d3529355-f0c2-5dc0-8455-12c4c965c4fe",
+          "speciesName": "Amnoperdix spp.",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-6b17420f-dcae-cfa1-139c-4b1eda03bf79",
+          "speciesName": "Ansériformes",
+          "commonName": "Waterfowl",
+          "commonNames": [
+            "Waterfowl"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-7442cc77-4482-e464-5948-2ef9052441a0",
+          "speciesName": "Anurophasis",
+          "commonName": "Blue and Brown Quails",
+          "commonNames": [
+            "Blue and Brown Quails"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Phasianidae"
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-3186f985-9591-ab6b-606f-7b09beefa2f7",
+          "speciesName": "Apodiformes",
+          "commonName": "Hummingbirds",
+          "commonNames": [
+            "Hummingbirds"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-6f1f2c1a-c5fd-8ea4-4776-b13b4afe8673",
+          "speciesName": "Apterygiformes",
+          "commonName": "Kiwis",
+          "commonNames": [
+            "Kiwis"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-bd1a72d4-744e-3b06-a319-6cb5d0d52463",
+          "speciesName": "Bucerotiformes",
+          "commonName": "Hoopoes",
+          "commonNames": [
+            "Hoopoes"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-6c4502c4-2098-8abb-c3c6-d2fd8a9af8a8",
+          "speciesName": "Caprimulgiformes",
+          "commonName": "Swifts, Hummingbirds",
+          "commonNames": [
+            "Swifts, Hummingbirds"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-48b4153d-0d5a-273d-0d36-d60a2197ae6d",
+          "speciesName": "Casuariiformes, Rheiformes, Struthioniformes",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-26e7cb3e-41bd-cf11-15db-f3d368f0f436",
+          "speciesName": "Casuarius",
+          "commonName": "Cassowaries",
+          "commonNames": [
+            "Cassowaries"
+          ],
+          "languageId": "la",
+          "eppoCode": "1CASUG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Casuariidae"
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-4593140c-7957-01d3-bf0d-ed4e0f5b0d77",
+          "speciesName": "Catreus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-5b75b30a-ac41-9b63-b9eb-d95f8631bc4b",
+          "speciesName": "Charadriformes",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-c9709c30-0f44-53dc-6f4e-06ea3654da68",
+          "speciesName": "Chrysolohus spp.",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-96b1aa78-b423-dffa-8f3e-5afab2fd7a62",
+          "speciesName": "Ciconiiformes",
+          "commonName": "Storks",
+          "commonNames": [
+            "Storks"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-b59a5279-d0c0-23d2-b399-53d8d9a273e4",
+          "speciesName": "Coliiformes",
+          "commonName": "mousebirds",
+          "commonNames": [
+            "mousebirds"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-9a7ed3d9-25cf-6d57-a673-f0bbf52411c6",
+          "speciesName": "Colombiformes",
+          "commonName": "pigeons & doves",
+          "commonNames": [
+            "pigeons & doves"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-5251411e-0013-ebbd-abbc-262ef9715e41",
+          "speciesName": "Colombiformes, Galliformes",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-12cc4a6d-0be7-b3cf-3b14-274d392e85ba",
+          "speciesName": "Columba",
+          "commonName": "Pigeon or Dove",
+          "commonNames": [
+            "Pigeon or Dove"
+          ],
+          "languageId": "la",
+          "eppoCode": "1COLUG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-602e6dc9-870f-79f1-f149-476a761524f7",
+          "speciesName": "Coraciiformes",
+          "commonName": "Kingfishers",
+          "commonNames": [
+            "Kingfishers"
+          ],
+          "languageId": "la",
+          "eppoCode": "1CORCO",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-cdff8f23-804c-28a2-9477-0d92fcaf75ab",
+          "speciesName": "Corvus splendens",
+          "commonName": "House Crow",
+          "commonNames": [
+            "House Crow"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-9f83903c-26d6-bf1f-57a4-cfd88f28a453",
+          "speciesName": "Coturnis spp.",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-739266d2-959a-731f-21d2-1e41ce250005",
+          "speciesName": "Cuculiformes",
+          "commonName": "Cuckoos",
+          "commonNames": [
+            "Cuckoos"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-9b7bc5b3-6ffb-9514-713d-a0b54c783ff3",
+          "speciesName": "Dendrortyx",
+          "commonName": "Wood Partridges",
+          "commonNames": [
+            "Wood Partridges"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-0fffaff7-2568-ccf9-6696-964f705ae1f0",
+          "speciesName": "Dromaius",
+          "commonName": "Emu",
+          "commonNames": [
+            "Emu"
+          ],
+          "languageId": "la",
+          "eppoCode": "1DRUSG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Dromaiidae"
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-cade9821-79a8-7fc9-97ac-eee9a466c819",
+          "speciesName": "Galliformes",
+          "commonName": "Fowls",
+          "commonNames": [
+            "Fowls"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-74cb8cf1-031d-49c5-292e-7b0e3f92a657",
+          "speciesName": "Gaviiformes",
+          "commonName": "Loons",
+          "commonNames": [
+            "Loons"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-f260637b-6003-4c22-c472-4584c7b719cd",
+          "speciesName": "Geotrygon",
+          "commonName": "Quail-Doves",
+          "commonNames": [
+            "Quail-Doves"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-bdde518e-617e-18f6-a71b-f7068e2d3b79",
+          "speciesName": "Gruiformes",
+          "commonName": "Cranes",
+          "commonNames": [
+            "Cranes"
+          ],
+          "languageId": "la",
+          "eppoCode": "1GRUSO",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-78d0fa3d-d031-9226-b830-3491b189ffed",
+          "speciesName": "Lagopus",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-0384ded5-545c-b600-9447-43d9a2fa2370",
+          "speciesName": "Lophura",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-f3655cec-b652-438b-66dd-7f2643917ba9",
+          "speciesName": "Margaroperdix",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Phasianidae"
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-05aa66e8-31eb-87c7-584b-597f1b0c1391",
+          "speciesName": "Melanoperdix",
+          "commonName": "Black Partridge",
+          "commonNames": [
+            "Black Partridge"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-3a63dc97-b850-a489-731b-7652e0f43d76",
+          "speciesName": "Otra aves",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-037e5cdf-2fc0-d0e2-38ee-7292f6eec8e4",
+          "speciesName": "Oxyura jamaicensis",
+          "commonName": "Ruddy Duck",
+          "commonNames": [
+            "Ruddy Duck"
+          ],
+          "languageId": "la",
+          "eppoCode": "OXURJA",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Anatidae"
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-a27f12f2-30a4-15b3-cb69-cf3c88641035",
+          "speciesName": "Passériformes",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-4856d0e6-3d78-7114-ed5d-66544a766a29",
+          "speciesName": "Pelécaniformes",
+          "commonName": "Pelicans",
+          "commonNames": [
+            "Pelicans"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-86c35e58-28d9-1678-91f5-bac54ac3be55",
+          "speciesName": "Perdix",
+          "commonName": null,
+          "commonNames": [],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-67941f61-691a-b72e-94fe-900fb14d4bde",
+          "speciesName": "Phasianus",
+          "commonName": "Pheasants",
+          "commonNames": [
+            "Pheasants"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-63f1cbdd-c64b-84e4-4164-5836e52fd56a",
+          "speciesName": "Phoenicopteriformes",
+          "commonName": "Flamingos",
+          "commonNames": [
+            "Flamingos"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-2cceb44b-ec47-6a90-5330-2efd149e6127",
+          "speciesName": "Piciformes",
+          "commonName": "Woodpeckers",
+          "commonNames": [
+            "Woodpeckers"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-8a0ea6c9-42ac-a29e-4afb-67cbde9cd8e0",
+          "speciesName": "Podicipediformes",
+          "commonName": "Grebes",
+          "commonNames": [
+            "Grebes"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-c4aa07fa-7a3e-2efd-2cdf-346ff81818eb",
+          "speciesName": "Procellariiformes",
+          "commonName": "Albatrosses, Petrels",
+          "commonNames": [
+            "Albatrosses, Petrels"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-f33748d2-5fd8-a2b7-a2f8-5c50a7a84d6e",
+          "speciesName": "Rhea",
+          "commonName": "The Rhea",
+          "commonNames": [
+            "The Rhea",
+            "Nandu"
+          ],
+          "languageId": "la",
+          "eppoCode": "1RHEAG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Rheidae"
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-53c6ec32-ca0a-7222-e978-31d8431c3237",
+          "speciesName": "Rhizothera",
+          "commonName": "Long-billed Partridges",
+          "commonNames": [
+            "Long-billed Partridges"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-0959832b-ae43-3ea9-1cc0-a7dd5ac3333a",
+          "speciesName": "Sphenisciformes",
+          "commonName": "Penguins",
+          "commonNames": [
+            "Penguins"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-6c3b4fba-e49e-119b-1c74-d14e9c38038a",
+          "speciesName": "Struthio",
+          "commonName": "Ostriches",
+          "commonNames": [
+            "Ostriches"
+          ],
+          "languageId": "la",
+          "eppoCode": "1STRUG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Aves",
+            "order": null,
+            "family": "Struthionidae"
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-a4f01769-a86f-6f7b-43c3-af1dc1f2c16f",
+          "speciesName": "Syrmaticus",
+          "commonName": "Long-tailed Pheasants",
+          "commonNames": [
+            "Long-tailed Pheasants"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-8f757965-1d8c-f912-4d44-b5ffcef8134c",
+          "speciesName": "Threskiornis aethiopicus",
+          "commonName": "African Sacred Ibis",
+          "commonNames": [
+            "African Sacred Ibis"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-b6c36fbd-ef70-2a33-e0b9-146612427688",
+          "speciesName": "Tinamiformes",
+          "commonName": "Tinamous",
+          "commonNames": [
+            "Tinamous"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01063980-8d12c173-7054-dd3e-b261-3d60c9877726",
+          "speciesName": "Trogoniformes",
+          "commonName": "Trogons",
+          "commonNames": [
+            "Trogons"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01063980",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        }
+      ],
+      "page": 0,
+      "size": 100,
+      "totalElements": 52
+    }
+  ],
+  "01064100": [
+    {
+      "content": [
+        {
+          "resultType": "species",
+          "id": "01064100-127d195c-2b97-1e89-31ec-914086336c6b",
+          "speciesName": "Apis mellifera",
+          "commonName": "Honey Bee",
+          "commonNames": [
+            "Honey Bee",
+            "Western Honey Bee"
+          ],
+          "languageId": "la",
+          "eppoCode": "APISME",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": "Insecta",
+            "order": null,
+            "family": "Apidae"
+          },
+          "commodityCnCode": "01064100",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01064100-81c6b79d-4397-acc6-2902-8ef78fee792e",
+          "speciesName": "Bombus",
+          "commonName": "Bumblebees",
+          "commonNames": [
+            "Bumblebees"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01064100",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01064100-ef195a29-8f85-fb83-1904-c0c37f7bf221",
+          "speciesName": "Bombus canariensis",
+          "commonName": "Canary Islands Bumble Bee",
+          "commonNames": [
+            "Canary Islands Bumble Bee"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Insecta",
+            "order": null,
+            "family": "Apidae"
+          },
+          "commodityCnCode": "01064100",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        },
+        {
+          "resultType": "species",
+          "id": "01064100-f096ea37-a5c3-9ab1-6323-1c5c0f5e2443",
+          "speciesName": "Hymenoptera",
+          "commonName": "Ant, Bee, Wasp, Sawfly",
+          "commonNames": [
+            "Ant, Bee, Wasp, Sawfly"
+          ],
+          "languageId": "la",
+          "eppoCode": null,
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": null,
+            "phylum": null,
+            "class": null,
+            "order": null,
+            "family": null
+          },
+          "commodityCnCode": "01064100",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        }
+      ],
+      "page": 0,
+      "size": 100,
+      "totalElements": 4
+    }
   ]
 }
