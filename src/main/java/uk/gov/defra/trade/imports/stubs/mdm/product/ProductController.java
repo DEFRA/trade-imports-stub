@@ -50,9 +50,17 @@ public class ProductController {
     ArrayNode body = JsonNodeFactory.instance.arrayNode();
     Arrays.stream(commaSeparatedCodes.split(","))
         .map(String::trim)
-        .filter(commodityByCode::has)
+        .filter(this::hasSavedCommodity)
         .forEach(code -> body.add(commodityByCode.get(code)));
     return withTraceHeader(ResponseEntity.ok()).body(body);
+  }
+
+  private boolean hasSavedCommodity(String code) {
+    if (commodityByCode.has(code)) {
+      return true;
+    }
+    log.info("No saved MDM commodity for code '{}'; leaving it out of /commodities", code);
+    return false;
   }
 
   @GetMapping(value = "/mdm/trade/product/search")
@@ -74,10 +82,13 @@ public class ProductController {
     JsonNode saved = searchByTerm.get(normalise(query));
     JsonNode body;
     if (saved == null) {
+      log.info("No saved MDM product search for q '{}'; answering an empty page", query);
       body = emptyPage(page, size, 0).put("totalPages", 0);
     } else if (page == 0) {
       body = saved;
     } else {
+      log.info("No saved MDM product search page {} for q '{}'; answering an empty page", page,
+          query);
       body = emptyPage(page, size, saved.path("totalElements").asLong())
           .put("totalPages", saved.path("totalPages").asInt());
     }
@@ -97,6 +108,8 @@ public class ProductController {
     if (pages.has(page)) {
       body = pages.get(page);
     } else {
+      log.info("No saved MDM species page {} for commodity code '{}'; answering an empty page",
+          page, code);
       long total = pages.isEmpty() ? 0 : pages.get(0).path("totalElements").asLong();
       body = emptyPage(page, size, total);
     }
