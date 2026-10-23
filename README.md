@@ -13,7 +13,7 @@ This stub stands in for two integrations that `trade-imports-reference-data` cal
 | Integration | Stands in for | Paths |
 |---|---|---|
 | `trade-token` | The Trade Platform OAuth token endpoint, called before MDM | `POST /tenant/oauth2/v2.0/token` |
-| `mdm` | MDM reference data through APIM | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search`, `GET /mdm/trade/product/commodities` |
+| `mdm` | MDM reference data through APIM | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search`, `GET /mdm/trade/product/commodities`, `GET /mdm/trade/product/commodities/{code}/species` |
 
 Each profile is one of:
 
