@@ -1,5 +1,6 @@
 package uk.gov.defra.trade.imports.stubs.mdm.product;
 
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.OCP_APIM_SUBSCRIPTION_KEY;
 import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.withTraceHeader;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -23,7 +24,6 @@ import uk.gov.defra.trade.imports.utils.FileUtils;
 @RestController
 public class ProductController {
 
-  private static final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
   private static final String SEARCH_FIXTURE = "responses/mdmProductSearchResponses.json";
   private static final String SPECIES_FIXTURE = "responses/mdmProductSpeciesResponses.json";
   private static final String COMMODITIES_FIXTURE =

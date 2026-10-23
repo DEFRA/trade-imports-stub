@@ -1,5 +1,6 @@
 package uk.gov.defra.trade.imports.stubs.mdm.countries;
 
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.OCP_APIM_SUBSCRIPTION_KEY;
 import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.withTraceHeader;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -17,7 +18,6 @@ import uk.gov.defra.trade.imports.utils.FileUtils;
 @Slf4j
 @RestController
 public class CountriesController {
-  private static final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
   private static final String COUNTRIES_FIXTURE = "responses/countriesResponse.json";
 
   private final JsonNode countries;

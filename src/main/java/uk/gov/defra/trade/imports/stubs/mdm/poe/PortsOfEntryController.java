@@ -1,5 +1,6 @@
 package uk.gov.defra.trade.imports.stubs.mdm.poe;
 
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.OCP_APIM_SUBSCRIPTION_KEY;
 import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.withTraceHeader;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -15,7 +16,6 @@ import uk.gov.defra.trade.imports.utils.FileUtils;
 @RestController
 public class PortsOfEntryController {
 
-  private static final String OCP_APIM_SUBSCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
   private static final String PORTS_FIXTURE = "responses/portsOfEntryResponse.json";
 
   private final JsonNode ports;
