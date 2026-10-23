@@ -24,7 +24,6 @@ public class PortsOfEntryController {
     this.ports = fileUtils.getObjectFromFile(PORTS_FIXTURE, JsonNode.class);
   }
 
-  /** Answers MDM's own port records, served whole and in MDM's order. */
   @GetMapping(value = "/mdm/trade/bcp/poes")
   ResponseEntity<JsonNode> getPortsOfEntry(
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
