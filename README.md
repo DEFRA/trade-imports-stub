@@ -77,6 +77,10 @@ The stub simulates AWS STS, Entra and the address lookup gateway for the address
 - When `HTTP_PROXY` is set to `http://host:port`, every outbound HTTP and HTTPS call goes through it, as CDP requires for egress; without it, calls go direct. A malformed value is logged with its credentials masked and without the parse exception, whose message repeats the URL.
 - `GlobalExceptionHandler` answers only application exceptions. Spring's own exceptions, such as a 404 for an unknown path, keep Spring's answers.
 
+### MDM countries
+
+`GET /mdm/geo/countries` answers the country records saved from MDM in `src/main/resources/responses/countriesResponse.json`, whole. `blocks` keeps the records that carry that block whatever `includeCountry` says, as MDM does. The saved records hold the membership of `GBNAG_SPS_EX` only, so any other block answers an empty list.
+
 ### MDM product search
 
 `GET /mdm/trade/product/search` and `GET /mdm/trade/product/commodities/{code}/species` answer responses saved from MDM in TST, kept in `src/main/resources/responses/mdmProductSearchResponses.json` (by search term) and `mdmProductSpeciesResponses.json` (by commodity code, one body per page). A term that wasn't saved finds nothing, and an unknown code answers an empty page. A search holds only page 0 of each saved term, so page 1 onwards answers an empty `content` array with the saved `totalElements` and `totalPages`. A `q` shorter than 2 characters answers 400 with `{"error":"q must be at least 2 characters"}`. The species path is templated, so latency and faults don't apply to it.

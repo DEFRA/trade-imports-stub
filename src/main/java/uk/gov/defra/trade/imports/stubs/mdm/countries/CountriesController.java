@@ -26,12 +26,6 @@ public class CountriesController {
     this.countries = fileUtils.getObjectFromFile(COUNTRIES_FIXTURE, JsonNode.class);
   }
 
-  /**
-   * Answers the country records captured once from MDM, served whole; {@code blocks} keeps the
-   * records that carry that block whatever {@code includeCountry} says, which is what that capture
-   * showed MDM doing. The capture holds the membership of {@code GBNAG_SPS_EX} only, so any other
-   * block answers an empty list.
-   */
   @GetMapping(value = "/mdm/geo/countries")
   ResponseEntity<JsonNode> getCountries(
       @RequestHeader(OCP_APIM_SUBSCRIPTION_KEY) String ocpApimSubscriptionKey,
