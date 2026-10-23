@@ -83,14 +83,14 @@ public class ProductController {
     JsonNode body;
     if (saved == null) {
       log.info("No saved MDM product search for q '{}'; answering an empty page", query);
-      body = emptyPage(page, size, 0).put("totalPages", 0);
+      body = emptySearchPage(page, size, 0, 0);
     } else if (page == 0) {
       body = saved;
     } else {
       log.info("No saved MDM product search page {} for q '{}'; answering an empty page", page,
           query);
-      body = emptyPage(page, size, saved.path("totalElements").asLong())
-          .put("totalPages", saved.path("totalPages").asInt());
+      body = emptySearchPage(page, size, saved.path("totalElements").asLong(),
+          saved.path("totalPages").asInt());
     }
     return withTraceHeader(ResponseEntity.ok()).body(body);
   }
@@ -114,6 +114,11 @@ public class ProductController {
       body = emptyPage(page, size, total);
     }
     return withTraceHeader(ResponseEntity.ok()).body(body);
+  }
+
+  private static ObjectNode emptySearchPage(
+      int page, int size, long totalElements, int totalPages) {
+    return emptyPage(page, size, totalElements).put("totalPages", totalPages);
   }
 
   private static ObjectNode emptyPage(int page, int size, long totalElements) {
