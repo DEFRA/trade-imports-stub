@@ -28,7 +28,6 @@ public class ProductController {
   private static final String SPECIES_FIXTURE = "responses/mdmProductSpeciesResponses.json";
   private static final String COMMODITIES_FIXTURE =
       "responses/mdmProductCommoditiesResponses.json";
-  private static final int MINIMUM_QUERY_LENGTH = 2;
 
   private final Map<String, JsonNode> searchByTerm = new HashMap<>();
   private final JsonNode speciesByCode;
@@ -70,12 +69,13 @@ public class ProductController {
       @RequestParam(value = "dataset", required = false) String dataset,
       @RequestParam(value = "page", defaultValue = "0") int page,
       @RequestParam(value = "size", defaultValue = "25") int size) {
+    final int minimumQueryLength = 2;
 
-    if (query == null || query.trim().length() < MINIMUM_QUERY_LENGTH) {
+    if (query == null || query.trim().length() < minimumQueryLength) {
       log.warn("Refusing product search: q '{}' is shorter than {} characters", query,
-          MINIMUM_QUERY_LENGTH);
+          minimumQueryLength);
       ObjectNode error = JsonNodeFactory.instance.objectNode()
-          .put("error", "q must be at least %d characters".formatted(MINIMUM_QUERY_LENGTH));
+          .put("error", "q must be at least %d characters".formatted(minimumQueryLength));
       return withTraceHeader(ResponseEntity.badRequest()).body(error);
     }
 
