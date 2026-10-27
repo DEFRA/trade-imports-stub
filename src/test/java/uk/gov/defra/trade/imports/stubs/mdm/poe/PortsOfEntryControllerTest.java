@@ -5,9 +5,9 @@ import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.ANY_KEY;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.KEY_HEADER;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.carriesTheStubTraceHeader;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubMvc.ANY_KEY;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubMvc.subscriptionKeyHeader;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubMvc.carriesTheStubTraceHeader;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ class PortsOfEntryControllerTest {
 
   @Test
   void getPortsOfEntry_shouldAnswerMdmsPortRecordsWholeInMdmOrder() throws Exception {
-    mockMvc.perform(get("/mdm/trade/bcp/poes").header(KEY_HEADER, ANY_KEY))
+    mockMvc.perform(get("/mdm/trade/bcp/poes").header(subscriptionKeyHeader(), ANY_KEY))
         .andExpect(status().isOk())
         .andExpect(carriesTheStubTraceHeader())
         .andExpect(jsonPath("$.result.length()").value(78))
@@ -34,7 +34,7 @@ class PortsOfEntryControllerTest {
 
   @Test
   void getPortsOfEntry_shouldCarryEveryPortsTraffic() throws Exception {
-    mockMvc.perform(get("/mdm/trade/bcp/poes").header(KEY_HEADER, ANY_KEY))
+    mockMvc.perform(get("/mdm/trade/bcp/poes").header(subscriptionKeyHeader(), ANY_KEY))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.result[?(@.traffic == 'Rail')].code").value(contains("GB FOL")))
         .andExpect(jsonPath("$.result[?(@.traffic == 'Airport')]", hasSize(18)));

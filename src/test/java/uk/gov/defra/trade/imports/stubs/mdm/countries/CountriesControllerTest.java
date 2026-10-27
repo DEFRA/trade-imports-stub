@@ -6,9 +6,9 @@ import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.ANY_KEY;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.KEY_HEADER;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubTestRequests.carriesTheStubTraceHeader;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubMvc.ANY_KEY;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubMvc.subscriptionKeyHeader;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubMvc.carriesTheStubTraceHeader;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -26,7 +26,7 @@ class CountriesControllerTest {
   @Test
   void getCountries_shouldAnswerAllTwoHundredAndFiftyMdmCountriesInMdmOrder_whenNoBlockIsAsked()
       throws Exception {
-    mockMvc.perform(get("/mdm/geo/countries").header(KEY_HEADER, ANY_KEY))
+    mockMvc.perform(get("/mdm/geo/countries").header(subscriptionKeyHeader(), ANY_KEY))
         .andExpect(status().isOk())
         .andExpect(carriesTheStubTraceHeader())
         .andExpect(jsonPath("$.length()").value(250))
@@ -38,7 +38,7 @@ class CountriesControllerTest {
   void getCountries_shouldAnswerTheThirtyTwoCountriesInTheBlock_whenGbnagSpsExIsAsked()
       throws Exception {
     mockMvc.perform(get("/mdm/geo/countries")
-            .header(KEY_HEADER, ANY_KEY)
+            .header(subscriptionKeyHeader(), ANY_KEY)
             .param("system", "GBNAG")
             .param("blocks", "GBNAG_SPS_EX"))
         .andExpect(status().isOk())
@@ -52,7 +52,7 @@ class CountriesControllerTest {
   @Test
   void getCountries_shouldIncludeACountryWhoseBlockEntryExcludesIt() throws Exception {
     mockMvc.perform(get("/mdm/geo/countries")
-            .header(KEY_HEADER, ANY_KEY)
+            .header(subscriptionKeyHeader(), ANY_KEY)
             .param("blocks", "GBNAG_SPS_EX"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$[*].alpha2.value").value(hasItem("GB")))
@@ -65,7 +65,7 @@ class CountriesControllerTest {
   void getCountries_shouldAnswerAllTwoHundredAndFiftyCountries_whenTheBlocksParameterIsBlank(
       String blocks) throws Exception {
     mockMvc.perform(get("/mdm/geo/countries")
-            .header(KEY_HEADER, ANY_KEY)
+            .header(subscriptionKeyHeader(), ANY_KEY)
             .param("blocks", blocks))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.length()").value(250));
@@ -74,7 +74,7 @@ class CountriesControllerTest {
   @Test
   void getCountries_shouldAnswerNoCountries_whenTheBlockIsUnknown() throws Exception {
     mockMvc.perform(get("/mdm/geo/countries")
-            .header(KEY_HEADER, ANY_KEY)
+            .header(subscriptionKeyHeader(), ANY_KEY)
             .param("blocks", "PERF_TEST_NO_SUCH_BLOCK"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$").value(hasSize(0)));
@@ -82,7 +82,7 @@ class CountriesControllerTest {
 
   @Test
   void getCountries_shouldServeFieldsNoStubModelNames() throws Exception {
-    mockMvc.perform(get("/mdm/geo/countries").header(KEY_HEADER, ANY_KEY))
+    mockMvc.perform(get("/mdm/geo/countries").header(subscriptionKeyHeader(), ANY_KEY))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$[0].countryUUID.content").exists())
         .andExpect(jsonPath("$[0].ISONumeric.value").exists());

@@ -61,7 +61,7 @@ class FaultsIT extends IntegrationBase {
     }
 
     @Test
-    void error_shouldFaultTheSpeciesPathForAnyCommodityCode() {
+    void error_shouldFaultASpeciesUriThatMatchesThePathTemplate() {
         putFault("mdm", Map.of(
             "kind", "error", "rate", 1.0, "expiresInSeconds", 60,
             "paths", List.of("/mdm/trade/product/commodities/*/species")));
