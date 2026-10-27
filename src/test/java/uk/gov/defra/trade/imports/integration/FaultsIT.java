@@ -61,6 +61,18 @@ class FaultsIT extends IntegrationBase {
     }
 
     @Test
+    void error_shouldFaultASpeciesUriThatMatchesThePathTemplate() {
+        putFault("mdm", Map.of(
+            "kind", "error", "rate", 1.0, "expiresInSeconds", 60,
+            "paths", List.of("/mdm/trade/product/commodities/*/species")));
+
+        ResponseEntity<String> species = getFrom("/mdm/trade/product/commodities/01061900/species");
+
+        assertThat(species.getStatusCode()).isEqualTo(HttpStatus.SERVICE_UNAVAILABLE);
+        assertThat(species.getBody()).isEqualTo("{\"fault\":\"error\"}");
+    }
+
+    @Test
     void throttle_shouldAnswer429WithRetryAfter() {
         putFault("trade-token", Map.of(
             "kind", "throttle", "rate", 1, "retryAfterSeconds", 5, "expiresInSeconds", 60));

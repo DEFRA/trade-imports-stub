@@ -27,6 +27,7 @@ class StubFaultsTest {
     private static final String COUNTRIES = "/mdm/geo/countries";
     private static final String POES = "/mdm/trade/bcp/poes";
     private static final String TOKEN = "/tenant/oauth2/v2.0/token";
+    private static final String SPECIES = "/mdm/trade/product/commodities/*/species";
     private static final Instant NOW = Instant.parse("2026-10-06T12:00:00Z");
     private static final SlaTargets INTERIM = new SlaTargets(100, 400, 1000);
 
@@ -56,6 +57,16 @@ class StubFaultsTest {
         IntegrationFaultReport mdm = reportFor(faults, "mdm");
         assertThat(mdm.requests()).isEqualTo(2);
         assertThat(mdm.injected()).containsEntry("error", 1L);
+    }
+
+    @Test
+    void decide_shouldFaultAUriThatMatchesAFaultedPathTemplate() {
+        StubFaults faults = faultsWithDraws(0.0);
+        faults.apply("mdm", error(1.0, List.of(SPECIES)));
+
+        assertThat(faults.decide("/mdm/trade/product/commodities/01061900/species")).isPresent();
+        assertThat(faults.decide(COUNTRIES)).isEmpty();
+        assertThat(reportFor(faults, "mdm").requests()).isEqualTo(2);
     }
 
     @Test
@@ -156,7 +167,7 @@ class StubFaultsTest {
 
         assertThat(report.fault().status()).isEqualTo(503);
         assertThat(report.fault().retryAfterSeconds()).isEqualTo(1);
-        assertThat(report.fault().paths()).containsExactly(COUNTRIES, POES);
+        assertThat(report.fault().paths()).containsExactly(COUNTRIES, POES, SPECIES);
     }
 
     private StubFaults faultsWithDraws(double... draws) {
@@ -182,7 +193,7 @@ class StubFaultsTest {
     private static StubLatencyProperties properties() {
         Map<String, Integration> integrations = new LinkedHashMap<>();
         integrations.put("trade-token", integration(TOKEN));
-        integrations.put("mdm", integration(COUNTRIES, POES));
+        integrations.put("mdm", integration(COUNTRIES, POES, SPECIES));
         return new StubLatencyProperties(integrations);
     }
 

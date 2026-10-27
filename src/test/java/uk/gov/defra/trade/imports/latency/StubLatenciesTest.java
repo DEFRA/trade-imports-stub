@@ -28,6 +28,20 @@ class StubLatenciesTest {
     }
 
     @Test
+    void forPath_shouldMapAUriToTheIntegrationWhosePathTemplateMatchesIt() {
+        Map<String, Integration> integrations = new LinkedHashMap<>();
+        integrations.put("mdm",
+            integration(ProfileName.ZERO_DELAY, "/mdm/trade/product/commodities/*/species"));
+        StubLatencies latencies = new StubLatencies(new StubLatencyProperties(integrations), () -> 0);
+
+        assertThat(latencies.forPath("/mdm/trade/product/commodities/01061900/species")).get()
+            .extracting(IntegrationLatency::name).isEqualTo("mdm");
+        assertThat(latencies.configuredPathFor("/mdm/trade/product/commodities/01061900/species"))
+            .hasValue("/mdm/trade/product/commodities/*/species");
+        assertThat(latencies.forPath("/mdm/trade/product/commodities/01061900")).isEmpty();
+    }
+
+    @Test
     void nextDelayMs_shouldBeZero_whenTheProfileIsZeroDelay() {
         StubLatencies latencies = new StubLatencies(properties(ProfileName.ZERO_DELAY), () -> 5.0);
 
