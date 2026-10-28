@@ -7,7 +7,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -47,19 +46,15 @@ public class ProductController {
       @RequestParam(value = "dataset", required = false) String dataset) {
 
     ArrayNode body = JsonNodeFactory.instance.arrayNode();
-    Arrays.stream(commaSeparatedCodes.split(","))
-        .map(String::trim)
-        .filter(this::hasSavedCommodity)
-        .forEach(code -> body.add(commodityByCode.get(code)));
-    return withTraceHeader(ResponseEntity.ok()).body(body);
-  }
-
-  private boolean hasSavedCommodity(String code) {
-    if (commodityByCode.has(code)) {
-      return true;
+    for (String requestedCode : commaSeparatedCodes.split(",")) {
+      String code = requestedCode.trim();
+      if (commodityByCode.has(code)) {
+        body.add(commodityByCode.get(code));
+      } else {
+        log.info("No saved MDM commodity for code '{}'; leaving it out of /commodities", code);
+      }
     }
-    log.info("No saved MDM commodity for code '{}'; leaving it out of /commodities", code);
-    return false;
+    return withTraceHeader(ResponseEntity.ok()).body(body);
   }
 
   @GetMapping(value = "/mdm/trade/product/search")

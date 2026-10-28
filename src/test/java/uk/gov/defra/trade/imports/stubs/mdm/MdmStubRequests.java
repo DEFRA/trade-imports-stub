@@ -1,18 +1,18 @@
 package uk.gov.defra.trade.imports.stubs.mdm;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponses.OCP_APIM_SUBSCRIPTION_KEY;
 
 import org.springframework.test.web.servlet.ResultMatcher;
+import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
-public final class MdmStubMvc {
+public final class MdmStubRequests {
 
-  public static final String ANY_KEY = "any-value-at-all";
+  private MdmStubRequests() {}
 
-  private MdmStubMvc() {}
-
-  public static String subscriptionKeyHeader() {
-    return OCP_APIM_SUBSCRIPTION_KEY;
+  public static MockHttpServletRequestBuilder mdmGet(String path) {
+    return get(path).header(OCP_APIM_SUBSCRIPTION_KEY, "any-value-at-all");
   }
 
   public static ResultMatcher carriesTheStubTraceHeader() {
