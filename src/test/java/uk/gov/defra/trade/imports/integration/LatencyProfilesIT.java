@@ -1,13 +1,13 @@
 package uk.gov.defra.trade.imports.integration;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubRequests.mdmCallerHeaders;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,12 +28,12 @@ class LatencyProfilesIT extends IntegrationBase {
 
     @Test
     void latencyProfiles_shouldApplyTheSlaDelayAndReportWhatWasAnswered() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Ocp-Apim-Subscription-Key", "stub-key");
-
         long startedAt = System.nanoTime();
         ResponseEntity<String> countries = restTemplate.exchange(
-            "/mdm/geo/countries", HttpMethod.GET, new HttpEntity<>(headers), String.class);
+            "/mdm/geo/countries",
+            HttpMethod.GET,
+            new HttpEntity<>(mdmCallerHeaders()),
+            String.class);
         long elapsedMs = (System.nanoTime() - startedAt) / 1_000_000;
 
         assertThat(countries.getStatusCode()).isEqualTo(HttpStatus.OK);
@@ -75,10 +75,11 @@ class LatencyProfilesIT extends IntegrationBase {
 
     @Test
     void latencyProfiles_shouldForgetAnsweredLatencies_whenTheyAreCleared() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Ocp-Apim-Subscription-Key", "stub-key");
         restTemplate.exchange(
-            "/mdm/geo/countries", HttpMethod.GET, new HttpEntity<>(headers), String.class);
+            "/mdm/geo/countries",
+            HttpMethod.GET,
+            new HttpEntity<>(mdmCallerHeaders()),
+            String.class);
         assertThat(integration("mdm").get("answered").get("count").asInt()).isGreaterThanOrEqualTo(1);
 
         ResponseEntity<Void> cleared = restTemplate.exchange(

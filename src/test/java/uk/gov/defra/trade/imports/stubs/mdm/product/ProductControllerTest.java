@@ -3,8 +3,8 @@ package uk.gov.defra.trade.imports.stubs.mdm.product;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubRequests.carriesTheStubTraceHeader;
 import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubRequests.mdmGet;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponseMatchers.carriesTheStubTraceHeader;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
