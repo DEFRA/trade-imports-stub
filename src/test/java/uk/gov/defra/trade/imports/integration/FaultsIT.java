@@ -2,6 +2,7 @@ package uk.gov.defra.trade.imports.integration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubRequests.mdmCallerHeaders;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import java.io.IOException;
@@ -145,9 +146,8 @@ class FaultsIT extends IntegrationBase {
     }
 
     private ResponseEntity<String> getFrom(String path) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Ocp-Apim-Subscription-Key", "stub-key");
-        return restTemplate.exchange(path, HttpMethod.GET, new HttpEntity<>(headers), String.class);
+        return restTemplate.exchange(
+            path, HttpMethod.GET, new HttpEntity<>(mdmCallerHeaders()), String.class);
     }
 
     private void putFault(String integration, Map<String, Object> body) {

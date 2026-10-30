@@ -3,9 +3,8 @@ package uk.gov.defra.trade.imports.stubs.mdm.product;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubMvc.ANY_KEY;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubMvc.subscriptionKeyHeader;
-import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubMvc.carriesTheStubTraceHeader;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubRequests.mdmGet;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubResponseMatchers.carriesTheStubTraceHeader;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ class ProductControllerTest {
 
   @Test
   void search_shouldAnswerTheSavedResponse_forASavedTerm() throws Exception {
-    mockMvc.perform(get(SEARCH_PATH).header(subscriptionKeyHeader(), ANY_KEY)
+    mockMvc.perform(mdmGet(SEARCH_PATH)
             .param("q", "cat").param("dataset", "gbnag").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(carriesTheStubTraceHeader())
@@ -35,14 +34,14 @@ class ProductControllerTest {
 
   @Test
   void search_shouldMatchTheTermIgnoringCase() throws Exception {
-    mockMvc.perform(get(SEARCH_PATH).header(subscriptionKeyHeader(), ANY_KEY).param("q", "BOS TAURUS"))
+    mockMvc.perform(mdmGet(SEARCH_PATH).param("q", "BOS TAURUS"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.totalElements").value(4));
   }
 
   @Test
   void search_shouldAnswerAnEmptyPage_forATermThatWasNotSaved() throws Exception {
-    mockMvc.perform(get(SEARCH_PATH).header(subscriptionKeyHeader(), ANY_KEY)
+    mockMvc.perform(mdmGet(SEARCH_PATH)
             .param("q", "zebra").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
@@ -52,7 +51,7 @@ class ProductControllerTest {
 
   @Test
   void search_shouldAnswerAnEmptyPageWithTheSavedTotal_forALaterPage() throws Exception {
-    mockMvc.perform(get(SEARCH_PATH).header(subscriptionKeyHeader(), ANY_KEY)
+    mockMvc.perform(mdmGet(SEARCH_PATH)
             .param("q", "cattle").param("page", "1"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
@@ -62,7 +61,7 @@ class ProductControllerTest {
 
   @Test
   void search_shouldRefuseTheCall_whenTheTermIsShorterThanTwoCharacters() throws Exception {
-    mockMvc.perform(get(SEARCH_PATH).header(subscriptionKeyHeader(), ANY_KEY).param("q", "c"))
+    mockMvc.perform(mdmGet(SEARCH_PATH).param("q", "c"))
         .andExpect(status().isBadRequest())
         .andExpect(jsonPath("$.error").value("q must be at least 2 characters"));
   }
@@ -75,7 +74,7 @@ class ProductControllerTest {
 
   @Test
   void getCommoditySpecies_shouldAnswerTheSavedPage_forASavedCode() throws Exception {
-    mockMvc.perform(get(speciesPath("0102")).header(subscriptionKeyHeader(), ANY_KEY)
+    mockMvc.perform(mdmGet(speciesPath("0102"))
             .param("dataset", "gbnag").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(carriesTheStubTraceHeader())
@@ -86,7 +85,7 @@ class ProductControllerTest {
   @Test
   void getCommoditySpecies_shouldAnswerTheSavedSecondPage_forACodeWithTwoSavedPages()
       throws Exception {
-    mockMvc.perform(get(speciesPath("01061900")).header(subscriptionKeyHeader(), ANY_KEY)
+    mockMvc.perform(mdmGet(speciesPath("01061900"))
             .param("dataset", "gbnag").param("page", "1").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(20))
@@ -96,7 +95,7 @@ class ProductControllerTest {
 
   @Test
   void getCommoditySpecies_shouldAnswerAnEmptyPage_forAnUnknownCode() throws Exception {
-    mockMvc.perform(get(speciesPath("030111")).header(subscriptionKeyHeader(), ANY_KEY)
+    mockMvc.perform(mdmGet(speciesPath("030111"))
             .param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
@@ -106,7 +105,7 @@ class ProductControllerTest {
   @Test
   void getCommoditySpecies_shouldAnswerAnEmptyPageWithTheSavedTotal_pastTheLastPage()
       throws Exception {
-    mockMvc.perform(get(speciesPath("0101")).header(subscriptionKeyHeader(), ANY_KEY)
+    mockMvc.perform(mdmGet(speciesPath("0101"))
             .param("page", "1").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
@@ -116,7 +115,7 @@ class ProductControllerTest {
   @Test
   void getCommodities_shouldAnswerTheSavedCommodityOfEachKnownCode_inTheOrderAsked()
       throws Exception {
-    mockMvc.perform(get(COMMODITIES_PATH).header(subscriptionKeyHeader(), ANY_KEY)
+    mockMvc.perform(mdmGet(COMMODITIES_PATH)
             .param("codes", "05111000,0102,030111").param("dataset", "gbnag"))
         .andExpect(status().isOk())
         .andExpect(carriesTheStubTraceHeader())
