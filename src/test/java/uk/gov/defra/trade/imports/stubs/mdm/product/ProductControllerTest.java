@@ -26,8 +26,8 @@ class ProductControllerTest {
             .param("q", "cat").param("dataset", "gbnag").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(carriesTheStubTraceHeader())
-        .andExpect(jsonPath("$.totalElements").value(13))
-        .andExpect(jsonPath("$.content.length()").value(13))
+        .andExpect(jsonPath("$.totalElements").value(10))
+        .andExpect(jsonPath("$.content.length()").value(10))
         .andExpect(jsonPath("$.content[0].speciesName").value("Felis catus"))
         .andExpect(jsonPath("$.content[0].commodityCnCode").value("01061900"));
   }
@@ -36,7 +36,7 @@ class ProductControllerTest {
   void search_shouldMatchTheTermIgnoringCase() throws Exception {
     mockMvc.perform(mdmGet(SEARCH_PATH).param("q", "BOS TAURUS"))
         .andExpect(status().isOk())
-        .andExpect(jsonPath("$.totalElements").value(4));
+        .andExpect(jsonPath("$.totalElements").value(3));
   }
 
   @Test
@@ -56,7 +56,7 @@ class ProductControllerTest {
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
         .andExpect(jsonPath("$.page").value(1))
-        .andExpect(jsonPath("$.totalElements").value(8));
+        .andExpect(jsonPath("$.totalElements").value(7));
   }
 
   @Test
@@ -80,17 +80,6 @@ class ProductControllerTest {
         .andExpect(carriesTheStubTraceHeader())
         .andExpect(jsonPath("$.totalElements").value(15))
         .andExpect(jsonPath("$.content.length()").value(15));
-  }
-
-  @Test
-  void getCommoditySpecies_shouldAnswerTheSavedSecondPage_forACodeWithTwoSavedPages()
-      throws Exception {
-    mockMvc.perform(mdmGet(speciesPath("01061900"))
-            .param("dataset", "gbnag").param("page", "1").param("size", "100"))
-        .andExpect(status().isOk())
-        .andExpect(jsonPath("$.content.length()").value(20))
-        .andExpect(jsonPath("$.page").value(1))
-        .andExpect(jsonPath("$.totalElements").value(120));
   }
 
   @Test
