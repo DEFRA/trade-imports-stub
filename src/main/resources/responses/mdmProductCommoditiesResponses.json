@@ -1,0 +1,331 @@
+{
+  "0101": {
+    "code": "0101",
+    "description": "Live horses, asses, mules and hinnies",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 5
+  },
+  "0102": {
+    "code": "0102",
+    "description": "Live bovine animals",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 15
+  },
+  "0103": {
+    "code": "0103",
+    "description": "Live swine",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 8
+  },
+  "0104": {
+    "code": "0104",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "010410": {
+    "code": "010410",
+    "description": "Sheep",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 4
+  },
+  "010420": {
+    "code": "010420",
+    "description": "Goats",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 2
+  },
+  "0105": {
+    "code": "0105",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "010511": {
+    "code": "010511",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01051111": {
+    "code": "01051111",
+    "description": "Weighing not more than 185 g:Fowls of the species Gallus domesticus, Grandparent and parent female chicks: Laying stocks",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 1
+  },
+  "010512": {
+    "code": "010512",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01051200": {
+    "code": "01051200",
+    "description": "Turkeys",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 1
+  },
+  "010513": {
+    "code": "010513",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01051300": {
+    "code": "01051300",
+    "description": "Ducks",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 2
+  },
+  "010514": {
+    "code": "010514",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01051400": {
+    "code": "01051400",
+    "description": "Geese",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 1
+  },
+  "010515": {
+    "code": "010515",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01051500": {
+    "code": "01051500",
+    "description": "Guinea fowls",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 1
+  },
+  "010594": {
+    "code": "010594",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01059400": {
+    "code": "01059400",
+    "description": "Fowls of the species Gallus domesticus",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 1
+  },
+  "010599": {
+    "code": "010599",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01059910": {
+    "code": "01059910",
+    "description": "Ducks",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 2
+  },
+  "01059920": {
+    "code": "01059920",
+    "description": "Geese",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 1
+  },
+  "01059930": {
+    "code": "01059930",
+    "description": "Turkeys",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 1
+  },
+  "01059950": {
+    "code": "01059950",
+    "description": "Guinea fowls",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 1
+  },
+  "0106": {
+    "code": "0106",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "010614": {
+    "code": "010614",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01061410": {
+    "code": "01061410",
+    "description": "Domestic rabbits",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 3
+  },
+  "01061490": {
+    "code": "01061490",
+    "description": "other than. 0106 14 10",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 3
+  },
+  "010619": {
+    "code": "010619",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01061900": {
+    "code": "01061900",
+    "description": "Other",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 120
+  },
+  "010620": {
+    "code": "010620",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01062000": {
+    "code": "01062000",
+    "description": "Reptiles (including snakes and turtles)",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 7
+  },
+  "010631": {
+    "code": "010631",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01063100": {
+    "code": "01063100",
+    "description": "Birds of prey",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 3
+  },
+  "010632": {
+    "code": "010632",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01063200": {
+    "code": "01063200",
+    "description": "Psittaciformes (including parrots, parakeets, macaws and cockatoos)",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 84
+  },
+  "010633": {
+    "code": "010633",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01063300": {
+    "code": "01063300",
+    "description": "Ostriches; emus (Dromaius novaehollandiae)",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 5
+  },
+  "010639": {
+    "code": "010639",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01063910": {
+    "code": "01063910",
+    "description": "Pigeons",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 5
+  },
+  "01063980": {
+    "code": "01063980",
+    "description": "other than  0105; 010631; 010632 and 01063910",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 52
+  },
+  "010641": {
+    "code": "010641",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01064100": {
+    "code": "01064100",
+    "description": "Bees",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 4
+  },
+  "010649": {
+    "code": "010649",
+    "description": null,
+    "isGerminal": false,
+    "isSelectable": false,
+    "speciesCount": 0
+  },
+  "01064900": {
+    "code": "01064900",
+    "description": "Other",
+    "isGerminal": false,
+    "isSelectable": true,
+    "speciesCount": 5
+  },
+  "05111000": {
+    "code": "05111000",
+    "description": "Bovine semen",
+    "isGerminal": true,
+    "isSelectable": true,
+    "speciesCount": 1
+  },
+  "05119985": {
+    "code": "05119985",
+    "description": "Other animal products, unfit for human consumption",
+    "isGerminal": true,
+    "isSelectable": true,
+    "speciesCount": 1
+  }
+}

@@ -21,6 +21,7 @@ public class StubFaults {
 
     private final Map<String, IntegrationFaults> byName = new LinkedHashMap<>();
     private final Map<String, IntegrationFaults> byPath = new LinkedHashMap<>();
+    private final StubLatencies stubLatencies;
     private final Clock clock;
     private final DoubleSupplier random;
 
@@ -35,6 +36,7 @@ public class StubFaults {
     }
 
     StubFaults(StubLatencies stubLatencies, Clock clock, DoubleSupplier random) {
+        this.stubLatencies = stubLatencies;
         this.clock = clock;
         this.random = random;
         for (IntegrationLatency integration : stubLatencies.all()) {
@@ -48,15 +50,13 @@ public class StubFaults {
     /**
      * Counts a request to an integration's path and decides whether to fault it.
      *
-     * @param requestUri the request URI, matched exactly against the integrations' paths
+     * @param requestUri the request URI, matched against the integrations' paths as
+     *     {@link StubLatencies#configuredPathFor} matches it
      * @return the fault to inject, or empty to answer normally
      */
     public Optional<ActiveFault> decide(String requestUri) {
-        IntegrationFaults integration = byPath.get(requestUri);
-        if (integration == null) {
-            return Optional.empty();
-        }
-        return integration.decide(requestUri, clock.instant(), random.getAsDouble());
+        return stubLatencies.configuredPathFor(requestUri)
+            .flatMap(path -> byPath.get(path).decide(path, clock.instant(), random.getAsDouble()));
     }
 
     /**

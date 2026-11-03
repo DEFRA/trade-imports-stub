@@ -13,7 +13,7 @@ This stub stands in for two integrations that `trade-imports-reference-data` cal
 | Integration | Stands in for | Paths |
 |---|---|---|
 | `trade-token` | The Trade Platform OAuth token endpoint, called before MDM | `POST /tenant/oauth2/v2.0/token` |
-| `mdm` | MDM reference data through APIM | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes` |
+| `mdm` | MDM reference data through APIM | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search`, `GET /mdm/trade/product/commodities`, `GET /mdm/trade/product/commodities/{code}/species` |
 
 Each profile is one of:
 
@@ -40,7 +40,9 @@ The same two integrations can be made to fail, so the resilience runs in `trade-
 | Integration | Paths a fault can apply to |
 |---|---|
 | `trade-token` | `POST /tenant/oauth2/v2.0/token` |
-| `mdm` | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes` |
+| `mdm` | `GET /mdm/geo/countries`, `GET /mdm/trade/bcp/poes`, `GET /mdm/trade/product/search`, `GET /mdm/trade/product/commodities`, `GET /mdm/trade/product/commodities/*/species` |
+
+A `*` in a path stands for one path segment, so `/mdm/trade/product/commodities/*/species` covers the species path for every commodity code. A fault's `paths` names a path as this table writes it.
 
 There are five kinds of fault, and an integration has one active fault at a time:
 
@@ -61,6 +63,32 @@ A fault applies to each request on its paths with probability `rate` (0 to 1). `
 - `GET /faults` reports `stub` and, for each integration, `integration`, `paths`, `fault` (null when none is on, otherwise `kind`, `rate`, `delayMs`, `status`, `retryAfterSeconds`, `paths` and `expiresAt`), `requests` (every request to its paths since the stub started) and `injected` (faults injected since the stub started, counted for each of `slow`, `hang`, `reset`, `throttle` and `error`). The counters are never reset, so a reader works in differences between two readings.
 
 Behind a load balancer a fault reaches only the instance that answered the `PUT`, so run one stub instance when you inject faults; the `injected` count against `requests` shows any shortfall. The Defra ID stub serves the same contract for `defra-id`.
+
+### Federated-credential simulators
+
+The stub simulates AWS STS, Entra and the address lookup gateway for the address lookup in `trade-imports-ins-backend`.
+
+- The STS simulator answers on its own port, `sts-simulator.port` (default 8098), because the AWS SDK posts `GetWebIdentityToken` to the root path of the endpoint override and so cannot share a sub-path on the main port.
+- `address-lookup-simulator.expected-audience` must match the `Scope` that ins-backend requests once `/.default` is stripped, `api://` prefix included. The gateway in dev rejects the bare GUID, so the simulator does too.
+- The `local` profile sets the STS issuer to `localhost`, for an ins-backend running outside the stack.
+- Integration tests set `sts-simulator.port` to 0. Random-port tests randomise only `server.port`, and a fixed simulator port would clash across the integration tests that share the profile.
+
+### Configuration notes
+
+- The `local` profile turns on DevTools restart on `.reloadtrigger`, which `docker/dev-run.sh` touches once per compile, so the context restarts once per build and not part-way through one.
+- When `HTTP_PROXY` is set to `http://host:port`, every outbound HTTP and HTTPS call goes through it, as CDP requires for egress; without it, calls go direct. A malformed value is logged with its credentials masked and without the parse exception, whose message repeats the URL.
+- `GlobalExceptionHandler` answers only application exceptions. Spring's own exceptions, such as a 404 for an unknown path, keep Spring's answers.
+
+### MDM countries and border control posts
+
+`GET /mdm/geo/countries` answers the country records saved from MDM in `src/main/resources/responses/countriesResponse.json`, whole. `blocks` keeps the records that carry that block whatever `includeCountry` says, as MDM does. The saved records hold the membership of `GBNAG_SPS_EX` only, so any other block answers an empty list.
+
+`GET /mdm/trade/bcp/poes` answers MDM's port records saved in `portsOfEntryResponse.json`, whole and in MDM's order.
+
+### MDM product search
+
+`GET /mdm/trade/product/search` and `GET /mdm/trade/product/commodities/{code}/species` answer responses saved from MDM in TST, kept in `src/main/resources/responses/mdmProductSearchResponses.json` (by search term) and `mdmProductSpeciesResponses.json` (by commodity code, one body per page). A term that wasn't saved finds nothing, and an unknown code answers an empty page. A search holds only page 0 of each saved term, so page 1 onwards answers an empty `content` array with the saved `totalElements` and `totalPages`. A `q` shorter than 2 characters answers 400 with `{"error":"q must be at least 2 characters"}`.
+`GET /mdm/trade/product/commodities?codes=…` answers the saved commodity for each known code in the comma-separated list, in the order asked, from `mdmProductCommoditiesResponses.json`; an unknown code is left out. TST does not yet set `isGerminal`, so the saved file sets it to `true` for the germinal codes `05111000` and `05119985`, which lets `trade-imports-reference-data` show its germinal filter working against the stub.
 
 ### About the licence
 

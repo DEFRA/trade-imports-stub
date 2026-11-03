@@ -2,6 +2,7 @@ package uk.gov.defra.trade.imports.integration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static uk.gov.defra.trade.imports.stubs.mdm.MdmStubRequests.mdmCallerHeaders;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import java.io.IOException;
@@ -58,6 +59,18 @@ class FaultsIT extends IntegrationBase {
         assertThat(poes.getBody()).isEqualTo("{\"fault\":\"error\"}");
         assertThat(countries.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(countries.getBody()).isNotEqualTo("{\"fault\":\"error\"}");
+    }
+
+    @Test
+    void error_shouldFaultASpeciesUriThatMatchesThePathTemplate() {
+        putFault("mdm", Map.of(
+            "kind", "error", "rate", 1.0, "expiresInSeconds", 60,
+            "paths", List.of("/mdm/trade/product/commodities/*/species")));
+
+        ResponseEntity<String> species = getFrom("/mdm/trade/product/commodities/01061900/species");
+
+        assertThat(species.getStatusCode()).isEqualTo(HttpStatus.SERVICE_UNAVAILABLE);
+        assertThat(species.getBody()).isEqualTo("{\"fault\":\"error\"}");
     }
 
     @Test
@@ -133,9 +146,8 @@ class FaultsIT extends IntegrationBase {
     }
 
     private ResponseEntity<String> getFrom(String path) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Ocp-Apim-Subscription-Key", "stub-key");
-        return restTemplate.exchange(path, HttpMethod.GET, new HttpEntity<>(headers), String.class);
+        return restTemplate.exchange(
+            path, HttpMethod.GET, new HttpEntity<>(mdmCallerHeaders()), String.class);
     }
 
     private void putFault(String integration, Map<String, Object> body) {
