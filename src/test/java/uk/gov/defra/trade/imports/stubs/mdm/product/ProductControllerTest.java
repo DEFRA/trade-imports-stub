@@ -110,9 +110,9 @@ class ProductControllerTest {
         .andExpect(carriesTheStubTraceHeader())
         .andExpect(jsonPath("$.length()").value(2))
         .andExpect(jsonPath("$[0].code").value("05111000"))
-        .andExpect(jsonPath("$[0].isGerminal").value(true))
+        .andExpect(jsonPath("$[0].description").value("Bovine semen"))
         .andExpect(jsonPath("$[1].code").value("0102"))
-        .andExpect(jsonPath("$[1].isGerminal").value(false));
+        .andExpect(jsonPath("$[1].description").value("Live bovine animals"));
   }
 
   private static String speciesPath(String code) {
