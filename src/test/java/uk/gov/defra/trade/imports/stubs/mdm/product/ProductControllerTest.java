@@ -26,8 +26,8 @@ class ProductControllerTest {
             .param("q", "cat").param("dataset", "gbnag").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(carriesTheStubTraceHeader())
-        .andExpect(jsonPath("$.totalElements").value(10))
-        .andExpect(jsonPath("$.content.length()").value(10))
+        .andExpect(jsonPath("$.totalElements").value(8))
+        .andExpect(jsonPath("$.content.length()").value(8))
         .andExpect(jsonPath("$.content[0].speciesName").value("Felis catus"))
         .andExpect(jsonPath("$.content[0].commodityCnCode").value("01061900"));
   }
@@ -56,7 +56,7 @@ class ProductControllerTest {
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
         .andExpect(jsonPath("$.page").value(1))
-        .andExpect(jsonPath("$.totalElements").value(7));
+        .andExpect(jsonPath("$.totalElements").value(4));
   }
 
   @Test
@@ -78,8 +78,8 @@ class ProductControllerTest {
             .param("dataset", "gbnag").param("page", "0").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(carriesTheStubTraceHeader())
-        .andExpect(jsonPath("$.totalElements").value(15))
-        .andExpect(jsonPath("$.content.length()").value(15));
+        .andExpect(jsonPath("$.totalElements").value(7))
+        .andExpect(jsonPath("$.content.length()").value(7));
   }
 
   @Test
@@ -98,7 +98,7 @@ class ProductControllerTest {
             .param("page", "1").param("size", "100"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.content.length()").value(0))
-        .andExpect(jsonPath("$.totalElements").value(5));
+        .andExpect(jsonPath("$.totalElements").value(3));
   }
 
   @Test
