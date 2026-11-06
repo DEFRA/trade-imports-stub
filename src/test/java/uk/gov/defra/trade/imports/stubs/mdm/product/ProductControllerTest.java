@@ -82,6 +82,24 @@ class ProductControllerTest {
         .andExpect(jsonPath("$.content.length()").value(7));
   }
 
+  /**
+   * The live animals review checks a commodity line's species through this endpoint, so a
+   * commodity the product search offers but this fixture does not list reads as unlisted and
+   * cannot be submitted. Chicken is searchable and was not listed here.
+   */
+  @Test
+  void getCommoditySpecies_shouldAnswerChicken_forTheCodeTheSearchOffers() throws Exception {
+    mockMvc.perform(mdmGet(speciesPath("01051111"))
+            .param("dataset", "gbnag").param("page", "0").param("size", "100"))
+        .andExpect(status().isOk())
+        .andExpect(carriesTheStubTraceHeader())
+        .andExpect(jsonPath("$.totalElements").value(1))
+        .andExpect(jsonPath("$.content.length()").value(1))
+        .andExpect(jsonPath("$.content[0].speciesName").value("Gallus gallus"))
+        .andExpect(jsonPath("$.content[0].commonName").value("Chicken"))
+        .andExpect(jsonPath("$.content[0].commodityCnCode").value("01051111"));
+  }
+
   @Test
   void getCommoditySpecies_shouldAnswerAnEmptyPage_forAnUnknownCode() throws Exception {
     mockMvc.perform(mdmGet(speciesPath("030111"))
