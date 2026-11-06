@@ -260,6 +260,40 @@
       "totalElements": 7
     }
   ],
+  "01051111": [
+    {
+      "content": [
+        {
+          "resultType": "species",
+          "id": "01051111-e4925bf1-3f8f-49a9-8bf4-4d607690eab2",
+          "speciesName": "Gallus gallus",
+          "commonName": "Chicken",
+          "commonNames": [
+            "Chicken",
+            "Red Junglefowl"
+          ],
+          "languageId": "la",
+          "eppoCode": "GALUGG",
+          "faoCode": null,
+          "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": null,
+            "family": "Phasianidae"
+          },
+          "commodityCnCode": "01051111",
+          "chedType": null,
+          "dataset": "gbnag",
+          "certificateModelCodes": [],
+          "certificateModelIds": []
+        }
+      ],
+      "page": 0,
+      "size": 100,
+      "totalElements": 1
+    }
+  ],
   "01061900": [
     {
       "content": [
