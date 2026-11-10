@@ -47,6 +47,7 @@
       {
         "resultType": "species",
         "id": "0101-90c48dd4-59cb-b5a3-7437-3e957fea4611",
+        "speciesId": "90c48dd4-59cb-b5a3-7437-3e957fea4611",
         "speciesName": "Equus cabalus*asinus",
         "commonName": "Hybrid (mule and hinny)",
         "commonNames": [
@@ -59,7 +60,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Perissodactyla",
           "family": "Equidae"
         },
         "commodityCnCode": "0101",
@@ -71,6 +72,7 @@
       {
         "resultType": "species",
         "id": "0101-89211d7b-ecef-3b6d-8081-56525ab03bbe",
+        "speciesId": "89211d7b-ecef-3b6d-8081-56525ab03bbe",
         "speciesName": "Equus cabalus",
         "commonName": "Horse",
         "commonNames": [
@@ -83,7 +85,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Perissodactyla",
           "family": "Equidae"
         },
         "commodityCnCode": "0101",
@@ -95,6 +97,7 @@
       {
         "resultType": "species",
         "id": "0101-7b7e2ddd-46b5-fb25-a207-53889047ef0c",
+        "speciesId": "7b7e2ddd-46b5-fb25-a207-53889047ef0c",
         "speciesName": "Equus asinus",
         "commonName": "Donkey",
         "commonNames": [
@@ -108,7 +111,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Perissodactyla",
           "family": "Equidae"
         },
         "commodityCnCode": "0101",
@@ -168,6 +171,7 @@
       {
         "resultType": "species",
         "id": "0102-8359e945-5529-907c-b782-0555124c5890",
+        "speciesId": "8359e945-5529-907c-b782-0555124c5890",
         "speciesName": "Bubalus",
         "commonName": "Water Buffaloes",
         "commonNames": [
@@ -181,7 +185,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "0102",
@@ -193,6 +197,7 @@
       {
         "resultType": "species",
         "id": "0102-2de1a45e-21b3-b839-5c78-20daaf9b5fd4",
+        "speciesId": "2de1a45e-21b3-b839-5c78-20daaf9b5fd4",
         "speciesName": "Bos taurus",
         "commonName": "Domestic Cattle",
         "commonNames": [
@@ -206,7 +211,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "0102",
@@ -218,6 +223,7 @@
       {
         "resultType": "species",
         "id": "0102-88305625-d9fd-3626-b16d-6c565c7b94c7",
+        "speciesId": "88305625-d9fd-3626-b16d-6c565c7b94c7",
         "speciesName": "Bos sp.",
         "commonName": "Cattle",
         "commonNames": [
@@ -230,7 +236,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "0102",
@@ -242,6 +248,7 @@
       {
         "resultType": "species",
         "id": "0102-c7b4c871-d24c-0807-c4bf-273bafbb971a",
+        "speciesId": "c7b4c871-d24c-0807-c4bf-273bafbb971a",
         "speciesName": "Bubalus bubalis",
         "commonName": "Water Buffalo",
         "commonNames": [
@@ -254,7 +261,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "0102",
@@ -266,6 +273,7 @@
       {
         "resultType": "species",
         "id": "0102-ae653662-640c-2315-561c-b35e2396c0d2",
+        "speciesId": "ae653662-640c-2315-561c-b35e2396c0d2",
         "speciesName": "Bison",
         "commonName": "Bison",
         "commonNames": [
@@ -278,7 +286,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "0102",
@@ -290,6 +298,7 @@
       {
         "resultType": "species",
         "id": "0102-e3beccb7-294d-5478-8f8e-96e9b5027bff",
+        "speciesId": "e3beccb7-294d-5478-8f8e-96e9b5027bff",
         "speciesName": "Bison bison",
         "commonName": "American Bison",
         "commonNames": [
@@ -302,7 +311,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "0102",
@@ -314,6 +323,7 @@
       {
         "resultType": "species",
         "id": "0102-2f997c8b-975c-2325-ca56-01622a2a6d9b",
+        "speciesId": "2f997c8b-975c-2325-ca56-01622a2a6d9b",
         "speciesName": "Syncerus",
         "commonName": "African Buffaloes",
         "commonNames": [
@@ -326,7 +336,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "0102",
@@ -386,6 +396,7 @@
       {
         "resultType": "species",
         "id": "0103-8664c7d3-69dc-f884-cb05-48cbbf96d684",
+        "speciesId": "8664c7d3-69dc-f884-cb05-48cbbf96d684",
         "speciesName": "Hylochoerus",
         "commonName": "Forest Hogs",
         "commonNames": [
@@ -398,7 +409,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Suidae"
         },
         "commodityCnCode": "0103",
@@ -410,6 +421,7 @@
       {
         "resultType": "species",
         "id": "0103-8cd3c8a2-526f-69f5-f8e0-d59b06489149",
+        "speciesId": "8cd3c8a2-526f-69f5-f8e0-d59b06489149",
         "speciesName": "Potamochoerus",
         "commonName": "Bushpigs",
         "commonNames": [
@@ -423,7 +435,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Suidae"
         },
         "commodityCnCode": "0103",
@@ -435,6 +447,7 @@
       {
         "resultType": "species",
         "id": "0103-51bcecea-3f58-ad99-e386-de5aacd26c46",
+        "speciesId": "51bcecea-3f58-ad99-e386-de5aacd26c46",
         "speciesName": "Babyrousa",
         "commonName": "Babirusas",
         "commonNames": [
@@ -447,7 +460,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Suidae"
         },
         "commodityCnCode": "0103",
@@ -459,6 +472,7 @@
       {
         "resultType": "species",
         "id": "0103-59cdf9dd-f65d-f50d-795d-a9d5423a7b11",
+        "speciesId": "59cdf9dd-f65d-f50d-795d-a9d5423a7b11",
         "speciesName": "Dicotyles spp.",
         "commonName": "Peccaries",
         "commonNames": [
@@ -472,7 +486,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Tayassuidae"
         },
         "commodityCnCode": "0103",
@@ -484,6 +498,7 @@
       {
         "resultType": "species",
         "id": "0103-6e5354d5-cafe-e072-8583-f08acf90dc9b",
+        "speciesId": "6e5354d5-cafe-e072-8583-f08acf90dc9b",
         "speciesName": "Phacochoerus",
         "commonName": "Warthogs",
         "commonNames": [
@@ -497,7 +512,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Suidae"
         },
         "commodityCnCode": "0103",
@@ -509,6 +524,7 @@
       {
         "resultType": "species",
         "id": "0103-51416c58-abaf-eb83-7cc2-4bb547f21a85",
+        "speciesId": "51416c58-abaf-eb83-7cc2-4bb547f21a85",
         "speciesName": "Sus scrofa domesticus",
         "commonName": "Domestic Pig",
         "commonNames": [
@@ -521,7 +537,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Suidae"
         },
         "commodityCnCode": "0103",
@@ -533,6 +549,7 @@
       {
         "resultType": "species",
         "id": "0103-1bdacc5d-486c-89e3-c79d-b8be56e5aa2a",
+        "speciesId": "1bdacc5d-486c-89e3-c79d-b8be56e5aa2a",
         "speciesName": "Sus scrofa",
         "commonName": "Wild Boar",
         "commonNames": [
@@ -545,7 +562,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Suidae"
         },
         "commodityCnCode": "0103",
@@ -616,7 +633,7 @@
         "isSelectable": true,
         "chedType": null,
         "childCount": 0,
-        "speciesCount": 1
+        "speciesCount": 0
       }
     ],
     "speciesCount": 0,
@@ -676,6 +693,7 @@
       {
         "resultType": "species",
         "id": "010410-47fd6b08-ebf2-99c5-a037-a19350fc1d26",
+        "speciesId": "47fd6b08-ebf2-99c5-a037-a19350fc1d26",
         "speciesName": "Ovis sp.",
         "commonName": "Sheep",
         "commonNames": [
@@ -689,7 +707,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "010410",
@@ -701,6 +719,7 @@
       {
         "resultType": "species",
         "id": "010410-db9c8eb4-3009-52be-4db8-cc08eaad2f3c",
+        "speciesId": "db9c8eb4-3009-52be-4db8-cc08eaad2f3c",
         "speciesName": "Ovis aries",
         "commonName": "Domestic sheep",
         "commonNames": [
@@ -714,7 +733,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "010410",
@@ -774,33 +793,8 @@
       }
     ],
     "children": [],
-    "speciesCount": 1,
-    "scientificNames": [
-      {
-        "resultType": "species",
-        "id": "010420-467eb59d-dd10-43c5-b603-186c4d59a9b5",
-        "speciesName": "Capra hircus",
-        "commonName": "Goat",
-        "commonNames": [
-          "Goat"
-        ],
-        "languageId": "la",
-        "eppoCode": null,
-        "faoCode": null,
-        "taxonomy": {
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": null,
-          "family": "Bovidae"
-        },
-        "commodityCnCode": "010420",
-        "chedType": null,
-        "dataset": "gbnag",
-        "certificateModelCodes": [],
-        "certificateModelIds": []
-      }
-    ],
+    "speciesCount": 0,
+    "scientificNames": [],
     "productTypes": []
   },
   "0105": {
@@ -1034,6 +1028,7 @@
       {
         "resultType": "species",
         "id": "01051111-e4925bf1-3f8f-49a9-8bf4-4d607690eab2",
+        "speciesId": "e4925bf1-3f8f-49a9-8bf4-4d607690eab2",
         "speciesName": "Gallus gallus",
         "commonName": "Chicken",
         "commonNames": [
@@ -1047,7 +1042,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Phasianidae"
         },
         "commodityCnCode": "01051111",
@@ -1179,6 +1174,7 @@
       {
         "resultType": "species",
         "id": "01051200-a4281c1c-6e15-6be3-0183-a0c3217ee522",
+        "speciesId": "a4281c1c-6e15-6be3-0183-a0c3217ee522",
         "speciesName": "Meleagris gallopavo",
         "commonName": "Turkey",
         "commonNames": [
@@ -1192,7 +1188,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Phasianidae"
         },
         "commodityCnCode": "01051200",
@@ -1324,20 +1320,21 @@
       {
         "resultType": "species",
         "id": "01051300-83a90e26-eff4-0d97-ceaf-c7c48f5d57b0",
+        "speciesId": "83a90e26-eff4-0d97-ceaf-c7c48f5d57b0",
         "speciesName": "Anas spp.",
         "commonName": "Dabbling Ducks",
         "commonNames": [
           "Dabbling Ducks"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ANAXG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Anseriformes",
+          "family": "Anatidae"
         },
         "commodityCnCode": "01051300",
         "chedType": null,
@@ -1348,20 +1345,21 @@
       {
         "resultType": "species",
         "id": "01051300-178dbfaf-9f5c-2c06-70d6-02e0bcdbb2f3",
+        "speciesId": "178dbfaf-9f5c-2c06-70d6-02e0bcdbb2f3",
         "speciesName": "Aix spp.",
         "commonName": "Perching Ducks",
         "commonNames": [
           "Perching Ducks"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1AIXXG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Anseriformes",
+          "family": "Anatidae"
         },
         "commodityCnCode": "01051300",
         "chedType": null,
@@ -1492,20 +1490,21 @@
       {
         "resultType": "species",
         "id": "01051400-21fd0a79-8475-da57-3bb5-e709b108f4a8",
+        "speciesId": "21fd0a79-8475-da57-3bb5-e709b108f4a8",
         "speciesName": "Anser spp.",
         "commonName": "Geese",
         "commonNames": [
           "Geese"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ANSEG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Anseriformes",
+          "family": "Anatidae"
         },
         "commodityCnCode": "01051400",
         "chedType": null,
@@ -1636,6 +1635,7 @@
       {
         "resultType": "species",
         "id": "01051500-c3b9d305-1d88-4c3d-14ca-4685ce22a0dc",
+        "speciesId": "c3b9d305-1d88-4c3d-14ca-4685ce22a0dc",
         "speciesName": "Numida meleagris",
         "commonName": "Helmeted Guineafowl",
         "commonNames": [
@@ -1648,7 +1648,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Numididae"
         },
         "commodityCnCode": "01051500",
@@ -1780,6 +1780,7 @@
       {
         "resultType": "species",
         "id": "01059400-e4925bf1-3f8f-49a9-8bf4-4d607690eab2",
+        "speciesId": "e4925bf1-3f8f-49a9-8bf4-4d607690eab2",
         "speciesName": "Gallus gallus",
         "commonName": "Chicken",
         "commonNames": [
@@ -1793,7 +1794,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Phasianidae"
         },
         "commodityCnCode": "01059400",
@@ -1952,6 +1953,7 @@
       {
         "resultType": "species",
         "id": "01059910-f0abbb5d-e495-583d-7b41-0560b85c4353",
+        "speciesId": "f0abbb5d-e495-583d-7b41-0560b85c4353",
         "speciesName": "Anas",
         "commonName": "Dabbling Ducks",
         "commonNames": [
@@ -1964,7 +1966,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Anseriformes",
           "family": "Anatidae"
         },
         "commodityCnCode": "01059910",
@@ -1976,6 +1978,7 @@
       {
         "resultType": "species",
         "id": "01059910-0a643ff1-c480-5d45-4d91-447a951cfddf",
+        "speciesId": "0a643ff1-c480-5d45-4d91-447a951cfddf",
         "speciesName": "Aix",
         "commonName": "Perching Ducks",
         "commonNames": [
@@ -1989,7 +1992,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Anseriformes",
           "family": "Anatidae"
         },
         "commodityCnCode": "01059910",
@@ -2059,6 +2062,7 @@
       {
         "resultType": "species",
         "id": "01059920-42fa4758-73c0-8d2e-6329-df8c3f6f4b32",
+        "speciesId": "42fa4758-73c0-8d2e-6329-df8c3f6f4b32",
         "speciesName": "Anser",
         "commonName": "Geese",
         "commonNames": [
@@ -2072,7 +2076,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Anseriformes",
           "family": "Anatidae"
         },
         "commodityCnCode": "01059920",
@@ -2142,6 +2146,7 @@
       {
         "resultType": "species",
         "id": "01059930-a4281c1c-6e15-6be3-0183-a0c3217ee522",
+        "speciesId": "a4281c1c-6e15-6be3-0183-a0c3217ee522",
         "speciesName": "Meleagris gallopavo",
         "commonName": "Turkey",
         "commonNames": [
@@ -2155,7 +2160,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Phasianidae"
         },
         "commodityCnCode": "01059930",
@@ -2225,6 +2230,7 @@
       {
         "resultType": "species",
         "id": "01059950-c3b9d305-1d88-4c3d-14ca-4685ce22a0dc",
+        "speciesId": "c3b9d305-1d88-4c3d-14ca-4685ce22a0dc",
         "speciesName": "Numida meleagris",
         "commonName": "Helmeted Guineafowl",
         "commonNames": [
@@ -2237,7 +2243,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Numididae"
         },
         "commodityCnCode": "01059950",
@@ -2507,6 +2513,7 @@
       {
         "resultType": "species",
         "id": "01061410-970b9500-ce0b-36d8-14ad-1d551bc30441",
+        "speciesId": "970b9500-ce0b-36d8-14ad-1d551bc30441",
         "speciesName": "Oryctolagus cuniculus",
         "commonName": "Domestic Rabbit",
         "commonNames": [
@@ -2520,7 +2527,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Lagomorpha",
           "family": "Leporidae"
         },
         "commodityCnCode": "01061410",
@@ -2532,6 +2539,7 @@
       {
         "resultType": "species",
         "id": "01061410-13215048-2f35-2d88-dde3-08e4d908f402",
+        "speciesId": "13215048-2f35-2d88-dde3-08e4d908f402",
         "speciesName": "Otra Lagomorpha",
         "commonName": "Other Lagomorphs (Rabbits, Hares and Pikas)",
         "commonNames": [
@@ -2614,6 +2622,7 @@
       {
         "resultType": "species",
         "id": "01061490-970b9500-ce0b-36d8-14ad-1d551bc30441",
+        "speciesId": "970b9500-ce0b-36d8-14ad-1d551bc30441",
         "speciesName": "Oryctolagus cuniculus",
         "commonName": "Domestic Rabbit",
         "commonNames": [
@@ -2627,7 +2636,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Lagomorpha",
           "family": "Leporidae"
         },
         "commodityCnCode": "01061490",
@@ -2639,6 +2648,7 @@
       {
         "resultType": "species",
         "id": "01061490-13215048-2f35-2d88-dde3-08e4d908f402",
+        "speciesId": "13215048-2f35-2d88-dde3-08e4d908f402",
         "speciesName": "Otra Lagomorpha",
         "commonName": "Other Lagomorphs (Rabbits, Hares and Pikas)",
         "commonNames": [
@@ -2663,6 +2673,7 @@
       {
         "resultType": "species",
         "id": "01061490-fb729919-5a9c-6a10-ffa5-914a8b6a3926",
+        "speciesId": "fb729919-5a9c-6a10-ffa5-914a8b6a3926",
         "speciesName": "Lagomorpha",
         "commonName": "Rabbits, Hares & Pikas",
         "commonNames": [
@@ -2676,7 +2687,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Lagomorpha",
           "family": null
         },
         "commodityCnCode": "01061490",
@@ -2808,6 +2819,7 @@
       {
         "resultType": "species",
         "id": "01061900-e71c3ba9-348a-6dd6-75e0-3d0e7d7be649",
+        "speciesId": "e71c3ba9-348a-6dd6-75e0-3d0e7d7be649",
         "speciesName": "Equus burchelli",
         "commonName": "Burchell's Zebra",
         "commonNames": [
@@ -2820,7 +2832,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Perissodactyla",
           "family": "Equidae"
         },
         "commodityCnCode": "01061900",
@@ -2832,6 +2844,7 @@
       {
         "resultType": "species",
         "id": "01061900-9356d1dd-cf7b-a7fd-a628-a93555bd6577",
+        "speciesId": "9356d1dd-cf7b-a7fd-a628-a93555bd6577",
         "speciesName": "Pseudoryx",
         "commonName": "Saola",
         "commonNames": [
@@ -2845,7 +2858,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
@@ -2857,6 +2870,7 @@
       {
         "resultType": "species",
         "id": "01061900-db25fbc2-5742-0e13-d7e5-fe8d38e0b6b7",
+        "speciesId": "db25fbc2-5742-0e13-d7e5-fe8d38e0b6b7",
         "speciesName": "Monotremata",
         "commonName": "Monotremes",
         "commonNames": [
@@ -2870,7 +2884,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Monotremata",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -2882,20 +2896,21 @@
       {
         "resultType": "species",
         "id": "01061900-e4b527c5-880b-9d34-e99b-0d052db2cbed",
+        "speciesId": "e4b527c5-880b-9d34-e99b-0d052db2cbed",
         "speciesName": "Hippopotamus spp.",
         "commonName": "Hippopotamuses",
         "commonNames": [
           "Hippopotamuses"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1HPPPG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Hippopotamidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -2906,6 +2921,7 @@
       {
         "resultType": "species",
         "id": "01061900-758865d2-a16d-1b3d-060c-283955819328",
+        "speciesId": "758865d2-a16d-1b3d-060c-283955819328",
         "speciesName": "Axis-Hyelaphus spp.",
         "commonName": "Chital and Hog deer",
         "commonNames": [
@@ -2918,7 +2934,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
@@ -2930,6 +2946,7 @@
       {
         "resultType": "species",
         "id": "01061900-064a788f-c973-4ab0-cf94-906f39e6124a",
+        "speciesId": "064a788f-c973-4ab0-cf94-906f39e6124a",
         "speciesName": "Antilope",
         "commonName": "Blackbuck",
         "commonNames": [
@@ -2943,7 +2960,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
@@ -2955,6 +2972,7 @@
       {
         "resultType": "species",
         "id": "01061900-b904caf3-3574-e4b6-1135-53d0069c15a7",
+        "speciesId": "b904caf3-3574-e4b6-1135-53d0069c15a7",
         "speciesName": "Mogera sp.",
         "commonName": "Asian Moles",
         "commonNames": [
@@ -2967,7 +2985,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Soricomorpha",
           "family": "Talpidae"
         },
         "commodityCnCode": "01061900",
@@ -2979,6 +2997,7 @@
       {
         "resultType": "species",
         "id": "01061900-93618fcb-d2dc-ce7e-da75-16a4a55f411a",
+        "speciesId": "93618fcb-d2dc-ce7e-da75-16a4a55f411a",
         "speciesName": "Oreamnos sp.",
         "commonName": "Mountain goats",
         "commonNames": [
@@ -2992,7 +3011,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
@@ -3004,6 +3023,7 @@
       {
         "resultType": "species",
         "id": "01061900-34e1ab58-014a-a64b-2345-8fa4d3e75b99",
+        "speciesId": "34e1ab58-014a-a64b-2345-8fa4d3e75b99",
         "speciesName": "Naemorhedus",
         "commonName": "Gorals and serows",
         "commonNames": [
@@ -3016,7 +3036,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
@@ -3028,20 +3048,21 @@
       {
         "resultType": "species",
         "id": "01061900-0ae8e357-fde2-99da-b225-2591c4032516",
+        "speciesId": "0ae8e357-fde2-99da-b225-2591c4032516",
         "speciesName": "Boselaphus spp.",
         "commonName": "Nilgais",
         "commonNames": [
           "Nilgais"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1BOSEG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3052,6 +3073,7 @@
       {
         "resultType": "species",
         "id": "01061900-ce389e9b-7540-3bd5-0f20-9c10ecab7d9f",
+        "speciesId": "ce389e9b-7540-3bd5-0f20-9c10ecab7d9f",
         "speciesName": "Otra Rodentia",
         "commonName": "Other Rodents",
         "commonNames": [
@@ -3076,6 +3098,7 @@
       {
         "resultType": "species",
         "id": "01061900-d4273810-beaa-76fb-1fa1-c836037e443e",
+        "speciesId": "d4273810-beaa-76fb-1fa1-c836037e443e",
         "speciesName": "Herpestes javanicus",
         "commonName": "Small Asian mongooses",
         "commonNames": [
@@ -3089,7 +3112,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Herpestidae"
         },
         "commodityCnCode": "01061900",
@@ -3101,6 +3124,7 @@
       {
         "resultType": "species",
         "id": "01061900-d4d3bb59-f93d-cb65-9070-ef819c802e2e",
+        "speciesId": "d4d3bb59-f93d-cb65-9070-ef819c802e2e",
         "speciesName": "Pecari sp.",
         "commonName": "Peccaries",
         "commonNames": [
@@ -3114,7 +3138,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Tayassuidae"
         },
         "commodityCnCode": "01061900",
@@ -3126,6 +3150,7 @@
       {
         "resultType": "species",
         "id": "01061900-a14fb50a-01bb-4f7e-d180-ce05792481d5",
+        "speciesId": "a14fb50a-01bb-4f7e-d180-ce05792481d5",
         "speciesName": "Hippopotamus amphibius",
         "commonName": "Common Hippopotamus",
         "commonNames": [
@@ -3138,7 +3163,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Hippopotamidae"
         },
         "commodityCnCode": "01061900",
@@ -3150,6 +3175,7 @@
       {
         "resultType": "species",
         "id": "01061900-e2b34ded-9ce6-4fa4-0d8d-53e2e9155d07",
+        "speciesId": "e2b34ded-9ce6-4fa4-0d8d-53e2e9155d07",
         "speciesName": "Blastocerus spp.",
         "commonName": "Marsh deer",
         "commonNames": [
@@ -3159,11 +3185,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3174,6 +3200,7 @@
       {
         "resultType": "species",
         "id": "01061900-45183e21-38c6-1948-9fd1-b5b5a993d4cf",
+        "speciesId": "45183e21-38c6-1948-9fd1-b5b5a993d4cf",
         "speciesName": "Tamias sp.",
         "commonName": "Chipmunks",
         "commonNames": [
@@ -3186,7 +3213,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Rodentia",
           "family": "Sciuridae"
         },
         "commodityCnCode": "01061900",
@@ -3198,20 +3225,21 @@
       {
         "resultType": "species",
         "id": "01061900-12d4b662-a2b0-52e2-b373-aa8eb24fc7fe",
+        "speciesId": "12d4b662-a2b0-52e2-b373-aa8eb24fc7fe",
         "speciesName": "Aepyceros spp.",
         "commonName": "Impalas",
         "commonNames": [
           "Impalas"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1AEPYG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3222,6 +3250,7 @@
       {
         "resultType": "species",
         "id": "01061900-f0d9a885-cd1e-56cc-7c5f-ff6a0adb6a2e",
+        "speciesId": "f0d9a885-cd1e-56cc-7c5f-ff6a0adb6a2e",
         "speciesName": "Equus quagga",
         "commonName": "Plains Zebra",
         "commonNames": [
@@ -3234,7 +3263,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Perissodactyla",
           "family": "Equidae"
         },
         "commodityCnCode": "01061900",
@@ -3246,6 +3275,7 @@
       {
         "resultType": "species",
         "id": "01061900-da6733ad-dde7-6754-fc97-3a2233ab9ff5",
+        "speciesId": "da6733ad-dde7-6754-fc97-3a2233ab9ff5",
         "speciesName": "Neotragus spp.",
         "commonName": "Dwarf antelopes",
         "commonNames": [
@@ -3255,11 +3285,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3270,6 +3300,7 @@
       {
         "resultType": "species",
         "id": "01061900-1299528c-f4a8-a5d1-48dd-b1f730b2cb5f",
+        "speciesId": "1299528c-f4a8-a5d1-48dd-b1f730b2cb5f",
         "speciesName": "Elaphurus spp.",
         "commonName": "Pere David's Deer",
         "commonNames": [
@@ -3279,11 +3310,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3294,6 +3325,7 @@
       {
         "resultType": "species",
         "id": "01061900-fe4b3632-677d-9e09-b5db-e7706b488cc5",
+        "speciesId": "fe4b3632-677d-9e09-b5db-e7706b488cc5",
         "speciesName": "Litocranius spp.",
         "commonName": "Gerenuks or Long-necked Antelopes",
         "commonNames": [
@@ -3303,11 +3335,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3318,6 +3350,7 @@
       {
         "resultType": "species",
         "id": "01061900-0d15168b-cf12-ef3c-6ef1-4cde47853be5",
+        "speciesId": "0d15168b-cf12-ef3c-6ef1-4cde47853be5",
         "speciesName": "Pudu spp.",
         "commonName": "Pudus",
         "commonNames": [
@@ -3327,11 +3360,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3342,6 +3375,7 @@
       {
         "resultType": "species",
         "id": "01061900-ec670dd7-57f2-bc8f-2ecd-5b6960502cd7",
+        "speciesId": "ec670dd7-57f2-bc8f-2ecd-5b6960502cd7",
         "speciesName": "Addax",
         "commonName": "Addax Antelopes",
         "commonNames": [
@@ -3355,7 +3389,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
@@ -3367,6 +3401,7 @@
       {
         "resultType": "species",
         "id": "01061900-fd8b052f-8bc4-d6da-bc19-8e9d8530af69",
+        "speciesId": "fd8b052f-8bc4-d6da-bc19-8e9d8530af69",
         "speciesName": "Equus grevyi",
         "commonName": "Grevy's Zebra",
         "commonNames": [
@@ -3379,7 +3414,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Perissodactyla",
           "family": "Equidae"
         },
         "commodityCnCode": "01061900",
@@ -3391,6 +3426,7 @@
       {
         "resultType": "species",
         "id": "01061900-9204391c-aa36-8778-6e22-78558da1359e",
+        "speciesId": "9204391c-aa36-8778-6e22-78558da1359e",
         "speciesName": "Cephalophus spp.",
         "commonName": "Duikers",
         "commonNames": [
@@ -3400,11 +3436,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3415,6 +3451,7 @@
       {
         "resultType": "species",
         "id": "01061900-5263e74d-dc49-0a8f-98c7-93859062896e",
+        "speciesId": "5263e74d-dc49-0a8f-98c7-93859062896e",
         "speciesName": "Damaliscus",
         "commonName": "Sassabies",
         "commonNames": [
@@ -3428,7 +3465,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
@@ -3440,6 +3477,7 @@
       {
         "resultType": "species",
         "id": "01061900-72c45bd6-6feb-ca4e-a09d-125bd174b400",
+        "speciesId": "72c45bd6-6feb-ca4e-a09d-125bd174b400",
         "speciesName": "Nasua nasua",
         "commonName": "South American Coati",
         "commonNames": [
@@ -3452,7 +3490,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Procyonidae"
         },
         "commodityCnCode": "01061900",
@@ -3464,6 +3502,7 @@
       {
         "resultType": "species",
         "id": "01061900-394881d9-d1b7-be11-56d2-7459b16b496e",
+        "speciesId": "394881d9-d1b7-be11-56d2-7459b16b496e",
         "speciesName": "Panthera sp.",
         "commonName": "Big Cats (Panthera)",
         "commonNames": [
@@ -3476,7 +3515,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Felidae"
         },
         "commodityCnCode": "01061900",
@@ -3488,20 +3527,21 @@
       {
         "resultType": "species",
         "id": "01061900-715bdbde-4068-905a-9ddc-4c781326dcdb",
+        "speciesId": "715bdbde-4068-905a-9ddc-4c781326dcdb",
         "speciesName": "Saiga spp.",
         "commonName": "Saiga antelopes",
         "commonNames": [
           "Saiga antelopes"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1SAIGG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3512,20 +3552,21 @@
       {
         "resultType": "species",
         "id": "01061900-6fb36d00-157b-3538-4bdd-ac6c000cc6df",
+        "speciesId": "6fb36d00-157b-3538-4bdd-ac6c000cc6df",
         "speciesName": "Hydropotes spp.",
         "commonName": "Water Deer",
         "commonNames": [
           "Water Deer"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1HPTSG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3536,20 +3577,21 @@
       {
         "resultType": "species",
         "id": "01061900-2577256a-1750-2546-cd72-2eb7fb9aa23d",
+        "speciesId": "2577256a-1750-2546-cd72-2eb7fb9aa23d",
         "speciesName": "Elephas spp.",
         "commonName": "Elephants",
         "commonNames": [
           "Elephants"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ELEPG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Proboscidea",
+          "family": "Elephantidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3560,6 +3602,7 @@
       {
         "resultType": "species",
         "id": "01061900-61db5ae0-2455-0e50-75e2-5a3e04255047",
+        "speciesId": "61db5ae0-2455-0e50-75e2-5a3e04255047",
         "speciesName": "Catagonus spp.",
         "commonName": "Chacoan peccaries",
         "commonNames": [
@@ -3569,11 +3612,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Tayassuidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3584,6 +3627,7 @@
       {
         "resultType": "species",
         "id": "01061900-dc557096-6482-65ae-d433-efe2cc750ff4",
+        "speciesId": "dc557096-6482-65ae-d433-efe2cc750ff4",
         "speciesName": "Oreotragus spp.",
         "commonName": "Klipspringers",
         "commonNames": [
@@ -3593,11 +3637,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3608,20 +3652,21 @@
       {
         "resultType": "species",
         "id": "01061900-815459de-ace8-d2a2-92ee-ecdde7b9a495",
+        "speciesId": "815459de-ace8-d2a2-92ee-ecdde7b9a495",
         "speciesName": "Antilocapra spp.",
         "commonName": "Pronghorns",
         "commonNames": [
           "Pronghorns"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ANLCG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Antilocapridae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3632,6 +3677,7 @@
       {
         "resultType": "species",
         "id": "01061900-71dba700-4e24-ed7a-c28d-7c200e723071",
+        "speciesId": "71dba700-4e24-ed7a-c28d-7c200e723071",
         "speciesName": "Acinonyx sp.",
         "commonName": "Cheetahs",
         "commonNames": [
@@ -3645,7 +3691,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Felidae"
         },
         "commodityCnCode": "01061900",
@@ -3657,6 +3703,7 @@
       {
         "resultType": "species",
         "id": "01061900-310f7b74-5ae3-0042-e7a3-28f502ca2419",
+        "speciesId": "310f7b74-5ae3-0042-e7a3-28f502ca2419",
         "speciesName": "Tetracerus",
         "commonName": "Four-horned antelope",
         "commonNames": [
@@ -3669,7 +3716,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
@@ -3681,6 +3728,7 @@
       {
         "resultType": "species",
         "id": "01061900-099865e0-3ac0-e2ea-be56-3a8909451551",
+        "speciesId": "099865e0-3ac0-e2ea-be56-3a8909451551",
         "speciesName": "Ondatra zibethicus",
         "commonName": "Muskrat",
         "commonNames": [
@@ -3693,7 +3741,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Rodentia",
           "family": "Cricetidae"
         },
         "commodityCnCode": "01061900",
@@ -3705,20 +3753,21 @@
       {
         "resultType": "species",
         "id": "01061900-51c341df-419d-4bcf-8b47-27557748af3e",
+        "speciesId": "51c341df-419d-4bcf-8b47-27557748af3e",
         "speciesName": "Rupicapra spp.",
         "commonName": "Chamois",
         "commonNames": [
           "Chamois"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1RPCPG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3729,6 +3778,7 @@
       {
         "resultType": "species",
         "id": "01061900-25ba7663-e800-8085-65c2-a210f00f7cb4",
+        "speciesId": "25ba7663-e800-8085-65c2-a210f00f7cb4",
         "speciesName": "Sylvicapra spp.",
         "commonName": "duikers",
         "commonNames": [
@@ -3738,11 +3788,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3753,6 +3803,7 @@
       {
         "resultType": "species",
         "id": "01061900-3d86ff68-d2a3-d0a1-2cfa-a0e61dfa8788",
+        "speciesId": "3d86ff68-d2a3-d0a1-2cfa-a0e61dfa8788",
         "speciesName": "Dermoptera",
         "commonName": "Colugos",
         "commonNames": [
@@ -3765,7 +3816,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Dermoptera",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -3777,20 +3828,21 @@
       {
         "resultType": "species",
         "id": "01061900-ca014a47-29b0-9acd-a4e1-d17889e2bf95",
+        "speciesId": "ca014a47-29b0-9acd-a4e1-d17889e2bf95",
         "speciesName": "Giraffa spp.",
         "commonName": "Giraffes",
         "commonNames": [
           "Giraffes"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1GIRFG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Giraffidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3801,6 +3853,7 @@
       {
         "resultType": "species",
         "id": "01061900-5ed338f0-4d9f-8b85-8a43-fa9a665d049a",
+        "speciesId": "5ed338f0-4d9f-8b85-8a43-fa9a665d049a",
         "speciesName": "Ammodorcas spp.",
         "commonName": "Dibatags",
         "commonNames": [
@@ -3810,11 +3863,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3825,6 +3878,7 @@
       {
         "resultType": "species",
         "id": "01061900-5fbe6348-6c4e-3a53-206f-7f17e8dca7d3",
+        "speciesId": "5fbe6348-6c4e-3a53-206f-7f17e8dca7d3",
         "speciesName": "Scandentia",
         "commonName": "Treeshrews",
         "commonNames": [
@@ -3837,7 +3891,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Scandentia",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -3849,6 +3903,7 @@
       {
         "resultType": "species",
         "id": "01061900-02f4dfc8-f3cd-c891-e0c0-48e8971feea8",
+        "speciesId": "02f4dfc8-f3cd-c891-e0c0-48e8971feea8",
         "speciesName": "Ozotoceros spp.",
         "commonName": "Pampas deer",
         "commonNames": [
@@ -3858,11 +3913,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3873,20 +3928,21 @@
       {
         "resultType": "species",
         "id": "01061900-896204c3-aa9c-0445-4b9c-03a3c8d4668a",
+        "speciesId": "896204c3-aa9c-0445-4b9c-03a3c8d4668a",
         "speciesName": "Ceratotherium spp.",
         "commonName": "White Rhinoceroses",
         "commonNames": [
           "White Rhinoceroses"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1KRTTG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Perissodactyla",
+          "family": "Rhinocerotidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3897,6 +3953,7 @@
       {
         "resultType": "species",
         "id": "01061900-69cbf207-e710-948a-3510-044b84113189",
+        "speciesId": "69cbf207-e710-948a-3510-044b84113189",
         "speciesName": "Taxidea sp.",
         "commonName": "American badgers",
         "commonNames": [
@@ -3909,7 +3966,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Mustelidae"
         },
         "commodityCnCode": "01061900",
@@ -3921,20 +3978,21 @@
       {
         "resultType": "species",
         "id": "01061900-7ad218a1-107b-f822-e72b-a9f9e2bd0479",
+        "speciesId": "7ad218a1-107b-f822-e72b-a9f9e2bd0479",
         "speciesName": "Tapirus spp.",
         "commonName": "Tapirs",
         "commonNames": [
           "Tapirs"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1TPIRG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Perissodactyla",
+          "family": "Tapiridae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3945,6 +4003,7 @@
       {
         "resultType": "species",
         "id": "01061900-c26c126f-8fe1-c382-ef26-1510ec7cdaf4",
+        "speciesId": "c26c126f-8fe1-c382-ef26-1510ec7cdaf4",
         "speciesName": "Tragelaphus sp.",
         "commonName": "Spiral-horned antelopes",
         "commonNames": [
@@ -3958,7 +4017,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
@@ -3970,20 +4029,21 @@
       {
         "resultType": "species",
         "id": "01061900-574c9d1e-51f7-42b3-72a0-13c72abfa3d5",
+        "speciesId": "574c9d1e-51f7-42b3-72a0-13c72abfa3d5",
         "speciesName": "Loxodonta spp.",
         "commonName": "African Elephants",
         "commonNames": [
           "African Elephants"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1LOXDG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Proboscidea",
+          "family": "Elephantidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -3994,6 +4054,7 @@
       {
         "resultType": "species",
         "id": "01061900-1787235e-aeab-70d1-22e6-4a7a50780bde",
+        "speciesId": "1787235e-aeab-70d1-22e6-4a7a50780bde",
         "speciesName": "Sciurus sp.",
         "commonName": "Squirrels",
         "commonNames": [
@@ -4006,7 +4067,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Rodentia",
           "family": "Sciuridae"
         },
         "commodityCnCode": "01061900",
@@ -4018,20 +4079,21 @@
       {
         "resultType": "species",
         "id": "01061900-c93f264f-7c4c-4121-708b-ccccafdc8452",
+        "speciesId": "c93f264f-7c4c-4121-708b-ccccafdc8452",
         "speciesName": "Oryx spp.",
         "commonName": "Oryxes",
         "commonNames": [
           "Oryxes"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ORYXG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4042,6 +4104,7 @@
       {
         "resultType": "species",
         "id": "01061900-5e46be90-9962-1450-f319-feb5b897e790",
+        "speciesId": "5e46be90-9962-1450-f319-feb5b897e790",
         "speciesName": "Xenarthra",
         "commonName": "Xenarthrans (armadillos, sloths, anteaters)",
         "commonNames": [
@@ -4055,7 +4118,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Cingulata",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -4067,6 +4130,7 @@
       {
         "resultType": "species",
         "id": "01061900-2a0fdb09-189f-4b41-4698-73862fb21e95",
+        "speciesId": "2a0fdb09-189f-4b41-4698-73862fb21e95",
         "speciesName": "Chiroptera",
         "commonName": "Bats",
         "commonNames": [
@@ -4079,7 +4143,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Chiroptera",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -4091,6 +4155,7 @@
       {
         "resultType": "species",
         "id": "01061900-7486c7f9-2fc9-b4d1-fe8b-3d59720b8d63",
+        "speciesId": "7486c7f9-2fc9-b4d1-fe8b-3d59720b8d63",
         "speciesName": "Peramelemorphia",
         "commonName": "Bandicoots and bilbies",
         "commonNames": [
@@ -4104,7 +4169,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Peramelemorphia",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -4116,6 +4181,7 @@
       {
         "resultType": "species",
         "id": "01061900-b5d938bf-0b2e-cba3-9684-4725dee263e6",
+        "speciesId": "b5d938bf-0b2e-cba3-9684-4725dee263e6",
         "speciesName": "Felis catus",
         "commonName": "Domestic Cat",
         "commonNames": [
@@ -4128,7 +4194,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Felidae"
         },
         "commodityCnCode": "01061900",
@@ -4140,20 +4206,21 @@
       {
         "resultType": "species",
         "id": "01061900-1be50921-9911-668c-3eeb-0af3735c5090",
+        "speciesId": "1be50921-9911-668c-3eeb-0af3735c5090",
         "speciesName": "Rhinoceros spp.",
         "commonName": "Rhinoceroses",
         "commonNames": [
           "Rhinoceroses"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1RHNOG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Perissodactyla",
+          "family": "Rhinocerotidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4164,6 +4231,7 @@
       {
         "resultType": "species",
         "id": "01061900-d2f507c4-fdb7-b08c-4402-9f18ba2544a3",
+        "speciesId": "d2f507c4-fdb7-b08c-4402-9f18ba2544a3",
         "speciesName": "Dama spp.",
         "commonName": "Fallow deer",
         "commonNames": [
@@ -4173,11 +4241,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4188,6 +4256,7 @@
       {
         "resultType": "species",
         "id": "01061900-a444aba3-b09c-becb-9078-cf227dc825a4",
+        "speciesId": "a444aba3-b09c-becb-9078-cf227dc825a4",
         "speciesName": "Dorcatragus spp.",
         "commonName": "Beira antelopes",
         "commonNames": [
@@ -4197,11 +4266,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4212,6 +4281,7 @@
       {
         "resultType": "species",
         "id": "01061900-6d1eda1b-8c32-47a9-8bde-dbaeb7bae414",
+        "speciesId": "6d1eda1b-8c32-47a9-8bde-dbaeb7bae414",
         "speciesName": "Mazama spp.",
         "commonName": "Brocket Deer",
         "commonNames": [
@@ -4221,11 +4291,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4236,6 +4306,7 @@
       {
         "resultType": "species",
         "id": "01061900-ff8d70c9-a17d-2ea0-c3e6-bd386ddfd78a",
+        "speciesId": "ff8d70c9-a17d-2ea0-c3e6-bd386ddfd78a",
         "speciesName": "Equus zebra",
         "commonName": "Mountain Zebra",
         "commonNames": [
@@ -4248,7 +4319,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Perissodactyla",
           "family": "Equidae"
         },
         "commodityCnCode": "01061900",
@@ -4260,6 +4331,7 @@
       {
         "resultType": "species",
         "id": "01061900-941aa031-94e3-743e-18e6-4eb1647be500",
+        "speciesId": "941aa031-94e3-743e-18e6-4eb1647be500",
         "speciesName": "Procapra spp.",
         "commonName": "Central Asian gazelles",
         "commonNames": [
@@ -4269,11 +4341,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4284,20 +4356,21 @@
       {
         "resultType": "species",
         "id": "01061900-0e66e486-e991-2add-c34d-dda1c68b3ba5",
+        "speciesId": "0e66e486-e991-2add-c34d-dda1c68b3ba5",
         "speciesName": "Taurotragus spp.",
         "commonName": "Elands",
         "commonNames": [
           "Elands"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1TATGG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4308,20 +4381,21 @@
       {
         "resultType": "species",
         "id": "01061900-b0415fab-00e3-494f-a4de-2037020afd9d",
+        "speciesId": "b0415fab-00e3-494f-a4de-2037020afd9d",
         "speciesName": "Connochaetes spp.",
         "commonName": "Wildebeests",
         "commonNames": [
           "Wildebeests"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1CONNG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4332,6 +4406,7 @@
       {
         "resultType": "species",
         "id": "01061900-0ed63fc3-f504-a8bf-0fd5-f247eac74435",
+        "speciesId": "0ed63fc3-f504-a8bf-0fd5-f247eac74435",
         "speciesName": "Nyctereutes procyonoides",
         "commonName": "Raccoon Dog",
         "commonNames": [
@@ -4344,7 +4419,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Canidae"
         },
         "commodityCnCode": "01061900",
@@ -4356,6 +4431,7 @@
       {
         "resultType": "species",
         "id": "01061900-c5137de8-8701-959d-a657-1c44b56718f1",
+        "speciesId": "c5137de8-8701-959d-a657-1c44b56718f1",
         "speciesName": "Tubulidentata",
         "commonName": "Aardvarks",
         "commonNames": [
@@ -4369,7 +4445,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Tubulidentata",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -4381,6 +4457,7 @@
       {
         "resultType": "species",
         "id": "01061900-82572614-71a1-7025-0a5c-1d4be1084af4",
+        "speciesId": "82572614-71a1-7025-0a5c-1d4be1084af4",
         "speciesName": "Vulpes sp.",
         "commonName": "Foxes",
         "commonNames": [
@@ -4394,7 +4471,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Canidae"
         },
         "commodityCnCode": "01061900",
@@ -4406,20 +4483,21 @@
       {
         "resultType": "species",
         "id": "01061900-e4119c28-342b-9206-1c5b-4e1b624de122",
+        "speciesId": "e4119c28-342b-9206-1c5b-4e1b624de122",
         "speciesName": "Mustela spp.",
         "commonName": "Weasels (including ermines, polecats, ferrets, and related species)",
         "commonNames": [
           "Weasels (including ermines, polecats, ferrets, and related species)"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1MUSTG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Carnivora",
+          "family": "Mustelidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4430,6 +4508,7 @@
       {
         "resultType": "species",
         "id": "01061900-3ca31cbb-ad9c-f953-49a9-9543cc644ce2",
+        "speciesId": "3ca31cbb-ad9c-f953-49a9-9543cc644ce2",
         "speciesName": "Alcelaphus spp.",
         "commonName": "Hartebeests",
         "commonNames": [
@@ -4439,11 +4518,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4454,20 +4533,21 @@
       {
         "resultType": "species",
         "id": "01061900-7f2a0cc6-a93e-abb8-c34a-d08f4d983b0a",
+        "speciesId": "7f2a0cc6-a93e-abb8-c34a-d08f4d983b0a",
         "speciesName": "Diceros spp.",
         "commonName": "Black Rhinoceroses",
         "commonNames": [
           "Black Rhinoceroses"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1DKRSG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Perissodactyla",
+          "family": "Rhinocerotidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4478,6 +4558,7 @@
       {
         "resultType": "species",
         "id": "01061900-5667cd60-a16d-20f0-bd52-d9f53e86e8d9",
+        "speciesId": "5667cd60-a16d-20f0-bd52-d9f53e86e8d9",
         "speciesName": "Macroscelidea",
         "commonName": "Elephant Shrews",
         "commonNames": [
@@ -4490,7 +4571,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Macroscelidea",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -4502,6 +4583,7 @@
       {
         "resultType": "species",
         "id": "01061900-5e2a4e8a-dd35-c52b-6e1a-c862ab10bf59",
+        "speciesId": "5e2a4e8a-dd35-c52b-6e1a-c862ab10bf59",
         "speciesName": "Arctictis binturong",
         "commonName": "Binturong",
         "commonNames": [
@@ -4514,7 +4596,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Viverridae"
         },
         "commodityCnCode": "01061900",
@@ -4526,20 +4608,21 @@
       {
         "resultType": "species",
         "id": "01061900-228931e8-087d-aedd-66b3-4fecea5fe86f",
+        "speciesId": "228931e8-087d-aedd-66b3-4fecea5fe86f",
         "speciesName": "Hippotragus spp.",
         "commonName": "Sable and Roan Antelopes",
         "commonNames": [
           "Sable and Roan Antelopes"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1HPPTG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4550,6 +4633,7 @@
       {
         "resultType": "species",
         "id": "01061900-1a7306e8-c582-e969-b522-c0e202eb8f88",
+        "speciesId": "1a7306e8-c582-e969-b522-c0e202eb8f88",
         "speciesName": "Hyemoschus spp.",
         "commonName": "Water chevrotains",
         "commonNames": [
@@ -4559,11 +4643,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Tragulidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4574,20 +4658,21 @@
       {
         "resultType": "species",
         "id": "01061900-a725bc09-96d6-0c84-9a3f-b09953a77a0c",
+        "speciesId": "a725bc09-96d6-0c84-9a3f-b09953a77a0c",
         "speciesName": "Moschus spp.",
         "commonName": "Musk Deer",
         "commonNames": [
           "Musk Deer"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1MOSCG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Moschidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4598,6 +4683,7 @@
       {
         "resultType": "species",
         "id": "01061900-53202bdd-8d23-5c6a-f05a-7f1f45953546",
+        "speciesId": "53202bdd-8d23-5c6a-f05a-7f1f45953546",
         "speciesName": "Gazella spp.",
         "commonName": "Gazelles",
         "commonNames": [
@@ -4607,11 +4693,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4622,20 +4708,21 @@
       {
         "resultType": "species",
         "id": "01061900-f7c01d41-ba78-3114-8a26-b0a066e6eb80",
+        "speciesId": "f7c01d41-ba78-3114-8a26-b0a066e6eb80",
         "speciesName": "Capreolus spp.",
         "commonName": "Roe Deer",
         "commonNames": [
           "Roe Deer"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1CAPRG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4646,6 +4733,7 @@
       {
         "resultType": "species",
         "id": "01061900-0ffed036-8e39-cd83-06d7-7b2a7538f5e6",
+        "speciesId": "0ffed036-8e39-cd83-06d7-7b2a7538f5e6",
         "speciesName": "Raphicerus spp.",
         "commonName": "Grysboks and steenboks",
         "commonNames": [
@@ -4655,11 +4743,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4670,6 +4758,7 @@
       {
         "resultType": "species",
         "id": "01061900-e592b79e-5e6a-b2c1-011c-c5685073d29f",
+        "speciesId": "e592b79e-5e6a-b2c1-011c-c5685073d29f",
         "speciesName": "Dicerorhinus spp.",
         "commonName": "Sumatran rhinoceroses",
         "commonNames": [
@@ -4679,11 +4768,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Perissodactyla",
+          "family": "Rhinocerotidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4694,6 +4783,7 @@
       {
         "resultType": "species",
         "id": "01061900-4c6fcc0f-8bb1-42a4-5769-7c0c434e29ab",
+        "speciesId": "4c6fcc0f-8bb1-42a4-5769-7c0c434e29ab",
         "speciesName": "Myocastor coypus",
         "commonName": "Coypus (nutria)",
         "commonNames": [
@@ -4707,7 +4797,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Rodentia",
           "family": "Myocastoridae"
         },
         "commodityCnCode": "01061900",
@@ -4719,6 +4809,7 @@
       {
         "resultType": "species",
         "id": "01061900-c477987f-a064-972b-92b7-d605f816efea",
+        "speciesId": "c477987f-a064-972b-92b7-d605f816efea",
         "speciesName": "Diprotodontia",
         "commonName": "Diprotodont marsupials",
         "commonNames": [
@@ -4732,7 +4823,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Diprotodontia",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -4744,6 +4835,7 @@
       {
         "resultType": "species",
         "id": "01061900-f34f3158-cb95-afdd-f231-f323594cf435",
+        "speciesId": "f34f3158-cb95-afdd-f231-f323594cf435",
         "speciesName": "Dasyuromorphia",
         "commonName": "Carnivorous marsupials",
         "commonNames": [
@@ -4757,7 +4849,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Dasyuromorphia",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -4769,6 +4861,7 @@
       {
         "resultType": "species",
         "id": "01061900-42c5410e-7340-5ab7-25fe-839a3675d4be",
+        "speciesId": "42c5410e-7340-5ab7-25fe-839a3675d4be",
         "speciesName": "Redunca spp.",
         "commonName": "Reedbucks",
         "commonNames": [
@@ -4778,11 +4871,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4793,6 +4886,7 @@
       {
         "resultType": "species",
         "id": "01061900-0b60db0a-faed-9d36-2807-b4b0c3a3ed04",
+        "speciesId": "0b60db0a-faed-9d36-2807-b4b0c3a3ed04",
         "speciesName": "Hyracoidea",
         "commonName": "Hyraxes",
         "commonNames": [
@@ -4805,7 +4899,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Hyracoidea",
           "family": null
         },
         "commodityCnCode": "01061900",
@@ -4817,20 +4911,21 @@
       {
         "resultType": "species",
         "id": "01061900-5d9ea9f7-f330-6f7f-5e0e-59cc02a9adab",
+        "speciesId": "5d9ea9f7-f330-6f7f-5e0e-59cc02a9adab",
         "speciesName": "Alces spp.",
         "commonName": "Moose",
         "commonNames": [
           "Moose"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ALCSG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4841,6 +4936,7 @@
       {
         "resultType": "species",
         "id": "01061900-959fd9cf-c645-8083-2b64-5afd032d27d0",
+        "speciesId": "959fd9cf-c645-8083-2b64-5afd032d27d0",
         "speciesName": "Tayassuidae",
         "commonName": "Tayassu pecari",
         "commonNames": [
@@ -4854,7 +4950,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Tayassuidae"
         },
         "commodityCnCode": "01061900",
@@ -4866,6 +4962,7 @@
       {
         "resultType": "species",
         "id": "01061900-a73228e1-ac60-57a2-f63d-d28127b8931e",
+        "speciesId": "a73228e1-ac60-57a2-f63d-d28127b8931e",
         "speciesName": "Procyon lotor",
         "commonName": "Raccoon",
         "commonNames": [
@@ -4878,7 +4975,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Procyonidae"
         },
         "commodityCnCode": "01061900",
@@ -4890,6 +4987,7 @@
       {
         "resultType": "species",
         "id": "01061900-b3607d37-8a1c-2636-7f9b-5c94694098c2",
+        "speciesId": "b3607d37-8a1c-2636-7f9b-5c94694098c2",
         "speciesName": "Otra mammalia",
         "commonName": "Other Mammals",
         "commonNames": [
@@ -4914,20 +5012,21 @@
       {
         "resultType": "species",
         "id": "01061900-7ab4faf8-8f10-9fa7-1a39-24597483c62b",
+        "speciesId": "7ab4faf8-8f10-9fa7-1a39-24597483c62b",
         "speciesName": "Antidorcas spp.",
         "commonName": "Springboks",
         "commonNames": [
           "Springboks"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ATDCG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -4938,6 +5037,7 @@
       {
         "resultType": "species",
         "id": "01061900-3186594f-b705-98b6-f60b-74095550f43b",
+        "speciesId": "3186594f-b705-98b6-f60b-74095550f43b",
         "speciesName": "Mustela putorius furo",
         "commonName": "Ferret",
         "commonNames": [
@@ -4950,7 +5050,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Mustelidae"
         },
         "commodityCnCode": "01061900",
@@ -4962,6 +5062,7 @@
       {
         "resultType": "species",
         "id": "01061900-7451f8de-ff62-df8c-c123-feeb421edbcd",
+        "speciesId": "7451f8de-ff62-df8c-c123-feeb421edbcd",
         "speciesName": "Pholidota",
         "commonName": "Pangolins",
         "commonNames": [
@@ -4974,7 +5075,7 @@
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
-          "order": null,
+          "order": "Asparagales",
           "family": "Orchidaceae"
         },
         "commodityCnCode": "01061900",
@@ -4986,6 +5087,7 @@
       {
         "resultType": "species",
         "id": "01061900-9d8f1f9f-5e97-5f87-33c8-a73307a4eba4",
+        "speciesId": "9d8f1f9f-5e97-5f87-33c8-a73307a4eba4",
         "speciesName": "Otra Carnivora",
         "commonName": "Other Carnivores",
         "commonNames": [
@@ -5010,6 +5112,7 @@
       {
         "resultType": "species",
         "id": "01061900-5f337574-9358-84e8-ea0f-733c6706069a",
+        "speciesId": "5f337574-9358-84e8-ea0f-733c6706069a",
         "speciesName": "Callosciurus erythraeus",
         "commonName": "Pallas's Squirrel",
         "commonNames": [
@@ -5022,7 +5125,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Rodentia",
           "family": "Sciuridae"
         },
         "commodityCnCode": "01061900",
@@ -5034,20 +5137,21 @@
       {
         "resultType": "species",
         "id": "01061900-418bb8ef-d1bf-b5e4-b7b4-505567d1e03f",
+        "speciesId": "418bb8ef-d1bf-b5e4-b7b4-505567d1e03f",
         "speciesName": "Rangifer spp.",
         "commonName": "Reindeer (caribou)",
         "commonNames": [
           "Reindeer (caribou)"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1RANFG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -5058,20 +5162,21 @@
       {
         "resultType": "species",
         "id": "01061900-17cded37-b9e4-8d5c-df0d-888b64913b1e",
+        "speciesId": "17cded37-b9e4-8d5c-df0d-888b64913b1e",
         "speciesName": "Odocoileus spp.",
         "commonName": "White-tailed and mule deer",
         "commonNames": [
           "White-tailed and mule deer"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ODOCG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -5082,6 +5187,7 @@
       {
         "resultType": "species",
         "id": "01061900-64c2a451-f31c-0622-68c3-6e003eb44889",
+        "speciesId": "64c2a451-f31c-0622-68c3-6e003eb44889",
         "speciesName": "Canis familiaris",
         "commonName": "Domestic Dog",
         "commonNames": [
@@ -5095,7 +5201,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Canidae"
         },
         "commodityCnCode": "01061900",
@@ -5107,6 +5213,7 @@
       {
         "resultType": "species",
         "id": "01061900-3513d26a-5fd4-5500-56c4-e36ebf1f2995",
+        "speciesId": "3513d26a-5fd4-5500-56c4-e36ebf1f2995",
         "speciesName": "Hippocamelus spp.",
         "commonName": "Huemuls and Tarucas (Andean Deer)",
         "commonNames": [
@@ -5116,11 +5223,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -5131,20 +5238,21 @@
       {
         "resultType": "species",
         "id": "01061900-65c98640-f48a-a8f9-580b-25a38910f7fe",
+        "speciesId": "65c98640-f48a-a8f9-580b-25a38910f7fe",
         "speciesName": "Kobus spp.",
         "commonName": "Waterbucks and kobs",
         "commonNames": [
           "Waterbucks and kobs"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1KOBUG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Bovidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -5155,20 +5263,21 @@
       {
         "resultType": "species",
         "id": "01061900-252cd2ea-a2fc-5625-3c6a-2dd5b1bd0839",
+        "speciesId": "252cd2ea-a2fc-5625-3c6a-2dd5b1bd0839",
         "speciesName": "Muntiacus spp.",
         "commonName": "Munjacs",
         "commonNames": [
           "Munjacs"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1MUNTG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Cervidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -5179,6 +5288,7 @@
       {
         "resultType": "species",
         "id": "01061900-db9ae093-6c29-d431-3e7f-051a14de722f",
+        "speciesId": "db9ae093-6c29-d431-3e7f-051a14de722f",
         "speciesName": "Okapia spp.",
         "commonName": "Okapis",
         "commonNames": [
@@ -5188,11 +5298,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Artiodactyla",
+          "family": "Giraffidae"
         },
         "commodityCnCode": "01061900",
         "chedType": null,
@@ -5323,6 +5433,7 @@
       {
         "resultType": "species",
         "id": "01062000-6a815a15-5b37-1436-c105-f911e4ba4c3c",
+        "speciesId": "6a815a15-5b37-1436-c105-f911e4ba4c3c",
         "speciesName": "Testudinata",
         "commonName": "Turtles",
         "commonNames": [
@@ -5347,6 +5458,7 @@
       {
         "resultType": "species",
         "id": "01062000-c34bbfc3-b2ed-5e1b-fcdb-4e063f11dada",
+        "speciesId": "c34bbfc3-b2ed-5e1b-fcdb-4e063f11dada",
         "speciesName": "Crocodylia",
         "commonName": "Crocodilians",
         "commonNames": [
@@ -5372,6 +5484,7 @@
       {
         "resultType": "species",
         "id": "01062000-f89b7dde-2778-e928-a1b1-02ee8c9fd2dc",
+        "speciesId": "f89b7dde-2778-e928-a1b1-02ee8c9fd2dc",
         "speciesName": "Serpentes",
         "commonName": "Snakes",
         "commonNames": [
@@ -5397,6 +5510,7 @@
       {
         "resultType": "species",
         "id": "01062000-0b0e9ccf-38f1-67b2-4e7e-e603b10498c5",
+        "speciesId": "0b0e9ccf-38f1-67b2-4e7e-e603b10498c5",
         "speciesName": "Sauria",
         "commonName": "Lizards",
         "commonNames": [
@@ -5409,7 +5523,7 @@
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": null,
+          "order": "Boraginales",
           "family": "Boraginaceae"
         },
         "commodityCnCode": "01062000",
@@ -5421,6 +5535,7 @@
       {
         "resultType": "species",
         "id": "01062000-491bc358-6333-bb92-b555-dfc0c593f731",
+        "speciesId": "491bc358-6333-bb92-b555-dfc0c593f731",
         "speciesName": "Trachemys scripta",
         "commonName": "Pond Slider",
         "commonNames": [
@@ -5445,6 +5560,7 @@
       {
         "resultType": "species",
         "id": "01062000-5bdf89b9-d0f9-8e48-249b-fcee39167517",
+        "speciesId": "5bdf89b9-d0f9-8e48-249b-fcee39167517",
         "speciesName": "Rhyncocephalia",
         "commonName": "Beak-headed reptiles",
         "commonNames": [
@@ -5589,6 +5705,7 @@
       {
         "resultType": "species",
         "id": "01063100-89f82bb2-10ca-de3a-72b4-7ca65233027a",
+        "speciesId": "89f82bb2-10ca-de3a-72b4-7ca65233027a",
         "speciesName": "Strigiformes",
         "commonName": "Owls",
         "commonNames": [
@@ -5601,7 +5718,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Strigiformes",
           "family": null
         },
         "commodityCnCode": "01063100",
@@ -5613,6 +5730,7 @@
       {
         "resultType": "species",
         "id": "01063100-807aa05f-6010-b167-5d39-e04cf8dfbfe3",
+        "speciesId": "807aa05f-6010-b167-5d39-e04cf8dfbfe3",
         "speciesName": "Accipitriformes",
         "commonName": "Diurnal birds of prey",
         "commonNames": [
@@ -5626,7 +5744,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Accipitriformes",
           "family": null
         },
         "commodityCnCode": "01063100",
@@ -5638,6 +5756,7 @@
       {
         "resultType": "species",
         "id": "01063100-aac89e6c-459a-3886-4500-0c5d427566ca",
+        "speciesId": "aac89e6c-459a-3886-4500-0c5d427566ca",
         "speciesName": "Falconiformes",
         "commonName": "Falcons",
         "commonNames": [
@@ -5650,7 +5769,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Falconiformes",
           "family": null
         },
         "commodityCnCode": "01063100",
@@ -5782,6 +5901,7 @@
       {
         "resultType": "species",
         "id": "01063200-cd87913d-f5b3-aea8-ae1a-48d5b95bb7aa",
+        "speciesId": "cd87913d-f5b3-aea8-ae1a-48d5b95bb7aa",
         "speciesName": "Psittaciformes",
         "commonName": "Parrots (Including parakeets, macaws and cockatoos)",
         "commonNames": [
@@ -5795,7 +5915,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Psittaciformes",
           "family": null
         },
         "commodityCnCode": "01063200",
@@ -5927,20 +6047,21 @@
       {
         "resultType": "species",
         "id": "01063300-5d3285aa-9480-de6c-975d-f42f44295739",
+        "speciesId": "5d3285aa-9480-de6c-975d-f42f44295739",
         "speciesName": "Struthio spp.",
         "commonName": "Ostriches",
         "commonNames": [
           "Ostriches"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1STRUG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Struthioniformes",
+          "family": "Struthionidae"
         },
         "commodityCnCode": "01063300",
         "chedType": null,
@@ -5951,6 +6072,7 @@
       {
         "resultType": "species",
         "id": "01063300-5947d7ef-7654-b3a4-70ba-85a7a0d06cc9",
+        "speciesId": "5947d7ef-7654-b3a4-70ba-85a7a0d06cc9",
         "speciesName": "Dromaius novaehollandiae",
         "commonName": "Common Emu",
         "commonNames": [
@@ -5964,7 +6086,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Casuariiformes",
           "family": "Dromaiidae"
         },
         "commodityCnCode": "01063300",
@@ -5976,20 +6098,21 @@
       {
         "resultType": "species",
         "id": "01063300-d87e8ec4-2d0d-a0bc-24a0-3f9a2f5e7e71",
+        "speciesId": "d87e8ec4-2d0d-a0bc-24a0-3f9a2f5e7e71",
         "speciesName": "Rhea spp.",
         "commonName": "Rheas",
         "commonNames": [
           "Rheas"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1RHEAG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Rheiformes",
+          "family": "Rheidae"
         },
         "commodityCnCode": "01063300",
         "chedType": null,
@@ -6000,6 +6123,7 @@
       {
         "resultType": "species",
         "id": "01063300-0fffaff7-2568-ccf9-6696-964f705ae1f0",
+        "speciesId": "0fffaff7-2568-ccf9-6696-964f705ae1f0",
         "speciesName": "Dromaius",
         "commonName": "Emus",
         "commonNames": [
@@ -6013,7 +6137,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Casuariiformes",
           "family": "Dromaiidae"
         },
         "commodityCnCode": "01063300",
@@ -6025,20 +6149,21 @@
       {
         "resultType": "species",
         "id": "01063300-1ca29f9f-4008-97d5-a05e-cfdc261f7d10",
+        "speciesId": "1ca29f9f-4008-97d5-a05e-cfdc261f7d10",
         "speciesName": "Casuarius spp.",
         "commonName": "Cassowaries",
         "commonNames": [
           "Cassowaries"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1CASUG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Casuariiformes",
+          "family": "Casuariidae"
         },
         "commodityCnCode": "01063300",
         "chedType": null,
@@ -6178,6 +6303,7 @@
       {
         "resultType": "species",
         "id": "01063910-bf0424dc-196f-4b11-6f9e-7f610717147b",
+        "speciesId": "bf0424dc-196f-4b11-6f9e-7f610717147b",
         "speciesName": "Geotrygon spp.",
         "commonName": "Turtledoves",
         "commonNames": [
@@ -6187,11 +6313,11 @@
         "eppoCode": null,
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Columbiformes",
+          "family": "Columbidae"
         },
         "commodityCnCode": "01063910",
         "chedType": null,
@@ -6202,20 +6328,21 @@
       {
         "resultType": "species",
         "id": "01063910-daf9eb36-5ffe-b639-4cad-7dcbf5ed8e63",
+        "speciesId": "daf9eb36-5ffe-b639-4cad-7dcbf5ed8e63",
         "speciesName": "Columba spp.",
         "commonName": "Pigeons",
         "commonNames": [
           "Pigeons"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1COLUG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Columbiformes",
+          "family": "Columbidae"
         },
         "commodityCnCode": "01063910",
         "chedType": null,
@@ -6284,6 +6411,7 @@
       {
         "resultType": "species",
         "id": "01063980-7304f55f-4c5f-c892-89e9-a4fe2cb4fef6",
+        "speciesId": "7304f55f-4c5f-c892-89e9-a4fe2cb4fef6",
         "speciesName": "Phasianidae",
         "commonName": "Pheasants & Partridges",
         "commonNames": [
@@ -6297,7 +6425,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Phasianidae"
         },
         "commodityCnCode": "01063980",
@@ -6309,6 +6437,7 @@
       {
         "resultType": "species",
         "id": "01063980-67941f61-691a-b72e-94fe-900fb14d4bde",
+        "speciesId": "67941f61-691a-b72e-94fe-900fb14d4bde",
         "speciesName": "Phasianus",
         "commonName": "Pheasants",
         "commonNames": [
@@ -6321,7 +6450,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Phasianidae"
         },
         "commodityCnCode": "01063980",
@@ -6333,20 +6462,21 @@
       {
         "resultType": "species",
         "id": "01063980-3c0dac65-913b-440c-16e1-a20b308466ca",
+        "speciesId": "3c0dac65-913b-440c-16e1-a20b308466ca",
         "speciesName": "Alectoris spp.",
         "commonName": "Rock Partridges",
         "commonNames": [
           "Rock Partridges"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ALCTG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Galliformes",
+          "family": "Phasianidae"
         },
         "commodityCnCode": "01063980",
         "chedType": null,
@@ -6477,20 +6607,21 @@
       {
         "resultType": "species",
         "id": "01064100-491c9bbc-990a-0e85-adea-64c84ba871d1",
+        "speciesId": "491c9bbc-990a-0e85-adea-64c84ba871d1",
         "speciesName": "Apis spp.",
         "commonName": "Bees",
         "commonNames": [
           "Bees"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1APISG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Apidae"
         },
         "commodityCnCode": "01064100",
         "chedType": null,
@@ -6501,6 +6632,7 @@
       {
         "resultType": "species",
         "id": "01064100-127d195c-2b97-1e89-31ec-914086336c6b",
+        "speciesId": "127d195c-2b97-1e89-31ec-914086336c6b",
         "speciesName": "Apis mellifera",
         "commonName": "Honey Bee",
         "commonNames": [
@@ -6514,7 +6646,7 @@
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": null,
+          "order": "Hymenoptera",
           "family": "Apidae"
         },
         "commodityCnCode": "01064100",
@@ -6526,6 +6658,7 @@
       {
         "resultType": "species",
         "id": "01064100-fa82eb97-5b4e-3d3f-76fd-0089ece4ae97",
+        "speciesId": "fa82eb97-5b4e-3d3f-76fd-0089ece4ae97",
         "speciesName": "Bombus sp.",
         "commonName": "Bumblebee",
         "commonNames": [
@@ -6539,7 +6672,7 @@
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": null,
+          "order": "Hymenoptera",
           "family": "Apidae"
         },
         "commodityCnCode": "01064100",
@@ -6671,6 +6804,7 @@
       {
         "resultType": "species",
         "id": "01064900-4bdd41df-f967-9eb0-6e4b-736cf1d8050f",
+        "speciesId": "4bdd41df-f967-9eb0-6e4b-736cf1d8050f",
         "speciesName": "Vespa velutina nigrithorax",
         "commonName": "Hornet",
         "commonNames": [
@@ -6684,7 +6818,7 @@
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": null,
+          "order": "Hymenoptera",
           "family": "Vespidae"
         },
         "commodityCnCode": "01064900",
@@ -6696,6 +6830,7 @@
       {
         "resultType": "species",
         "id": "01064900-5b015afa-c3d9-c674-4033-301e308a1ceb",
+        "speciesId": "5b015afa-c3d9-c674-4033-301e308a1ceb",
         "speciesName": "Otra Insecta",
         "commonName": "Other Insecta",
         "commonNames": [
@@ -6780,6 +6915,7 @@
       {
         "resultType": "species",
         "id": "04071919-c3b9d305-1d88-4c3d-14ca-4685ce22a0dc",
+        "speciesId": "c3b9d305-1d88-4c3d-14ca-4685ce22a0dc",
         "speciesName": "Numida meleagris",
         "commonName": "Helmeted Guineafowl",
         "commonNames": [
@@ -6792,7 +6928,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Numididae"
         },
         "commodityCnCode": "04071919",
@@ -6804,20 +6940,21 @@
       {
         "resultType": "species",
         "id": "04071919-178dbfaf-9f5c-2c06-70d6-02e0bcdbb2f3",
+        "speciesId": "178dbfaf-9f5c-2c06-70d6-02e0bcdbb2f3",
         "speciesName": "Aix spp.",
         "commonName": "Perching Ducks",
         "commonNames": [
           "Perching Ducks"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1AIXXG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Anseriformes",
+          "family": "Anatidae"
         },
         "commodityCnCode": "04071919",
         "chedType": null,
@@ -6828,6 +6965,7 @@
       {
         "resultType": "species",
         "id": "04071919-7304f55f-4c5f-c892-89e9-a4fe2cb4fef6",
+        "speciesId": "7304f55f-4c5f-c892-89e9-a4fe2cb4fef6",
         "speciesName": "Phasianidae",
         "commonName": "Pheasants & Partridges",
         "commonNames": [
@@ -6841,7 +6979,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": null,
+          "order": "Galliformes",
           "family": "Phasianidae"
         },
         "commodityCnCode": "04071919",
@@ -6853,20 +6991,21 @@
       {
         "resultType": "species",
         "id": "04071919-5d3285aa-9480-de6c-975d-f42f44295739",
+        "speciesId": "5d3285aa-9480-de6c-975d-f42f44295739",
         "speciesName": "Struthio spp.",
         "commonName": "Ostriches",
         "commonNames": [
           "Ostriches"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1STRUG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Struthioniformes",
+          "family": "Struthionidae"
         },
         "commodityCnCode": "04071919",
         "chedType": null,
@@ -6877,20 +7016,21 @@
       {
         "resultType": "species",
         "id": "04071919-83a90e26-eff4-0d97-ceaf-c7c48f5d57b0",
+        "speciesId": "83a90e26-eff4-0d97-ceaf-c7c48f5d57b0",
         "speciesName": "Anas spp.",
         "commonName": "Dabbling Ducks",
         "commonNames": [
           "Dabbling Ducks"
         ],
         "languageId": "la",
-        "eppoCode": null,
+        "eppoCode": "1ANAXG",
         "faoCode": null,
         "taxonomy": {
-          "kingdom": null,
-          "phylum": null,
-          "class": null,
-          "order": null,
-          "family": null
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Anseriformes",
+          "family": "Anatidae"
         },
         "commodityCnCode": "04071919",
         "chedType": null,
@@ -6901,6 +7041,7 @@
       {
         "resultType": "species",
         "id": "04071919-9a7ed3d9-25cf-6d57-a673-f0bbf52411c6",
+        "speciesId": "9a7ed3d9-25cf-6d57-a673-f0bbf52411c6",
         "speciesName": "Colombiformes",
         "commonName": "Pigeons and Doves",
         "commonNames": [
@@ -6948,7 +7089,7 @@
       "traces": null
     },
     "commodityGroup": "Great British notification - Animals & Germinals",
-    "isGerminal": false,
+    "isGerminal": true,
     "certifiedAs": [],
     "breedCategory": [],
     "identificationSystems": [],
@@ -6984,6 +7125,7 @@
       {
         "resultType": "species",
         "id": "05111000-c7b4c871-d24c-0807-c4bf-273bafbb971a",
+        "speciesId": "c7b4c871-d24c-0807-c4bf-273bafbb971a",
         "speciesName": "Bubalus bubalis",
         "commonName": "Water Buffalo",
         "commonNames": [
@@ -6996,7 +7138,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "05111000",
@@ -7008,6 +7150,7 @@
       {
         "resultType": "species",
         "id": "05111000-2de1a45e-21b3-b839-5c78-20daaf9b5fd4",
+        "speciesId": "2de1a45e-21b3-b839-5c78-20daaf9b5fd4",
         "speciesName": "Bos taurus",
         "commonName": "Domestic Cattle",
         "commonNames": [
@@ -7021,7 +7164,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "05111000",
@@ -7033,6 +7176,7 @@
       {
         "resultType": "species",
         "id": "05111000-e3beccb7-294d-5478-8f8e-96e9b5027bff",
+        "speciesId": "e3beccb7-294d-5478-8f8e-96e9b5027bff",
         "speciesName": "Bison bison",
         "commonName": "American Bison",
         "commonNames": [
@@ -7045,7 +7189,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "05111000",
@@ -7079,7 +7223,7 @@
       "traces": null
     },
     "commodityGroup": "Great British notification - Animals & Germinals",
-    "isGerminal": false,
+    "isGerminal": true,
     "certifiedAs": [],
     "breedCategory": [],
     "identificationSystems": [],
@@ -7115,6 +7259,7 @@
       {
         "resultType": "species",
         "id": "05119985-2de1a45e-21b3-b839-5c78-20daaf9b5fd4",
+        "speciesId": "2de1a45e-21b3-b839-5c78-20daaf9b5fd4",
         "speciesName": "Bos taurus",
         "commonName": "Domestic Cattle",
         "commonNames": [
@@ -7128,7 +7273,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "05119985",
@@ -7140,6 +7285,7 @@
       {
         "resultType": "species",
         "id": "05119985-8cc59486-d531-a73d-3cfa-ebf2e949677c",
+        "speciesId": "8cc59486-d531-a73d-3cfa-ebf2e949677c",
         "speciesName": "Equus caballus",
         "commonName": "Horse",
         "commonNames": [
@@ -7152,7 +7298,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Perissodactyla",
           "family": "Equidae"
         },
         "commodityCnCode": "05119985",
@@ -7164,6 +7310,7 @@
       {
         "resultType": "species",
         "id": "05119985-970b9500-ce0b-36d8-14ad-1d551bc30441",
+        "speciesId": "970b9500-ce0b-36d8-14ad-1d551bc30441",
         "speciesName": "Oryctolagus cuniculus",
         "commonName": "Domestic Rabbit",
         "commonNames": [
@@ -7177,7 +7324,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Lagomorpha",
           "family": "Leporidae"
         },
         "commodityCnCode": "05119985",
@@ -7189,6 +7336,7 @@
       {
         "resultType": "species",
         "id": "05119985-b5d938bf-0b2e-cba3-9684-4725dee263e6",
+        "speciesId": "b5d938bf-0b2e-cba3-9684-4725dee263e6",
         "speciesName": "Felis catus",
         "commonName": "Domestic Cat",
         "commonNames": [
@@ -7201,7 +7349,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Felidae"
         },
         "commodityCnCode": "05119985",
@@ -7213,6 +7361,7 @@
       {
         "resultType": "species",
         "id": "05119985-db9c8eb4-3009-52be-4db8-cc08eaad2f3c",
+        "speciesId": "db9c8eb4-3009-52be-4db8-cc08eaad2f3c",
         "speciesName": "Ovis aries",
         "commonName": "Domestic sheep",
         "commonNames": [
@@ -7226,7 +7375,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "05119985",
@@ -7238,6 +7387,7 @@
       {
         "resultType": "species",
         "id": "05119985-467eb59d-dd10-43c5-b603-186c4d59a9b5",
+        "speciesId": "467eb59d-dd10-43c5-b603-186c4d59a9b5",
         "speciesName": "Capra hircus",
         "commonName": "Goat",
         "commonNames": [
@@ -7250,7 +7400,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Bovidae"
         },
         "commodityCnCode": "05119985",
@@ -7262,6 +7412,7 @@
       {
         "resultType": "species",
         "id": "05119985-fd797cf7-3026-04f7-a606-e54bcb4371c6",
+        "speciesId": "fd797cf7-3026-04f7-a606-e54bcb4371c6",
         "speciesName": "Rodentia",
         "commonName": "Rodents",
         "commonNames": [
@@ -7275,7 +7426,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Rodentia",
           "family": null
         },
         "commodityCnCode": "05119985",
@@ -7287,6 +7438,7 @@
       {
         "resultType": "species",
         "id": "05119985-51416c58-abaf-eb83-7cc2-4bb547f21a85",
+        "speciesId": "51416c58-abaf-eb83-7cc2-4bb547f21a85",
         "speciesName": "Sus scrofa domesticus",
         "commonName": "Domestic Pig",
         "commonNames": [
@@ -7299,7 +7451,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Artiodactyla",
           "family": "Suidae"
         },
         "commodityCnCode": "05119985",
@@ -7311,6 +7463,7 @@
       {
         "resultType": "species",
         "id": "05119985-7b7e2ddd-46b5-fb25-a207-53889047ef0c",
+        "speciesId": "7b7e2ddd-46b5-fb25-a207-53889047ef0c",
         "speciesName": "Equus asinus",
         "commonName": "Donkey",
         "commonNames": [
@@ -7324,7 +7477,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Perissodactyla",
           "family": "Equidae"
         },
         "commodityCnCode": "05119985",
@@ -7336,6 +7489,7 @@
       {
         "resultType": "species",
         "id": "05119985-64c2a451-f31c-0622-68c3-6e003eb44889",
+        "speciesId": "64c2a451-f31c-0622-68c3-6e003eb44889",
         "speciesName": "Canis familiaris",
         "commonName": "Domestic Dog",
         "commonNames": [
@@ -7349,7 +7503,7 @@
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
-          "order": null,
+          "order": "Carnivora",
           "family": "Canidae"
         },
         "commodityCnCode": "05119985",
@@ -7361,24 +7515,26 @@
     ],
     "productTypes": [
       {
+        "productTypeId": "f7e4e87f-67aa-b605-5afe-f52b9ed95bc2",
         "code": "OVA_EMBRYO",
         "name": "Ova Embryo",
         "speciesIds": [
-          "05119985-2de1a45e-21b3-b839-5c78-20daaf9b5fd4",
-          "05119985-467eb59d-dd10-43c5-b603-186c4d59a9b5",
-          "05119985-51416c58-abaf-eb83-7cc2-4bb547f21a85",
-          "05119985-8cc59486-d531-a73d-3cfa-ebf2e949677c",
-          "05119985-db9c8eb4-3009-52be-4db8-cc08eaad2f3c"
+          "2de1a45e-21b3-b839-5c78-20daaf9b5fd4",
+          "467eb59d-dd10-43c5-b603-186c4d59a9b5",
+          "51416c58-abaf-eb83-7cc2-4bb547f21a85",
+          "8cc59486-d531-a73d-3cfa-ebf2e949677c",
+          "db9c8eb4-3009-52be-4db8-cc08eaad2f3c"
         ]
       },
       {
+        "productTypeId": "c6e2a7d2-85cf-d384-afcf-791770e24c94",
         "code": "SEMEN",
         "name": "Semen",
         "speciesIds": [
-          "05119985-467eb59d-dd10-43c5-b603-186c4d59a9b5",
-          "05119985-51416c58-abaf-eb83-7cc2-4bb547f21a85",
-          "05119985-8cc59486-d531-a73d-3cfa-ebf2e949677c",
-          "05119985-db9c8eb4-3009-52be-4db8-cc08eaad2f3c"
+          "467eb59d-dd10-43c5-b603-186c4d59a9b5",
+          "51416c58-abaf-eb83-7cc2-4bb547f21a85",
+          "8cc59486-d531-a73d-3cfa-ebf2e949677c",
+          "db9c8eb4-3009-52be-4db8-cc08eaad2f3c"
         ]
       }
     ]
